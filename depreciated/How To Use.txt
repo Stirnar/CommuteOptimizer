@@ -1,0 +1,50 @@
+NSU Commute Optimizer V2.html
+
+HOW TO USE:
+   
+	Step 1: Download the file
+	Step 4: Double-click the html file to open it in your web browser
+
+	STEPS 2 and 3 are now hardcoded and no longer required!
+		(For posterity)
+		Step 2: Dowload Tracks.csv and Variance.csv 
+		Step 3: Make sure NSU-Commute-Calculator-STANDALONE.html is in the same folder as the CSVs
+
+FEATURES:
+
+	Calculate commute for your specific track
+	Enter your home location or auto-find optimal spot
+	See hours/day, week, month, year
+	Calculate gas costs & car maintenance
+	See UWorld questions lost
+	Month-by-month breakdown
+
+HOW TO GET YOUR COORDINATES:
+
+	Google Maps Method:
+	1. Find your address in Google Maps
+	2. Right-click on the location
+	3. Click the coordinates (like "26.082, -80.249")
+	4. Paste into calculator
+
+	OR
+
+	Leave it blank and let the tool find the optimal location
+	(Takes a while, but finds the best spot automatically)
+
+WHAT THIS TELLS YOU:
+
+	• How much time you'll spend commuting
+	• How much money it'll cost you
+	• How many UWorld questions you could do instead
+	• Which tracks have lower commute burden
+	• Where to live to minimize commuting
+
+FUTURE DIRECTIONS:
+	
+	• Custom block building
+	• Adding in your own clinical sites
+
+QUESTIONS OR ISSUES?
+
+   Contact: Skyler Colwell
