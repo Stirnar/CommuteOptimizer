@@ -8,7 +8,7 @@ Enhanced version of the Medical Student Commute Optimizer with three major new f
 
 New Features
 
- 1. Custom Block Builder
+1. Custom Block Builder
 
 What it does:
 - Create custom rotation blocks with flexible weekly schedules
@@ -48,7 +48,7 @@ Features:
 - Easy removal with delete button
 - Displays coordinates for verification
 
- 3. Help & Instructions Modal
+3. Help & Instructions Modal
 
 Access:
 - Click "Help & Instructions" button on main page
@@ -58,99 +58,6 @@ Contents:
 - Using the Custom Block Builder
 - Adding custom locations
 - Tips for optimal use
-
-Deployment Guide
-
- Option 1: Static Hosting (Current Mode)
-The application currently works in "embedded" mode with data hardcoded in the HTML file.
-
-Pros:
-- Single file deployment
-- No server required
-- Works anywhere (email, USB drive, etc.)
-
-Cons:
-- Must rebuild HTML to update data
-- Larger file size
-
- Option 2: Backend Hosting (Recommended for Production)
-
- Step 1: Prepare Backend
-1. Set up a simple web server (Node.js, Python, PHP, etc.)
-2. Place CSV files in a `/api` directory
-3. Enable CORS if needed
-4. Serve CSV files at:
-   - `/api/locations.csv`
-   - `/api/tracks.csv`
-   - `/api/variance.csv`
-
- Step 2: Configure Application
-In the HTML file, change this line:
-```javascript
-const DATA_SOURCE_MODE = 'backend'; // Change from 'embedded' to 'backend'
-const BACKEND_URL = '/api'; // Or your full backend URL
-```
-
- Step 3: Deploy
-Upload all files to your web server.
-
- Simple Backend Examples
-
- Python (Flask)
-```python
-from flask import Flask, send_file
-from flask_cors import CORS
-
-app = Flask(__name__)
-CORS(app)
-
-@app.route('/api/<filename>')
-def serve_csv(filename):
-    return send_file(f'data/{filename}', mimetype='text/csv')
-
-if __name__ == '__main__':
-    app.run(port=5000)
-```
-
- Node.js (Express)
-```javascript
-const express = require('express');
-const cors = require('cors');
-const app = express();
-
-app.use(cors());
-app.use('/api', express.static('data'));
-
-app.listen(5000, () => {
-    console.log('Server running on port 5000');
-});
-```
-
- Static File Server (Simplest)
-Just place CSVs in a folder and use any static file server:
-```bash
- Python
-python -m http.server 8000
-
- Node
-npx serve
-
- PHP
-php -S localhost:8000
-```
-
- Updating Data
-
- Embedded Mode
-1. Open HTML file in text editor
-2. Find the embedded CSV data (search for `LOCATIONS_CSV`, `TRACKS_CSV`, `VARIANCE_CSV`)
-3. Update the data
-4. Save file
-
- Backend Mode
-1. Simply update the CSV files on your server
-2. No code changes needed
-3. Changes take effect immediately
 
  File Structure
 
@@ -200,7 +107,7 @@ Surgery Clerkship @ HCA Florida Kendall Hospital,Kendall,N/A,N/A,8,n
 - No data sent to external servers (except OSRM routing)
 - Location data never leaves your browser
 
- Technical Details
+Technical Details
 
  Routing
 - Uses OpenStreetMap OSRM routing service
@@ -220,44 +127,41 @@ Surgery Clerkship @ HCA Florida Kendall Hospital,Kendall,N/A,N/A,8,n
 - Opportunity cost: Hours × Resident hourly rate
 - UWorld: Hours × 60 ÷ 1.5 mins/question
 
- Troubleshooting
+Troubleshooting
 
  "Error loading data"
 - Check internet connection
 - Verify CSV files are accessible
 - Check browser console for errors
 
- Custom blocks not saving
+Custom blocks not saving
 - Check browser localStorage is enabled
 - Try different browser
 - Clear and re-add blocks
 
- Routing errors
+Routing errors
 - OSRM service may be temporarily down
 - Uses fallback calculations automatically
 - Refresh page and try again
 
- Coordinates not working
+Coordinates not working
 - Ensure format is: latitude, longitude
 - No extra spaces or characters
 - Use Google Maps format
 
- Future Enhancements
+Future Enhancements
 - Export results to PDF
 - Compare multiple tracks side-by-side
 - Historical data tracking
 - Mobile app version
 - Carpooling optimization
 
- Support
+Support
 For questions or issues:
 - Check Help & Instructions in app
 - Review this README
-- Contact: [Your contact info]
+- Contact: skyler_colwell@yahoo.com
 
  Credits
 Developed by Skyler Colwell
 Version 3.0 - January 2026
-
- License
-[Your chosen license]
