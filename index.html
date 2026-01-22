@@ -486,7 +486,7 @@
         }
         
         async function loadLocations() {
-            const data = await loadCSV('./Data/Locations.csv');
+            const data = await loadCSV('./data/Locations.csv');
             data.forEach(row => {
                 if (row.Locations && row.Coordinates) {
                     const [lat, lng] = row.Coordinates.split(',').map(s => parseFloat(s.trim()));
@@ -498,12 +498,12 @@
         }
         
         async function loadTracks() {
-            const data = await loadCSV('./Data/Tracks.csv');
+            const data = await loadCSV('./data/Tracks.csv');
             tracks = data.filter(row => row['Current Track'] && row['Current Track'].trim() !== '');
         }
         
         async function loadVariance() {
-            const data = await loadCSV('./Data/Variance.csv');
+            const data = await loadCSV('./data/Variance.csv');
             data.forEach(row => {
                 if (row.Block) {
                     variance[row.Block] = row;
