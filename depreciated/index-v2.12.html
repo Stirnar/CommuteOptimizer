@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medical Student Commute Optimizer - NSU V2.2</title>
+    <title>Medical Student Commute Optimizer - NSU V2.12</title>
     <script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
     <!-- Leaflet.js for mapping -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -173,22 +173,9 @@
         /* Map Styles */
         #mapContainer {
             height: 500px;
-            width: 100%;
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            position: relative;
-            z-index: 1;
-        }
-        
-        /* Fix for Leaflet tile loading */
-        .leaflet-container {
-            height: 100%;
-            width: 100%;
-        }
-        
-        .leaflet-tile-container {
-            pointer-events: auto;
         }
         
         .leaflet-popup-content {
@@ -229,12 +216,12 @@
         <div class="card">
             <h1>
                 Medical Student Commute Optimizer
-                <span class="version-badge">V2.2</span>
+                <span class="version-badge">V2.12 DEV</span>
             </h1>
-            <p class="subtitle">Calculate your clinical rotation commute burden - Now with address input, interactive maps, and track comparison!</p>
+            <p class="subtitle">Calculate your clinical rotation commute burden - Now with address input and interactive maps!</p>
             
             <div id="loadingData" class="hidden">
-                <p style="color: #3b82f6; font-weight: 600;">Loading data files...</p>
+                <p style="color: #3b82f6; font-weight: 600;">📊 Loading data files...</p>
             </div>
             
             <div id="dataError" class="error-message hidden">
@@ -243,22 +230,8 @@
             </div>
             
             <div id="mainForm" class="hidden">
-                <div class="form-group" style="margin-bottom: 20px;">
-                    <label>What would you like to find?</label>
-                    <div style="display: flex; gap: 20px; margin-top: 8px;">
-                        <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
-                            <input type="radio" name="mode" value="optimal-home" checked>
-                            <span>Find optimal home for a track</span>
-                        </label>
-                        <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
-                            <input type="radio" name="mode" value="optimal-track">
-                            <span>Find optimal track for my home (takes a while)</span>
-                        </label>
-                    </div>
-                </div>
-                
                 <div class="form-grid">
-                    <div class="form-group" id="trackSelectGroup">
+                    <div class="form-group">
                         <label>Select Your Track</label>
                         <select id="trackSelect">
                             <option value="">Choose a track...</option>
@@ -266,46 +239,29 @@
                     </div>
                     
                     <div class="form-group">
-                        <label id="homeInputLabel">Home Location - Optional</label>
+                        <label>Home Location - Optional</label>
                         <input type="text" id="homeInput" placeholder="e.g., 1234 Main St, Fort Lauderdale, FL or 26.082, -80.249">
-                        <span class="helper-text" id="homeInputHelper">Enter an address or coordinates. Leave blank to find optimal location.</span>
+                        <span class="helper-text">Enter an address or coordinates. Leave blank to find optimal location.</span>
                         <div id="geocodeStatus" style="margin-top: 8px; font-size: 12px; display: none;"></div>
                     </div>
                 </div>
                 
-                <button id="calculateBtn">Calculate</button>
+                <button id="calculateBtn">Calculate Commute Burden</button>
                 <p id="optimalNote" class="helper-text hidden" style="margin-top: 8px;">
                     No home location provided - will find optimal location (this takes a while)
-                </p>
-                <p id="trackCompareNote" class="helper-text hidden" style="margin-top: 8px; color: #3b82f6;">
-                    Will compare all tracks from your home location (this takes a while)
                 </p>
             </div>
         </div>
         
         <div id="loading" class="hidden">
-            <h2 id="loadingTitle">Calculating routes...</h2>
-            <p id="loadingSubtext">This may take a moment. Please wait.</p>
-            <div id="loadingProgress" style="margin-top: 16px; font-size: 14px; color: #64748b;"></div>
-        </div>
-        
-        <div id="trackComparisonResults" class="hidden">
-            <div class="card">
-                <h2 style="font-size: 24px; margin-bottom: 8px;">🏆 Top 5 Tracks for Your Location</h2>
-                <p style="color: #64748b; margin-bottom: 24px;" id="comparisonHomeDisplay"></p>
-                
-                <div id="trackRankings"></div>
-                
-                <button onclick="document.getElementById('trackComparisonResults').classList.add('hidden'); document.getElementById('mainForm').classList.remove('hidden');" 
-                        style="margin-top: 24px; background: #64748b;">
-                    ← Try Different Location
-                </button>
-            </div>
+            <h2>Calculating routes...</h2>
+            <p>This may take a moment. Please wait.</p>
         </div>
         
         <div id="results" class="hidden">
             <div class="stats-grid" id="statsGrid"></div>
             
+            <!-- Map Section -->
             <div class="card">
                 <h3>Location Map</h3>
                 <div id="mapContainer"></div>
@@ -383,7 +339,7 @@
                     <li>Regular days: Home → Site → Home (2 legs)</li>
                     <li>Blocks at Nemours = 0 commute (on-site housing)</li>
                     <li>Car maintenance cost: $0.0986/mile (AAA average)</li>
-                    <li>UWorld questions: 1.5 minutes per question max</li>
+                    <li>UWorld questions: 1.5 minutes per question average</li>
                     <li>Opportunity cost: Resident hourly rate = Annual salary ÷ (52 weeks × 60 hrs/week)</li>
                     <li>Optimal location: If no home location provided, system tests 500 points across South Florida to find location that minimizes total commute hours</li>
                 </ul>
@@ -392,7 +348,7 @@
             <div style="margin-bottom: 24px; padding: 16px; background: #f0f9ff; border-radius: 8px;">
                 <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 8px; color: #1e40af;">Data Source & Privacy</h3>
                 <p style="font-size: 14px; color: #475569; margin-bottom: 8px;">
-                    V2.2 loads data from external CSV files in the /data directory. This allows for easier updates without modifying code.
+                    V2.1 loads data from external CSV files in the /data directory. This allows for easier updates without modifying code.
                 </p>
                 <p style="font-size: 14px; color: #475569;">
                     <strong>Privacy:</strong> All calculations are performed in your browser. Address geocoding uses OpenStreetMap's free API. Your location data is never stored or transmitted to any server beyond the geocoding lookup.
@@ -517,7 +473,7 @@
             errorText.textContent = message;
             errorDiv.classList.remove('hidden');
         }
-              
+        
         function populateTrackDropdown() {
             const select = document.getElementById('trackSelect');
             select.innerHTML = '<option value="">Choose a track...</option>';
@@ -539,11 +495,6 @@
         function setupEventListeners() {
             document.getElementById('calculateBtn').addEventListener('click', handleCalculate);
             
-            // Mode switching
-            document.querySelectorAll('input[name="mode"]').forEach(radio => {
-                radio.addEventListener('change', handleModeChange);
-            });
-            
             document.getElementById('sourcesBtn').addEventListener('click', () => {
                 document.getElementById('modal').classList.add('show');
             });
@@ -554,19 +505,14 @@
             
             document.getElementById('homeInput').addEventListener('input', (e) => {
                 const note = document.getElementById('optimalNote');
-                const trackNote = document.getElementById('trackCompareNote');
                 const statusDiv = document.getElementById('geocodeStatus');
                 
                 if (e.target.value.trim() === '') {
-                    const mode = document.querySelector('input[name="mode"]:checked').value;
-                    if (mode === 'optimal-home') {
-                        note.classList.remove('hidden');
-                        trackNote.classList.add('hidden');
-                    }
+                    note.classList.remove('hidden');
                     statusDiv.style.display = 'none';
                 } else {
                     note.classList.add('hidden');
-                    trackNote.classList.add('hidden');
+                    // Clear status when user starts typing
                     statusDiv.style.display = 'none';
                 }
             });
@@ -575,47 +521,6 @@
             inputs.forEach(id => {
                 document.getElementById(id).addEventListener('change', updateCostSettings);
             });
-        }
-        
-        function handleModeChange() {
-            const mode = document.querySelector('input[name="mode"]:checked').value;
-            const trackSelectGroup = document.getElementById('trackSelectGroup');
-            const homeInputLabel = document.getElementById('homeInputLabel');
-            const homeInputHelper = document.getElementById('homeInputHelper');
-            const optimalNote = document.getElementById('optimalNote');
-            const trackCompareNote = document.getElementById('trackCompareNote');
-            const calculateBtn = document.getElementById('calculateBtn');
-            const homeInput = document.getElementById('homeInput');
-            
-            if (mode === 'optimal-track') {
-                // Find optimal track mode
-                trackSelectGroup.style.display = 'none';
-                homeInputLabel.textContent = 'Home Location - Required';
-                homeInputHelper.textContent = 'Enter your address or coordinates to find the best tracks.';
-                calculateBtn.textContent = 'Compare All Tracks';
-                
-                if (!homeInput.value.trim()) {
-                    trackCompareNote.classList.remove('hidden');
-                    optimalNote.classList.add('hidden');
-                } else {
-                    trackCompareNote.classList.add('hidden');
-                    optimalNote.classList.add('hidden');
-                }
-            } else {
-                // Find optimal home mode (original)
-                trackSelectGroup.style.display = 'block';
-                homeInputLabel.textContent = 'Home Location - Optional';
-                homeInputHelper.textContent = 'Enter an address or coordinates. Leave blank to find optimal location.';
-                calculateBtn.textContent = 'Calculate Commute Burden';
-                
-                if (!homeInput.value.trim()) {
-                    optimalNote.classList.remove('hidden');
-                    trackCompareNote.classList.add('hidden');
-                } else {
-                    optimalNote.classList.add('hidden');
-                    trackCompareNote.classList.add('hidden');
-                }
-            }
         }
         
         function updateCostSettings() {
@@ -629,215 +534,51 @@
             }
         }
         
-        
-        async function findOptimalTracks(homeCoords) {
-            const loadingProgress = document.getElementById('loadingProgress');
-            const trackResults = [];
-            
-            console.log(`Comparing ${tracks.length} tracks from home location...`);
-            
-            for (let i = 0; i < tracks.length; i++) {
-                const track = tracks[i];
-                loadingProgress.textContent = `Analyzing ${track['Current Track']} (${i + 1}/${tracks.length})...`;
-                
-                try {
-                    const result = await calculateTrackCommute(track, homeCoords, true);
-                    
-                    const hourlyRate = costSettings.residentSalary / (52 * 60);
-                    const gasCost = (result.totalMiles / costSettings.mpg) * costSettings.gasPricePerGallon;
-                    const maintenanceCost = result.totalMiles * costSettings.maintenancePerMile;
-                    const opportunityCost = result.totalHours * hourlyRate;
-                    const totalCost = gasCost + maintenanceCost + opportunityCost;
-                    
-                    trackResults.push({
-                        trackName: track['Current Track'],
-                        trackData: track,
-                        totalHours: result.totalHours,
-                        totalMiles: result.totalMiles,
-                        totalWeeks: result.totalWeeks,
-                        gasCost: gasCost,
-                        maintenanceCost: maintenanceCost,
-                        opportunityCost: opportunityCost,
-                        totalCost: totalCost,
-                        blockDetails: result.blockDetails
-                    });
-                } catch (error) {
-                    console.error(`Error calculating ${track['Current Track']}:`, error);
-                }
-            }
-            
-            // Sort by total hours (primary) and total cost (secondary)
-            trackResults.sort((a, b) => {
-                if (Math.abs(a.totalHours - b.totalHours) < 1) {
-                    return a.totalCost - b.totalCost;
-                }
-                return a.totalHours - b.totalHours;
-            });
-            
-            console.log('Track comparison complete!');
-            return trackResults.slice(0, 5); // Return top 5
-        }
-        
-        function displayTrackComparison(topTracks, homeCoords) {
-            document.getElementById('comparisonHomeDisplay').textContent = 
-                `Comparing from: ${homeCoords.lat.toFixed(4)}, ${homeCoords.lng.toFixed(4)}`;
-            
-            const rankingsDiv = document.getElementById('trackRankings');
-            
-            rankingsDiv.innerHTML = topTracks.map((track, index) => {
-                const hoursPerWeek = track.totalWeeks > 0 ? track.totalHours / track.totalWeeks : 0;
-                const medal = index === 0 ? '1.' : index === 1 ? '2.' : index === 2 ? '3.' : `${index + 1}.`;
-                
-                return `
-                    <div class="card" style="margin-bottom: 16px; border-left: 4px solid ${index === 0 ? '#10b981' : index === 1 ? '#3b82f6' : '#64748b'};">
-                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 16px;">
-                            <div>
-                                <h3 style="margin: 0; font-size: 20px;">${medal} ${track.trackName}</h3>
-                                <p style="color: #64748b; font-size: 14px; margin-top: 4px;">
-                                    ${Math.round(track.totalHours)} hrs/year • ${hoursPerWeek.toFixed(1)} hrs/week
-                                </p>
-                            </div>
-                            <div style="text-align: right;">
-                                <div style="font-size: 24px; font-weight: bold; color: #10b981;">
-                                    $${Math.round(track.totalCost).toLocaleString()}
-                                </div>
-                                <div style="font-size: 12px; color: #64748b;">Total Cost</div>
-                            </div>
-                        </div>
-                        
-                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; padding: 12px; background: #f8fafc; border-radius: 8px;">
-                            <div>
-                                <div style="font-size: 12px; color: #64748b;">Gas</div>
-                                <div style="font-weight: 600;">$${Math.round(track.gasCost).toLocaleString()}</div>
-                            </div>
-                            <div>
-                                <div style="font-size: 12px; color: #64748b;">Maintenance</div>
-                                <div style="font-weight: 600;">$${Math.round(track.maintenanceCost).toLocaleString()}</div>
-                            </div>
-                            <div>
-                                <div style="font-size: 12px; color: #64748b;">Opportunity</div>
-                                <div style="font-weight: 600;">$${Math.round(track.opportunityCost).toLocaleString()}</div>
-                            </div>
-                        </div>
-                        
-                        <button onclick="selectTrackFromComparison('${track.trackName}', ${index})" 
-                                style="margin-top: 12px; width: 100%; background: #3b82f6;">
-                            View Full Details for ${track.trackName}
-                        </button>
-                    </div>
-                `;
-            }).join('');
-            
-            document.getElementById('trackComparisonResults').classList.remove('hidden');
-            document.getElementById('loading').classList.add('hidden');
-        }
-        
-        // Store comparison results globally so we can access them
-        let lastTrackComparison = null;
-        let lastComparisonHomeCoords = null;
-        
-        window.selectTrackFromComparison = function(trackName, index) {
-            if (!lastTrackComparison || !lastComparisonHomeCoords) return;
-            
-            const selectedTrack = lastTrackComparison[index];
-            
-            // Hide comparison, show detailed results
-            document.getElementById('trackComparisonResults').classList.add('hidden');
-            
-            // Set current results for detailed display
-            currentResults = {
-                totalHours: selectedTrack.totalHours,
-                totalMiles: selectedTrack.totalMiles,
-                totalWeeks: selectedTrack.totalWeeks,
-                blockDetails: selectedTrack.blockDetails
-            };
-            currentHomeCoords = lastComparisonHomeCoords;
-            
-            displayResults(currentResults, currentHomeCoords);
-        };
-        
         async function handleCalculate() {
-            const mode = document.querySelector('input[name="mode"]:checked').value;
             const trackSelect = document.getElementById('trackSelect');
             const homeInput = document.getElementById('homeInput');
             
-            // Mode-specific validation
-            if (mode === 'optimal-home' && !trackSelect.value) {
+            if (!trackSelect.value) {
                 alert('Please select a track');
-                return;
-            }
-            
-            if (mode === 'optimal-track' && !homeInput.value.trim()) {
-                alert('Please enter your home location to compare tracks');
                 return;
             }
             
             document.getElementById('calculateBtn').disabled = true;
             document.getElementById('loading').classList.remove('hidden');
             document.getElementById('results').classList.add('hidden');
-            document.getElementById('trackComparisonResults').classList.add('hidden');
-            
-            const loadingTitle = document.getElementById('loadingTitle');
-            const loadingSubtext = document.getElementById('loadingSubtext');
             
             try {
-                if (mode === 'optimal-track') {
-                    // Find optimal track for given address
-                    loadingTitle.textContent = 'Comparing all tracks...';
-                    loadingSubtext.textContent = 'Testing 60 tracks from your location. This will take a few minutes.';
+                const trackData = tracks.find(t => t['Current Track'] === trackSelect.value);
+                let coords;
+                
+                if (!homeInput.value.trim()) {
+                    // No input - find optimal location
+                    const statusDiv = document.getElementById('geocodeStatus');
+                    statusDiv.style.display = 'block';
+                    statusDiv.style.color = '#3b82f6';
+                    statusDiv.textContent = '🔍 Finding optimal location...';
                     
-                    const coords = await parseLocationInput(homeInput.value);
-                    
-                    if (!coords) {
-                        alert('Could not parse location. Please check the format or try coordinates.');
-                        return;
+                    coords = await findOptimalLocation(trackData);
+                    if (coords) {
+                        homeInput.value = `${coords.lat.toFixed(6)}, ${coords.lng.toFixed(6)}`;
+                        statusDiv.style.color = '#10b981';
+                        statusDiv.textContent = '✅ Optimal location found';
                     }
-                    
-                    const topTracks = await findOptimalTracks(coords);
-                    
-                    // Store for detailed view
-                    lastTrackComparison = topTracks;
-                    lastComparisonHomeCoords = coords;
-                    
-                    displayTrackComparison(topTracks, coords);
-                    
                 } else {
-                    // Find optimal home for selected track
-                    loadingTitle.textContent = 'Calculating routes...';
-                    loadingSubtext.textContent = 'This may take a moment. Please wait.';
-                    
-                    const trackData = tracks.find(t => t['Current Track'] === trackSelect.value);
-                    let coords;
-                    
-                    if (!homeInput.value.trim()) {
-                        // No input - find optimal location
-                        const statusDiv = document.getElementById('geocodeStatus');
-                        statusDiv.style.display = 'block';
-                        statusDiv.style.color = '#3b82f6';
-                        statusDiv.textContent = 'Finding optimal location...';
-                        
-                        coords = await findOptimalLocation(trackData);
-                        if (coords) {
-                            homeInput.value = `${coords.lat.toFixed(6)}, ${coords.lng.toFixed(6)}`;
-                            statusDiv.style.color = '#10b981';
-                            statusDiv.textContent = 'Optimal location found';
-                        }
-                    } else {
-                        // User provided input - parse as address or coordinates
-                        coords = await parseLocationInput(homeInput.value);
-                    }
-                    
-                    if (!coords) {
-                        alert('Could not parse location. Please check the format or try coordinates.');
-                        return;
-                    }
-                    
-                    currentHomeCoords = coords;
-                    
-                    const results = await calculateTrackCommute(trackData, coords);
-                    currentResults = results;
-                    displayResults(results, coords);
+                    // User provided input - parse as address or coordinates
+                    coords = await parseLocationInput(homeInput.value);
                 }
+                
+                if (!coords) {
+                    alert('Could not parse location. Please check the format or try coordinates.');
+                    return;
+                }
+                
+                currentHomeCoords = coords;
+                
+                const results = await calculateTrackCommute(trackData, coords);
+                currentResults = results;
+                displayResults(results, coords);
             } catch (error) {
                 console.error('Calculation error:', error);
                 alert('An error occurred: ' + error.message);
@@ -858,12 +599,16 @@
             } catch (error) {}
             return null;
         }
-                
+        
+        // ============================================
+        // GEOCODING - NEW IN V2.1
+        // ============================================
+        
         async function geocodeAddress(address) {
             const statusDiv = document.getElementById('geocodeStatus');
             statusDiv.style.display = 'block';
             statusDiv.style.color = '#3b82f6';
-            statusDiv.textContent = 'Looking up address...';
+            statusDiv.textContent = '🔍 Looking up address...';
             
             try {
                 // Use Nominatim (OpenStreetMap) geocoding API
@@ -875,7 +620,7 @@
                 
                 const response = await fetch(url, {
                     headers: {
-                        'User-Agent': 'NSU-Commute-Optimizer/2.2'
+                        'User-Agent': 'NSU-Commute-Optimizer/2.1'
                     }
                 });
                 
@@ -887,7 +632,7 @@
                 
                 if (results.length === 0) {
                     statusDiv.style.color = '#ef4444';
-                    statusDiv.textContent = 'Address not found. Try a more specific address or use coordinates.';
+                    statusDiv.textContent = '❌ Address not found. Try a more specific address or use coordinates.';
                     return null;
                 }
                 
@@ -900,7 +645,7 @@
                 
                 if (southFloridaResults.length === 0) {
                     statusDiv.style.color = '#f59e0b';
-                    statusDiv.textContent = 'Address found but outside South Florida region. Please enter a South Florida address.';
+                    statusDiv.textContent = '⚠️ Address found but outside South Florida region. Please enter a South Florida address.';
                     return null;
                 }
                 
@@ -912,7 +657,7 @@
                 };
                 
                 statusDiv.style.color = '#10b981';
-                statusDiv.textContent = `Found: ${best.display_name}`;
+                statusDiv.textContent = `✅ Found: ${best.display_name}`;
                 
                 console.log('Geocoded address:', best.display_name, coords);
                 
@@ -921,7 +666,7 @@
             } catch (error) {
                 console.error('Geocoding error:', error);
                 statusDiv.style.color = '#ef4444';
-                statusDiv.textContent = 'Error looking up address. Try using coordinates instead.';
+                statusDiv.textContent = '❌ Error looking up address. Try using coordinates instead.';
                 return null;
             }
         }
@@ -956,7 +701,7 @@
                 const statusDiv = document.getElementById('geocodeStatus');
                 statusDiv.style.display = 'block';
                 statusDiv.style.color = '#10b981';
-                statusDiv.textContent = 'Using coordinates';
+                statusDiv.textContent = '✅ Using coordinates';
                 return coords;
             }
             
@@ -969,7 +714,7 @@
             const statusDiv = document.getElementById('geocodeStatus');
             statusDiv.style.display = 'block';
             statusDiv.style.color = '#ef4444';
-            statusDiv.textContent = 'Invalid format. Use "123 Main St, City, FL" or "26.082, -80.249"';
+            statusDiv.textContent = '❌ Invalid format. Use "123 Main St, City, FL" or "26.082, -80.249"';
             return null;
         }
         
@@ -1140,8 +885,12 @@
             return bestLocation || topCandidates[0].coords;
         }
         
+        // ============================================
+        // INTERACTIVE MAPPING - NEW IN V2.1
+        // ============================================
         
-        function initializeMap(homeCoords, clinicalSites, results) {
+        function initializeMap(homeCoords, clinicalSites) {
+            // Remove old map if exists
             if (mapInstance) {
                 mapInstance.remove();
             }
@@ -1179,66 +928,24 @@
             
             // Add home marker
             L.marker([homeCoords.lat, homeCoords.lng], { icon: homeIcon })
-                .bindPopup(`<strong>Your Home</strong><br>${homeCoords.lat.toFixed(4)}, ${homeCoords.lng.toFixed(4)}`)
+                .bindPopup(`<strong>🏠 Your Home</strong><br>${homeCoords.lat.toFixed(4)}, ${homeCoords.lng.toFixed(4)}`)
                 .addTo(mapInstance);
             
             // Add NSU campus marker
             L.marker([NSU_COORDS.lat, NSU_COORDS.lng], { icon: nsuIcon })
-                .bindPopup(`<strong>NSU Campus</strong><br>Dr. Kiran C. Patel College of Osteopathic Medicine`)
+                .bindPopup(`<strong>🎓 NSU Campus</strong><br>Dr. Kiran C. Patel College of Osteopathic Medicine`)
                 .addTo(mapInstance);
             
-			// Calculate weeks at each site from blockDetails
-			const siteWeeks = {};
-			results.blockDetails.forEach(block => {
-				const varData = variance[block.block];
-				if (varData && varData.Locations) {
-					const blockSites = varData.Locations.split(',').map(l => l.trim()).filter(Boolean);
-					const weeksPerSite = block.weeks / blockSites.length;
-					
-					blockSites.forEach(siteName => {
-						// Skip Nemours
-						if (!siteName.toLowerCase().includes('nemours')) {
-							siteWeeks[siteName] = (siteWeeks[siteName] || 0) + weeksPerSite;
-						}
-					});
-				}
-				
-				if (block.isPediatrics && block.week4Details) {
-					block.week4Details.forEach(detail => {
-						const weeksForThisSite = detail.days === 'Fri' ? 0.2 : 0.4; // Rough estimate
-						siteWeeks[detail.location] = (siteWeeks[detail.location] || 0) + weeksForThisSite;
-					});
-				}
-			});
-
-			// Add clinical site markers with size/intensity based on weeks
-			clinicalSites.forEach(site => {
-				const coords = locations[site];
-				if (coords) {
-					const weeks = siteWeeks[site] || 0;
-					const size = 12 + (weeks * 1.5); // 12-28px range
-					const opacity = 0.4 + (weeks / 32); // 0.4-1.0 range
-					
-					const heatIcon = L.divIcon({
-						className: 'custom-div-icon',
-						html: `<div style="
-							background: rgba(59, 130, 246, ${opacity}); 
-							width: ${size}px; 
-							height: ${size}px; 
-							border-radius: 50%;
-							border: 2px solid white;
-							box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-						"></div>`,
-						iconSize: [size, size],
-						iconAnchor: [size/2, size/2]
-					});
-					
-					L.marker([coords.lat, coords.lng], { icon: heatIcon })
-						.bindPopup(`<strong>${site}</strong><br>${weeks.toFixed(1)} weeks at this site<br>${coords.lat.toFixed(4)}, ${coords.lng.toFixed(4)}`)
-						.addTo(mapInstance);
-				}
-			});
-			
+            // Add clinical site markers
+            clinicalSites.forEach(site => {
+                const coords = locations[site];
+                if (coords) {
+                    L.marker([coords.lat, coords.lng], { icon: clinicalIcon })
+                        .bindPopup(`<strong>🏥 ${site}</strong><br>${coords.lat.toFixed(4)}, ${coords.lng.toFixed(4)}`)
+                        .addTo(mapInstance);
+                }
+            });
+            
             // Create bounds to fit all markers
             const allPoints = [
                 [homeCoords.lat, homeCoords.lng],
@@ -1249,13 +956,6 @@
             const bounds = L.latLngBounds(allPoints);
             mapInstance.fitBounds(bounds, { padding: [50, 50] });
             
-            // Force map to recalculate size (fixes gray tile issue)
-            setTimeout(() => {
-                if (mapInstance) {
-                    mapInstance.invalidateSize();
-                }
-            }, 100);
-            
             // Add legend
             const legend = L.control({ position: 'bottomright' });
             legend.onAdd = function() {
@@ -1265,10 +965,10 @@
                         <span class="legend-marker" style="background: #10b981;"></span>
                         <span>Your Home</span>
                     </div>
-					<div class="legend-item">
-						<span class="legend-marker" style="background: rgba(59, 130, 246, 0.5); width: 12px; height: 12px;"></span>
-						<span>Clinical Sites (size = time spent)</span>
-					</div>
+                    <div class="legend-item">
+                        <span class="legend-marker" style="background: #3b82f6;"></span>
+                        <span>Clinical Sites</span>
+                    </div>
                     <div class="legend-item">
                         <span class="legend-marker" style="background: #f59e0b;"></span>
                         <span>NSU Campus</span>
@@ -1371,7 +1071,7 @@
             `).join('');
             
             // Initialize map with locations
-            initializeMap(homeCoords, Array.from(usedSites), results);
+            initializeMap(homeCoords, Array.from(usedSites));
             
             document.getElementById('results').classList.remove('hidden');
         }
