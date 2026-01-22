@@ -49,7 +49,7 @@ What You Can Do Now
 
 	-
 
-V2.0 - December 2025
+V2.0 - January 2026
 
 Initial Features
 - Track selection: Choose from 60 available tracks
