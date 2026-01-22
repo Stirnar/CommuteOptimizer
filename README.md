@@ -1,6 +1,7 @@
 NSU Commute Optimizer V3
 
 Overview
+
 Enhanced version of the Medical Student Commute Optimizer with three major new features:
 1. Custom Block Builder - Create flexible rotation schedules with varying locations
 2. Backend-Ready Architecture - Easily deployable with dynamic CSV updates
