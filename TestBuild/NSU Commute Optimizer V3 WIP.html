@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Student Commute Optimizer - NSU</title>
+    <script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(to bottom right, #f0f9ff, #e0f2fe);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container { max-width: 1400px; margin: 0 auto; }
+        
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+        
+        h1 { font-size: 32px; font-weight: bold; color: #1e40af; margin-bottom: 8px; }
+        h3 { font-size: 18px; font-weight: 600; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+        .subtitle { color: #64748b; margin-bottom: 24px; }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+        
+        .form-group { display: flex; flex-direction: column; }
+        label { font-weight: 600; margin-bottom: 8px; color: #334155; }
+        
+        select, input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: 2px solid #e2e8f0;
+            font-size: 14px;
+        }
+        
+        .helper-text { font-size: 12px; color: #64748b; margin-top: 4px; }
+        
+        button {
+            background: #3b82f6;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:disabled { background: #94a3b8; cursor: not-allowed; }
+        button:hover:not(:disabled) { background: #2563eb; }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .stat-value { font-size: 28px; font-weight: bold; margin-top: 8px; }
+        
+        .results-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 24px;
+        }
+        
+        .cost-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px;
+            background: #f0fdf4;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+        .cost-sub { font-size: 12px; color: #64748b; margin-left: 12px; margin-bottom: 12px; }
+        
+        .block-item {
+            padding: 12px;
+            background: #f8fafc;
+            border-radius: 8px;
+            border-left: 4px solid #3b82f6;
+            margin-bottom: 12px;
+        }
+        
+        .site-item {
+            padding: 8px;
+            background: #f1f5f9;
+            border-radius: 6px;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+        
+        .hidden { display: none; }
+        #loading { text-align: center; padding: 40px; color: #64748b; }
+        
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.5);
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            padding: 20px;
+        }
+        .modal.show { display: flex; }
+        .modal-content {
+            background: white;
+            padding: 32px;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 800px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        
+        .modal-input-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px;
+            background: #f8fafc;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+        .modal-input-group input { width: 100px; padding: 4px 8px; }
+        
+        ul.methodology { color: #64748b; font-size: 14px; line-height: 1.8; padding-left: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Medical Student Commute Optimizer</h1>
+            <p class="subtitle">Calculate your clinical rotation commute burden</p>
+            
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Select Your Track</label>
+                    <select id="trackSelect">
+                        <option value="">Choose a track...</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Home Location (Latitude, Longitude) - Optional</label>
+                    <input type="text" id="homeInput" placeholder="e.g., 26.082, -80.249">
+                    <span class="helper-text">Leave blank to find optimal location</span>
+                </div>
+            </div>
+            
+            <button id="calculateBtn">Calculate Commute Burden</button>
+            <p id="optimalNote" class="helper-text hidden" style="margin-top: 8px;">
+                No home location provided - will find optimal location (this takes a while)
+            </p>
+        </div>
+        
+        <div id="loading" class="hidden">
+            <h2>Calculating routes...</h2>
+            <p>This may take a moment. Please wait.</p>
+        </div>
+        
+        <div id="results" class="hidden">
+            <div class="stats-grid" id="statsGrid"></div>
+            
+            <div class="results-grid">
+                <div>
+                    <div class="card">
+                        <h3>Costs</h3>
+                        <div id="costsContent"></div>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Clinical Sites & Your Location</h3>
+                        <div style="padding: 16px; background: #f8fafc; borderRadius: 8px; margin-bottom: 16px;">
+                            <div id="homeLocDisplay" style="margin-bottom: 8px; font-weight: 500; color: #10b981;"></div>
+                            <div style="font-weight: 500; color: #3b82f6;">NSU Campus: 26.082, -80.249</div>
+                        </div>
+                        <div style="font-size: 14px; font-weight: 600; margin-bottom: 12px; color: #475569;">
+                            Clinical Sites Used in Your Track:
+                        </div>
+                        <div id="sitesContent" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; max-height: 400px; overflow-y: auto;"></div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>Track Blocks</h3>
+                    <div id="blocksContent" style="max-height: 600px; overflow-y: auto;"></div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <button id="sourcesBtn">View Data Sources & Adjust Cost Parameters</button>
+            </div>
+        </div>
+        
+        <div class="card" style="margin-top: 32px; text-align: center; color: #64748b; font-size: 14px;">
+            Developed by Skyler Colwell
+        </div>
+    </div>
+    
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2 style="font-size: 24px; font-weight: bold; margin-bottom: 16px;">Data Sources & Methodology</h2>
+            
+            <div style="margin-bottom: 24px;">
+                <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px;">Cost Parameters (Editable)</h3>
+                <div id="costInputs">
+                    <div class="modal-input-group">
+                        <span>Gas Price per Gallon</span>
+                        <input type="number" id="inputGas" step="0.01">
+                    </div>
+                    <div class="modal-input-group">
+                        <span>Miles per Gallon</span>
+                        <input type="number" id="inputMpg">
+                    </div>
+                    <div class="modal-input-group">
+                        <span>Car Maintenance ($/mile)</span>
+                        <input type="number" id="inputMaint" step="0.0001">
+                    </div>
+                    <div class="modal-input-group">
+                        <span>Resident Salary (Annual)</span>
+                        <input type="number" id="inputSalary" step="1000">
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 24px;">
+                <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px;">Calculation Methodology</h3>
+                <ul class="methodology">
+                    <li>Routes calculated using OpenStreetMap OSRM</li>
+                    <li>Wednesday campus trips: Home â†’ Site â†’ School â†’ Home (3 legs)</li>
+                    <li>Regular days: Home â†’ Site â†’ Home (2 legs)</li>
+                    <li>Blocks at Nemours = 0 commute (on-site housing)</li>
+                    <li>Car maintenance cost: $0.0986/mile (AAA average)</li>
+                    <li>UWorld questions: 1.5 minutes per question average</li>
+                    <li>Opportunity cost: Resident hourly rate = Annual salary Ã· (52 weeks Ã— 60 hrs/week)</li>
+                    <li>Optimal location: If no home location provided, system tests 500 points across South Florida to find location that minimizes total commute hours</li>
+                </ul>
+            </div>
+            
+            <button id="closeModal">Close</button>
+        </div>
+    </div>
+
+    <script>
+        //  EMBEDDED CSV DATA (bad practice, but I didn't want people to also have to download the CSVs
+        
+        const LOCATIONS_CSV = `Locations,Coordinates
+Kendall,"25.731069957230403, -80.38628700352972"
+Westside,"26.123668204117724, -80.25947981701404"
+Northwest,"26.263042528913687, -80.20276918880472"
+Aventura,"25.97038210912737, -80.14554911625011"
+Nemours,"28.37665587316434, -81.27300731843543"
+WestPalm,"26.684214000482726, -80.2513854261201"
+Boynton,"26.515183620358176, -80.14963755131183"
+University,"26.077745784148576, -80.24936930062212"
+JFK,"26.761656389960226, -80.08762409978341"
+Mercy,"25.74014640539288, -80.21343487469416"
+Mount Sinai Miami Beach,"25.81306508820689, -80.14139127708835"
+Leading,"26.125202665806643, -80.24158939943842"
+Eye,"26.110122990399873, -80.26011847468521"`;
+
+        const TRACKS_CSV = `
+Current Track,Apr-26 (03/30/26-04/24/26),May-26 (04/27/26-05/22/26),Jun-26 (05/25/26-06/19/26),Aug-26 (07/27/26-08/21/26),Sep-26 (08/24/26-09/18/26),Oct-26 (09/21/26-10/16/26),Nov-26 (10/19/26-11/13/26),Jan-27 (01/04/27-01/29/27),Feb-27 (02/01/27-02/26/27),Mar-27 (03/01/27-03/26/27)
+Track 1,Radiology Clerkship @ HCA Florida Kendall Hospital,Internal Medicine Clerkship @ HCA Florida Westside Hospital,Internal Medicine Clerkship @ HCA Florida Westside Hospital,Surgery Clerkship @ HCA Florida Aventura Hospital,Surgery Clerkship @ HCA Florida Aventura Hospital,Pediatrics Clerkship @ Nemours Children's Hospital,Primary Care Medicine Clerkship @ To Be Determined,Obstetrics and Gynecology Clerkship @ To Be Determined,Psychiatry Clerkship @ HCA Florida JFK North Hospital,Surgical Selective (Burn) @ HCA Florida Kendall Hospital
+Track 2,Radiology Clerkship @ HCA Florida Westside Hospital,Psychiatry Clerkship @ HCA Florida Aventura Hospital,Pediatrics Clerkship @ Nemours Children's Hospital,Surgery Clerkship @ HCA Florida Aventura Hospital,Surgery Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Westside Hospital,Internal Medicine Clerkship @ HCA Florida Westside Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined,Primary Care Medicine Clerkship @ To Be Determined,Surgical Selective (Surg Onc) @ HCA Florida Mercy Hospital
+Track 3,Infectious Disease Selective @ HCA Florida Kendall Hospital,Radiology Clerkship @ HCA Florida Kendall Hospital,Primary Care Medicine Clerkship @ To Be Determined,Surgery Clerkship @ HCA Florida Aventura Hospital,Surgery Clerkship @ HCA Florida Aventura Hospital,Psychiatry Clerkship @ HCA Florida Aventura Hospital,Pediatrics Clerkship @ Nemours Children's Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined,Internal Medicine Clerkship @ HCA Florida Westside Hospital,Internal Medicine Clerkship @ HCA Florida Westside Hospital
+Track 4,Surgery Clerkship @ HCA Florida Kendall Hospital,Surgery Clerkship @ HCA Florida Kendall Hospital,Pediatrics Clerkship @ Nemours Children's Hospital,Internal Medicine Clerkship @ HCA Florida Westside Hospital,Internal Medicine Clerkship @ HCA Florida Westside Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined,Primary Care Medicine Clerkship @ To Be Determined,Radiology Clerkship @ HCA Florida Westside Hospital,Psychiatry Clerkship @ HCA Florida JFK North Hospital,Nephrology Selective @ HCA Florida Westside Hospital
+Track 5,Surgery Clerkship @ HCA Florida Kendall Hospital,Surgery Clerkship @ HCA Florida Kendall Hospital,Radiology Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Westside Hospital,Internal Medicine Clerkship @ HCA Florida Westside Hospital,Pediatrics Clerkship @ Nemours Children's Hospital,Primary Care Medicine Clerkship @ To Be Determined,Obstetrics and Gynecology Clerkship @ To Be Determined,Psychiatry Clerkship @ HCA Florida JFK North Hospital,Trauma Surgery/Surgical Critical Care Selective @ HCA Florida Kendall Hospital
+Track 6,Urology Selective @ Mount Sinai Miami Beach,Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Radiology Clerkship @ HCA Florida Kendall Hospital,Primary Care Medicine Clerkship @ To Be Determined,Surgery Clerkship @ HCA Florida Aventura Hospital,Surgery Clerkship @ HCA Florida Aventura Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined,Pediatrics Clerkship @ Nemours Children's Hospital,Psychiatry Clerkship @ HCA Florida JFK North Hospital
+Track 7,Obstetrics and Gynecology Clerkship @ To Be Determined,Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Radiology Clerkship @ HCA Florida Westside Hospital,Pediatrics Clerkship @ Nemours Children's Hospital,Surgery Clerkship @ HCA Florida Aventura Hospital,Surgery Clerkship @ HCA Florida Aventura Hospital,Primary Care Medicine Clerkship @ To Be Determined,Surgical Intensive Care Unit Selective @ HCA Florida Kendall Hospital,Psychiatry Clerkship @ HCA Florida JFK North Hospital
+Track 8,Obstetrics and Gynecology Clerkship @ To Be Determined,Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Primary Care Medicine Clerkship @ To Be Determined,Pediatrics Clerkship @ Nemours Children's Hospital,Surgery Clerkship @ HCA Florida Aventura Hospital,Surgery Clerkship @ HCA Florida Aventura Hospital,Surgical Selective (Plastics) @ HCA Florida Kendall Hospital,Radiology Clerkship @ HCA Florida Aventura Hospital,Psychiatry Clerkship @ HCA Florida JFK North Hospital
+Track 11,Obstetrics and Gynecology Clerkship @ To Be Determined,Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Psychiatry Clerkship @ HCA Florida JFK North Hospital,Nephrology Selective @ HCA Florida Westside Hospital,Radiology Clerkship @ HCA Florida Westside Hospital,Pediatrics Clerkship @ Nemours Children's Hospital,Surgery Clerkship @ HCA Florida Aventura Hospital,Surgery Clerkship @ HCA Florida Aventura Hospital,Primary Care Medicine Clerkship @ To Be Determined
+Track 12,Primary Care Medicine Clerkship @ To Be Determined,Neonatal Intensive Care Unit Selective @ HCA Florida Mercy Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined,Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Pediatrics Clerkship @ Nemours Children's Hospital,Radiology Clerkship @ HCA Florida Kendall Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Psychiatry Clerkship @ HCA Florida Aventura Hospital
+Track 13,Surgery Clerkship @ HCA Florida Kendall Hospital,Surgery Clerkship @ HCA Florida Kendall Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined,Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Pediatrics Clerkship @ Nemours Children's Hospital,Radiology Clerkship @ HCA Florida Westside Hospital,Primary Care Medicine Clerkship @ To Be Determined,Psychiatry Clerkship @ HCA Florida Aventura Hospital,Surgical Intensive Care Unit Selective @ HCA Florida Kendall Hospital
+Track 14,Surgery Clerkship @ HCA Florida Westside Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Psychiatry Clerkship @ HCA Florida JFK North Hospital,Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Primary Care Medicine Clerkship @ To Be Determined,Pediatrics Clerkship @ Nemours Children's Hospital,Anesthesia Selective (Kendall) @ HCA Florida Kendall Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined,Radiology Clerkship @ HCA Florida Kendall Hospital
+Track 15,Surgery Clerkship @ HCA Florida Westside Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Radiology Clerkship @ HCA Florida Westside Hospital,Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Pediatrics Clerkship @ Nemours Children's Hospital,Surgical Intensive Care Unit Selective @ HCA Florida Kendall Hospital,Primary Care Medicine Clerkship @ To Be Determined,Obstetrics and Gynecology Clerkship @ To Be Determined,Psychiatry Clerkship @ HCA Florida JFK North Hospital
+Track 16,Surgery Clerkship @ HCA Florida Westside Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Psychiatry Clerkship @ HCA Florida JFK North Hospital,Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Pediatrics Clerkship @ Nemours Children's Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined,Primary Care Medicine Clerkship @ To Be Determined,Radiology Clerkship @ HCA Florida Kendall Hospital,Anesthesia Selective (Westside) @ HCA Florida Westside Hospital
+Track 17,Surgery Clerkship @ HCA Florida Westside Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Psychiatry Clerkship @ HCA Florida JFK North Hospital,Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Pediatrics Clerkship @ Nemours Children's Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined,Primary Care Medicine Clerkship @ To Be Determined,Radiology Clerkship @ HCA Florida Westside Hospital,Anesthesia Selective (Westside) @ HCA Florida Westside Hospital
+Track 18,Obstetrics and Gynecology Clerkship @ To Be Determined,Radiology Clerkship @ HCA Florida Westside Hospital,Pediatrics Clerkship @ Nemours Children's Hospital,Surgery Clerkship @ HCA Florida Kendall Hospital,Surgery Clerkship @ HCA Florida Kendall Hospital,Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Primary Care Medicine Clerkship @ To Be Determined,Psychiatry Clerkship @ HCA Florida Aventura Hospital,Anesthesia Selective (Kendall) @ HCA Florida Kendall Hospital
+Track 19,Psychiatry Clerkship @ HCA Florida JFK North Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined,Radiology Clerkship @ HCA Florida Aventura Hospital,Pediatrics Clerkship @ Nemours Children's Hospital,Anesthesia Selective (Westside) @ HCA Florida Westside Hospital,Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Primary Care Medicine Clerkship @ To Be Determined
+Track 20,Primary Care Medicine Clerkship @ To Be Determined,Obstetrics and Gynecology Clerkship @ To Be Determined,Pediatrics Clerkship @ Nemours Children's Hospital,Surgery Clerkship @ HCA Florida Kendall Hospital,Surgery Clerkship @ HCA Florida Kendall Hospital,Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Psychiatry Clerkship @ HCA Florida JFK North Hospital,Trauma Surgery/Surgical Critical Care Selective @ HCA Florida Kendall Hospital,Radiology Clerkship @ HCA Florida Westside Hospital
+Track 21,Radiology Clerkship @ HCA Florida Aventura Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined,Pediatrics Clerkship @ Nemours Children's Hospital,Surgery Clerkship @ HCA Florida Kendall Hospital,Surgery Clerkship @ HCA Florida Kendall Hospital,Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Psychiatry Clerkship @ HCA Florida JFK North Hospital,Anesthesia Selective (Kendall) @ HCA Florida Kendall Hospital,Primary Care Medicine Clerkship @ To Be Determined
+Track 22,Radiology Clerkship @ HCA Florida Aventura Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined,Dermatology Selective @ Leading Edge Dermatology,Surgery Clerkship @ HCA Florida Kendall Hospital,Surgery Clerkship @ HCA Florida Kendall Hospital,Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Psychiatry Clerkship @ HCA Florida JFK North Hospital,Pediatrics Clerkship @ Nemours Children's Hospital,Primary Care Medicine Clerkship @ To Be Determined
+Track 23,Primary Care Medicine Clerkship @ To Be Determined,Psychiatry Clerkship @ HCA Florida JFK North Hospital,Infectious Disease Selective @ HCA Florida Kendall Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined,Pediatrics Clerkship @ Nemours Children's Hospital,Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Surgery Clerkship @ HCA Florida Kendall Hospital,Surgery Clerkship @ HCA Florida Kendall Hospital,Radiology Clerkship @ HCA Florida Aventura Hospital
+Track 24,Radiology Clerkship @ HCA Florida Aventura Hospital,Anesthesia Selective (Kendall) @ HCA Florida Kendall Hospital,Primary Care Medicine Clerkship @ To Be Determined,Psychiatry Clerkship @ HCA Florida JFK North Hospital,Pediatrics Clerkship @ Nemours Children's Hospital,Surgery Clerkship @ HCA Florida Kendall Hospital,Surgery Clerkship @ HCA Florida Kendall Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined,Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Internal Medicine Clerkship @ HCA Florida Kendall Hospital
+Track 25,Primary Care Medicine Clerkship @ To Be Determined,Radiology Clerkship @ HCA Florida Aventura Hospital,Pulmonology Selective @ HCA Florida Aventura Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined,Pediatrics Clerkship @ Nemours Children's Hospital,Surgery Clerkship @ HCA Florida Kendall Hospital,Surgery Clerkship @ HCA Florida Kendall Hospital,Psychiatry Clerkship @ HCA Florida JFK North Hospital,Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Internal Medicine Clerkship @ HCA Florida Kendall Hospital
+Track 26,Primary Care Medicine Clerkship @ To Be Determined,Radiology Clerkship @ HCA Florida Aventura Hospital,Urology Selective @ Mount Sinai Miami Beach,Obstetrics and Gynecology Clerkship @ To Be Determined,Psychiatry Clerkship @ HCA Florida JFK North Hospital,Surgery Clerkship @ HCA Florida Kendall Hospital,Surgery Clerkship @ HCA Florida Kendall Hospital,Pediatrics Clerkship @ Nemours Children's Hospital,Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Internal Medicine Clerkship @ HCA Florida Kendall Hospital
+Track 27,Pediatrics Clerkship @ Nemours Children's Hospital,Radiology Clerkship @ HCA Florida Aventura Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined,Primary Care Medicine Clerkship @ To Be Determined,Psychiatry Clerkship @ HCA Florida JFK North Hospital,Surgery Clerkship @ HCA Florida Kendall Hospital,Surgery Clerkship @ HCA Florida Kendall Hospital,Trauma Surgery/Surgical Critical Care Selective @ HCA Florida Kendall Hospital,Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Internal Medicine Clerkship @ HCA Florida Kendall Hospital
+Track 28,Primary Care Medicine Clerkship @ To Be Determined,Radiology Clerkship @ HCA Florida Aventura Hospital,Psychiatry Clerkship @ HCA Florida Aventura Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined,Neonatal Intensive Care Unit Selective @ HCA Florida Mercy Hospital,Surgery Clerkship @ HCA Florida Kendall Hospital,Surgery Clerkship @ HCA Florida Kendall Hospital,Pediatrics Clerkship @ Nemours Children's Hospital,Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Internal Medicine Clerkship @ HCA Florida Kendall Hospital
+Track 30,Primary Care Medicine Clerkship @ Aventura,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Radiology Clerkship @ HCA Florida Aventura Hospital,Pediatrics Clerkship @ Nemours Children's Hospital,Psychiatry Clerkship @ HCA Florida JFK North Hospital,Anesthesia Selective (Westside) @ HCA Florida Westside Hospital,Surgery Clerkship @ HCA Florida Kendall Hospital,Surgery Clerkship @ HCA Florida Kendall Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined
+Track 31,Pediatrics Clerkship @ Nemours Children's Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Radiology Clerkship @ HCA Florida Aventura Hospital,Primary Care Medicine Clerkship @ To Be Determined,Psychiatry Clerkship @ HCA Florida JFK North Hospital,Neonatal Intensive Care Unit Selective @ HCA Florida Mercy Hospital,Surgery Clerkship @ HCA Florida Kendall Hospital,Surgery Clerkship @ HCA Florida Kendall Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined
+Track 32,Pediatrics Clerkship @ Nemours Children's Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Primary Care Medicine Clerkship @ To Be Determined,Radiology Clerkship @ HCA Florida Aventura Hospital,Psychiatry Clerkship @ HCA Florida Aventura Hospital,Cardiology Selective @ HCA Florida Kendall Hospital,Surgery Clerkship @ HCA Florida Kendall Hospital,Surgery Clerkship @ HCA Florida Kendall Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined
+Track 33,Anesthesia Selective (Westside) @ HCA Florida Westside Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Radiology Clerkship @ HCA Florida Aventura Hospital,Primary Care Medicine Clerkship @ To Be Determined,Psychiatry Clerkship @ HCA Florida Aventura Hospital,Pediatrics Clerkship @ Nemours Children's Hospital,Surgery Clerkship @ HCA Florida Kendall Hospital,Surgery Clerkship @ HCA Florida Kendall Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined
+Track 34,Pediatrics Clerkship @ Nemours Children's Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Primary Care Medicine Clerkship @ To Be Determined,Psychiatry Clerkship @ HCA Florida JFK North Hospital,Anesthesia Selective (Kendall) @ HCA Florida Kendall Hospital,Radiology Clerkship @ HCA Florida Aventura Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined
+Track 35,Pediatrics Clerkship @ Nemours Children's Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Primary Care Medicine Clerkship @ Aventura,Psychiatry Clerkship @ HCA Florida Aventura Hospital,Pulmonology Selective @ HCA Florida Aventura Hospital,Radiology Clerkship @ HCA Florida Aventura Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined
+Track 36,Pediatrics Clerkship @ Nemours Children's Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Radiology Clerkship @ HCA Florida Aventura Hospital,Psychiatry Clerkship @ HCA Florida Aventura Hospital,Surgical Selective (Ortho) @ HCA Florida Kendall Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined,Primary Care Medicine Clerkship @ To Be Determined
+Track 37,Anesthesia Selective (Kendall) @ HCA Florida Kendall Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Radiology Clerkship @ HCA Florida Aventura Hospital,Psychiatry Clerkship @ HCA Florida Aventura Hospital,Pediatrics Clerkship @ Nemours Children's Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined,Primary Care Medicine Clerkship @ To Be Determined
+Track 38,Surgery Clerkship @ HCA Florida Westside Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Radiology Clerkship @ HCA Florida Kendall Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Primary Care Medicine Clerkship @ To Be Determined,Obstetrics and Gynecology Clerkship @ To Be Determined,Pediatrics Clerkship @ Nemours Children's Hospital,Anesthesia Selective (Kendall) @ HCA Florida Kendall Hospital,Psychiatry Clerkship @ HCA Florida Aventura Hospital
+Track 39,Surgery Clerkship @ HCA Florida Aventura Hospital,Surgery Clerkship @ HCA Florida Aventura Hospital,Psychiatry Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Radiology Clerkship @ HCA Florida Aventura Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined,Pediatrics Clerkship @ Nemours Children's Hospital,Anesthesia Selective (Westside) @ HCA Florida Westside Hospital,Primary Care Medicine Clerkship @ To Be Determined
+Track 40,Surgery Clerkship @ HCA Florida Aventura Hospital,Surgery Clerkship @ HCA Florida Aventura Hospital,Psychiatry Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Radiology Clerkship @ HCA Florida Aventura Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined,Pediatrics Clerkship @ Nemours Children's Hospital,Primary Care Medicine Clerkship @ To Be Determined,Anesthesia Selective (Kendall) @ HCA Florida Kendall Hospital
+Track 41,Surgery Clerkship @ HCA Florida Westside Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Primary Care Medicine Clerkship @ To Be Determined,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Trauma Surgery/Surgical Critical Care Selective @ HCA Florida Kendall Hospital,Radiology Clerkship @ HCA Florida Aventura Hospital,Pediatrics Clerkship @ Nemours Children's Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined,Psychiatry Clerkship @ HCA Florida Aventura Hospital
+Track 42,Surgery Clerkship @ HCA Florida Kendall Hospital,Surgery Clerkship @ HCA Florida Kendall Hospital,Psychiatry Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined,Radiology Clerkship @ HCA Florida Aventura Hospital,Surgical Intensive Care Unit Selective @ HCA Florida Kendall Hospital,Primary Care Medicine Clerkship @ To Be Determined,Pediatrics Clerkship @ Nemours Children's Hospital
+Track 43,Psychiatry Clerkship @ HCA Florida JFK North Hospital,Primary Care Medicine Clerkship @ To Be Determined,Neonatal Intensive Care Unit Selective @ HCA Florida Mercy Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined,Radiology Clerkship @ HCA Florida Aventura Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Pediatrics Clerkship @ Nemours Children's Hospital
+Track 44,Surgery Clerkship @ HCA Florida Kendall Hospital,Surgery Clerkship @ HCA Florida Kendall Hospital,Psychiatry Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined,Radiology Clerkship @ HCA Florida Aventura Hospital,Anesthesia Selective (Westside) @ HCA Florida Westside Hospital,Primary Care Medicine Clerkship @ To Be Determined,Pediatrics Clerkship @ Nemours Children's Hospital
+Track 45,Obstetrics and Gynecology Clerkship @ To Be Determined,Psychiatry Clerkship @ HCA Florida JFK North Hospital,Ophthalmology Selective @ Ft. Lauderdale Eye Institute,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Radiology Clerkship @ HCA Florida Aventura Hospital,Primary Care Medicine Clerkship @ To Be Determined,Pediatrics Clerkship @ Nemours Children's Hospital
+Track 46,Psychiatry Clerkship @ HCA Florida Aventura Hospital,Obstetrics and Gynecology Clerkship @ University Hospital,Neurology Selective @ HCA Florida Westside Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Radiology Clerkship @ HCA Florida Aventura Hospital,Primary Care Medicine Clerkship @ Aventura,Pediatrics Clerkship @ Nemours Children's Hospital
+Track 47,Neonatal Intensive Care Unit Selective @ HCA Florida Mercy Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined,Radiology Clerkship @ HCA Florida Aventura Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Primary Care Medicine Clerkship @ To Be Determined,Pediatrics Clerkship @ Nemours Children's Hospital,Psychiatry Clerkship @ HCA Florida Aventura Hospital
+Track 48,Dermatology Selective @ Leading Edge Dermatology,Primary Care Medicine Clerkship @ To Be Determined,Psychiatry Clerkship @ HCA Florida JFK North Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Radiology Clerkship @ HCA Florida Aventura Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined,Pediatrics Clerkship @ Nemours Children's Hospital
+Track 49,Psychiatry Clerkship @ HCA Florida Aventura Hospital,Primary Care Medicine Clerkship @ To Be Determined,Obstetrics and Gynecology Clerkship @ To Be Determined,Surgery Clerkship @ HCA Florida Westside Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Anesthesia Selective (Westside) @ HCA Florida Westside Hospital,Radiology Clerkship @ HCA Florida Aventura Hospital,Pediatrics Clerkship @ Nemours Children's Hospital
+Track 50,Psychiatry Clerkship @ HCA Florida Aventura Hospital,Primary Care Medicine Clerkship @ To Be Determined,Pediatrics Clerkship @ Nemours Children's Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined,Cardiology Selective @ HCA Florida Kendall Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Radiology Clerkship @ HCA Florida Aventura Hospital
+Track 51,Ophthalmology Selective @ Ft. Lauderdale Eye Institute,Primary Care Medicine Clerkship @ To Be Determined,Pediatrics Clerkship @ Nemours Children's Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined,Radiology Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Psychiatry Clerkship @ HCA Florida Aventura Hospital
+Track 52,Psychiatry Clerkship @ HCA Florida Aventura Hospital,Pediatrics Clerkship @ Nemours Children's Hospital,Pathology Selective @ HCA Florida Westside Hospital,Primary Care Medicine Clerkship @ To Be Determined,Obstetrics and Gynecology Clerkship @ To Be Determined,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Radiology Clerkship @ HCA Florida Aventura Hospital
+Track 53,Psychiatry Clerkship @ HCA Florida JFK North Hospital,Pediatrics Clerkship @ Nemours Children's Hospital,Anesthesia Selective (Westside) @ HCA Florida Westside Hospital,Primary Care Medicine Clerkship @ To Be Determined,Obstetrics and Gynecology Clerkship @ To Be Determined,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Radiology Clerkship @ HCA Florida Aventura Hospital
+Track 54,Psychiatry Clerkship @ HCA Florida JFK North Hospital,Pediatrics Clerkship @ Nemours Children's Hospital,Primary Care Medicine Clerkship @ To Be Determined,Anesthesia Selective (Westside) @ HCA Florida Westside Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined,Surgery Clerkship @ HCA Florida Westside Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Radiology Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital
+Track 55,Radiology Clerkship @ HCA Florida Aventura Hospital,Pediatrics Clerkship @ Nemours Children's Hospital,Primary Care Medicine Clerkship @ To Be Determined,Neurology Selective @ HCA Florida Westside Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined,Surgery Clerkship @ HCA Florida Westside Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Psychiatry Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital
+Track 56,Pulmonology Selective @ HCA Florida Aventura Hospital,Pediatrics Clerkship @ Nemours Children's Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined,Primary Care Medicine Clerkship @ To Be Determined,Radiology Clerkship @ HCA Florida Aventura Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Psychiatry Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital
+Track 57,Pathology Selective @ HCA Florida Westside Hospital,Pediatrics Clerkship @ Nemours Children's Hospital,Primary Care Medicine Clerkship @ To Be Determined,Radiology Clerkship @ HCA Florida Aventura Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined,Surgery Clerkship @ HCA Florida Westside Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Psychiatry Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital
+Track 58,Neurology Selective @ HCA Florida Westside Hospital,Pediatrics Clerkship @ Nemours Children's Hospital,Primary Care Medicine Clerkship @ To Be Determined,Psychiatry Clerkship @ HCA Florida Aventura Hospital,Radiology Clerkship @ HCA Florida Westside Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital
+Track 59,Psychiatry Clerkship @ HCA Florida Aventura Hospital,Primary Care Medicine Clerkship @ To Be Determined,Obstetrics and Gynecology Clerkship @ To Be Determined,Infectious Disease Selective @ HCA Florida Kendall Hospital,Pediatrics Clerkship @ Nemours Children's Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Radiology Clerkship @ HCA Florida Kendall Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital
+Track 60,Surgery Clerkship @ HCA Florida Westside Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Radiology Clerkship @ HCA Florida Aventura Hospital,Pediatrics Clerkship @ Nemours Children's Hospital,Obstetrics and Gynecology Clerkship @ To Be Determined,Surgical Intensive Care Unit Selective @ HCA Florida Kendall Hospital,Primary Care Medicine Clerkship @ To Be Determined,Psychiatry Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital
+Track 61,Surgery Clerkship @ HCA Florida Westside Hospital,Surgery Clerkship @ HCA Florida Westside Hospital,Trauma Surgery/Surgical Critical Care Selective @ HCA Florida Kendall Hospital,Pediatrics Clerkship @ Nemours Children's Hospital,Radiology Clerkship @ HCA Florida Kendall Hospital,Primary Care Medicine Clerkship @ To Be Determined,Obstetrics and Gynecology Clerkship @ To Be Determined,Psychiatry Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Internal Medicine Clerkship @ HCA Florida Aventura Hospital
+`;
+
+        const VARIANCE_CSV = `
+Block,Locations,Within Week Changes,Within Block Changes,Block Length (wks),Wednesday Exception
+Surgery Clerkship @ HCA Florida Kendall Hospital,Kendall,N/A,N/A,8,n
+Surgery Clerkship @ HCA Florida Westside Hospital,"Westside, Northwest",N/A,"4 weeks westside, 4 weeks northside",8,n
+Surgery Clerkship @ HCA Florida Aventura Hospital,Aventura,N/A,N/A,8,n
+Internal Medicine Clerkship @ HCA Florida Aventura Hospital,Aventura,N/A,N/A,8,n
+Internal Medicine Clerkship @ HCA Florida Westside Hospital,"Westside, Northwest",N/A,N/A,8,n
+Internal Medicine Clerkship @ HCA Florida Kendall Hospital,Kendall,N/A,N/A,8,n
+Pediatrics Clerkship @ Nemours Children's Hospital,"Nemours, WestPalm, Kendall,  Boynton, University","Yes. In week 4, mon-tues (either westpalm or kendall), weds-thurs (boynton), fri (University)","Yes. weeks 1-3 (nemours), week 4 (see within week changes)",4,y
+Psychiatry Clerkship @ HCA Florida JFK North Hospital,JFK,N/A,N/A,4,y
+Psychiatry Clerkship @ HCA Florida Aventura Hospital,Aventura,N/A,N/A,4,n
+Obstetrics and Gynecology Clerkship @ University Hospital,University,N/A,N/A,4,n
+Obstetrics and Gynecology Clerkship @ Northwest Hospital,Northwest,N/A,N/A,4,n
+Obstetrics and Gynecology Clerkship @ Mercy Hospital,Mercy,N/A,N/A,4,n
+Primary Care Medicine Clerkship @ Aventura,Aventura,N/A,N/A,4,n
+Primary Care Medicine Clerkship @ Kendall,Kendall,N/A,N/A,4,n
+Primary Care Medicine Clerkship @ JFK,JFK,N/A,N/A,4,n
+Radiology Clerkship @ HCA Florida Kendall Hospital,Kendall,N/A,N/A,4,n
+Radiology Clerkship @ HCA Florida Westside Hospital,"Westside, Northwest",N/A,"Yes. weeks 1-2 Westside, weeks 3-4 Northwest",4,n
+Radiology Clerkship @ HCA Florida Adventura Hospital,Aventura,N/A,N/A,4,n
+Surgical Selective (Burn) @ HCA Florida Kendall Hospital,Kendall,N/A,N/A,4,n
+Surgical Selective (Surg Onc) - @ HCA Florida Mercy Hospital,Mercy,N/A,N/A,4,n
+Infectious Disease Selective @ HCA Florida Kendall Hospital,Kendall,N/A,N/A,4,n
+Nephrology Selective @ HCA Florida Westside Hospital,Westside,N/A,N/A,4,n
+Trauma Surgery/Surgical Critical Care Selective @ HCA Florida Kendall Hospital,Kendall,N/A,N/A,4,n
+Urology Selective @ Mount Sinai Miami Beach,Mount Sinai Miami Beach,N/A,N/A,4,n
+Surgical Intensive Care Unit Selective @ HCA Florida Kendall Hospital,Kendall,N/A,N/A,4,n
+Surgical Selective (Plastics) @ HCA Florida Kendall Hospital,Kendall,N/A,N/A,4,n
+Nephrology Selective @ HCA Florida Westside Hospital,Westside,N/A,N/A,4,n
+Neonatal Intensive Care Unit Selective @ HCA Florida Mercy Hospital,Mercy,N/A,N/A,4,n
+Anesthesia Selective (Kendall) @ HCA Florida Kendall Hospital,Kendall,N/A,N/A,4,n
+Anesthesia Selective (Westside) @ HCA Florida Westside Hospital,Westside,N/A,N/A,4,n
+Dermatology Selective @ Leading Edge Dermatology,Leading,N/A,N/A,4,n
+Pulmonology Selective @ HCA Florida Aventura Hospital,Aventura,N/A,N/A,4,n
+Cardiology Selective @ HCA Florida Kendall Hospital,Kendall,N/A,N/A,4,n
+Surgical Selective (Ortho) @ HCA Florida Kendall Hospital,Kendall,N/A,N/A,4,n
+Ophthalmology Selective @ Ft. Lauderdale Eye Institute,Eye,N/A,N/A,4,n
+Neurology Selective @ HCA Florida Westside Hospital,Westside,N/A,N/A,4,n
+Pathology Selective @ HCA Florida Westside Hospital,Westside,N/A,N/A,4,n
+`;
+        
+        const NSU_COORDS = { lat: 26.082, lng: -80.249 };
+        
+        let locations = {};
+        let tracks = [];
+        let variance = {};
+        let currentResults = null;
+        let currentHomeCoords = null;
+        let costSettings = {
+            gasPricePerGallon: 2.95,
+            mpg: 25,
+            residentSalary: 60000,
+            maintenancePerMile: 0.0986
+        };
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof Papa === 'undefined') {
+                alert("Error: PapaParse library not loaded. Check your internet connection.");
+                return;
+            }
+            parseData();
+            setupEventListeners();
+            initCostInputs();
+        });
+        
+        function parseData() {
+            Papa.parse(LOCATIONS_CSV.trim(), {
+                header: true,
+                skipEmptyLines: true,
+                complete: (result) => {
+                    result.data.forEach(row => {
+                        if (row.Locations && row.Coordinates) {
+                            const [lat, lng] = row.Coordinates.split(',').map(s => parseFloat(s.trim()));
+                            locations[row.Locations.trim()] = { lat, lng };
+                        }
+                    });
+                    locations['NSU'] = NSU_COORDS;
+                }
+            });
+            
+            Papa.parse(TRACKS_CSV.trim(), {
+                header: true,
+                skipEmptyLines: true,
+                complete: (result) => {
+                    tracks = result.data.filter(row => row['Current Track'] && row['Current Track'].trim() !== '');
+                    populateTrackDropdown();
+                }
+            });
+            
+            Papa.parse(VARIANCE_CSV.trim(), {
+                header: true,
+                skipEmptyLines: true,
+                complete: (result) => {
+                    result.data.forEach(row => {
+                        if (row.Block) {
+                            variance[row.Block] = row;
+                        }
+                    });
+                }
+            });
+        }
+        
+        function populateTrackDropdown() {
+            const select = document.getElementById('trackSelect');
+            select.innerHTML = '<option value="">Choose a track...</option>';
+            tracks.forEach(track => {
+                const option = document.createElement('option');
+                option.value = track['Current Track'];
+                option.textContent = track['Current Track'];
+                select.appendChild(option);
+            });
+        }
+        
+        function initCostInputs() {
+            document.getElementById('inputGas').value = costSettings.gasPricePerGallon;
+            document.getElementById('inputMpg').value = costSettings.mpg;
+            document.getElementById('inputMaint').value = costSettings.maintenancePerMile;
+            document.getElementById('inputSalary').value = costSettings.residentSalary;
+        }
+
+        function setupEventListeners() {
+            document.getElementById('calculateBtn').addEventListener('click', handleCalculate);
+            
+            document.getElementById('sourcesBtn').addEventListener('click', () => {
+                document.getElementById('modal').classList.add('show');
+            });
+            
+            document.getElementById('closeModal').addEventListener('click', () => {
+                document.getElementById('modal').classList.remove('show');
+            });
+            
+            document.getElementById('homeInput').addEventListener('input', (e) => {
+                const note = document.getElementById('optimalNote');
+                if (e.target.value.trim() === '') {
+                    note.classList.remove('hidden');
+                } else {
+                    note.classList.add('hidden');
+                }
+            });
+
+            // Cost input listeners
+            const inputs = ['inputGas', 'inputMpg', 'inputMaint', 'inputSalary'];
+            inputs.forEach(id => {
+                document.getElementById(id).addEventListener('change', updateCostSettings);
+            });
+        }
+        
+        function updateCostSettings() {
+            costSettings.gasPricePerGallon = parseFloat(document.getElementById('inputGas').value);
+            costSettings.mpg = parseFloat(document.getElementById('inputMpg').value);
+            costSettings.maintenancePerMile = parseFloat(document.getElementById('inputMaint').value);
+            costSettings.residentSalary = parseFloat(document.getElementById('inputSalary').value);
+            
+            // If results already exist, re-render to update costs
+            if (currentResults && currentHomeCoords) {
+                displayResults(currentResults, currentHomeCoords);
+            }
+        }
+        
+        async function handleCalculate() {
+            const trackSelect = document.getElementById('trackSelect');
+            const homeInput = document.getElementById('homeInput');
+            
+            if (!trackSelect.value) {
+                alert('Please select a track');
+                return;
+            }
+            
+            document.getElementById('calculateBtn').disabled = true;
+            document.getElementById('loading').classList.remove('hidden');
+            document.getElementById('results').classList.add('hidden');
+            
+            try {
+                const trackData = tracks.find(t => t['Current Track'] === trackSelect.value);
+                let coords;
+                
+                if (!homeInput.value.trim()) {
+                    coords = await findOptimalLocation(trackData);
+                    if (coords) {
+                        homeInput.value = `${coords.lat.toFixed(6)}, ${coords.lng.toFixed(6)}`;
+                    }
+                } else {
+                    coords = parseCoordinates(homeInput.value);
+                }
+                
+                if (!coords) {
+                    alert('Could not parse coordinates. Use format: latitude, longitude');
+                    return;
+                }
+                
+                // Save for cost updates
+                currentHomeCoords = coords;
+                
+                const results = await calculateTrackCommute(trackData, coords);
+                currentResults = results; // Store globally
+                displayResults(results, coords);
+            } catch (error) {
+                console.error('Calculation error:', error);
+                alert('An error occurred: ' + error.message);
+            } finally {
+                document.getElementById('calculateBtn').disabled = false;
+                document.getElementById('loading').classList.add('hidden');
+            }
+        }
+        
+        function parseCoordinates(input) {
+            try {
+                const parts = input.split(',').map(s => s.trim());
+                if (parts.length === 2) {
+                    const lat = parseFloat(parts[0]);
+                    const lng = parseFloat(parts[1]);
+                    if (!isNaN(lat) && !isNaN(lng)) return { lat, lng };
+                }
+            } catch (error) {}
+            return null;
+        }
+        
+        async function getRoute(from, to, useApi = true) {
+            const lat1 = from.lat * Math.PI / 180;
+            const lat2 = to.lat * Math.PI / 180;
+            const deltaLat = (to.lat - from.lat) * Math.PI / 180;
+            const deltaLng = (to.lng - from.lng) * Math.PI / 180;
+            
+            const a = Math.sin(deltaLat/2) * Math.sin(deltaLat/2) +
+                      Math.cos(lat1) * Math.cos(lat2) *
+                      Math.sin(deltaLng/2) * Math.sin(deltaLng/2);
+            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+            const distanceMiles = 3959 * c; // Earth radius in miles
+            
+            if (!useApi) {
+                return { distanceMiles, durationHours: distanceMiles / 30 };
+            }
+
+            try {
+                await new Promise(resolve => setTimeout(resolve, 200)); // Rate limit protection
+                
+                const response = await fetch(
+                    `https://router.project-osrm.org/route/v1/driving/${from.lng},${from.lat};${to.lng},${to.lat}?overview=false`
+                );
+                
+                const data = await response.json();
+                
+                if (data.routes && data.routes.length > 0) {
+                    const apiDist = data.routes[0].distance * 0.000621371;
+                    const apiDur = data.routes[0].duration / 3600;
+                    return { distanceMiles: apiDist, durationHours: apiDur };
+                }
+            } catch (error) {
+                console.error('Routing error:', error);
+            }
+            
+            return { distanceMiles, durationHours: distanceMiles / 30 };
+        }
+        
+        async function calculateTrackCommute(trackData, homeCoords, useApi = true) {
+            let totalHours = 0;
+            let totalMiles = 0;
+            let totalWeeks = 0;
+            const blockDetails = [];
+            
+            const months = Object.keys(trackData).filter(k => k !== 'Current Track');
+            
+            for (const month of months) {
+                const blockName = trackData[month];
+                if (!blockName || blockName.trim() === '') continue;
+                
+                const blockCommute = await calculateBlockCommute(blockName, homeCoords, useApi);
+                if (blockCommute) {
+                    totalHours += blockCommute.totalHours;
+                    totalMiles += blockCommute.totalMiles;
+                    totalWeeks += blockCommute.weeks;
+                    blockDetails.push({
+                        month,
+                        block: blockName,
+                        ...blockCommute
+                    });
+                }
+            }
+            
+            return { totalHours, totalMiles, totalWeeks, blockDetails };
+        }
+        
+        async function calculateBlockCommute(blockName, homeCoords, useApi = true) {
+            const varData = variance[blockName];
+            if (!varData) return null;
+            
+            const blockLocations = varData.Locations.split(',').map(l => l.trim()).filter(Boolean);
+            const isPediatrics = blockName.includes('Pediatrics Clerkship @ Nemours');
+            
+            if (!isPediatrics && blockLocations.some(loc => loc.toLowerCase().includes('nemours'))) {
+                return { totalHours: 0, totalMiles: 0, weeks: parseInt(varData['Block Length (wks)']) || 4 };
+            }
+            
+            const weeks = parseInt(varData['Block Length (wks)']) || 4;
+            const hasWednesdayException = varData['Wednesday Exception']?.toLowerCase() === 'y';
+            
+            let totalHours = 0;
+            let totalMiles = 0;
+            
+            if (isPediatrics) {
+                const week4Details = [];
+                const sites = [
+                    { name: 'Kendall', days: 'Mon-Tue', trips: 2 },
+                    { name: 'Boynton', days: 'Wed-Thu', trips: 2 },
+                    { name: 'University', days: 'Fri', trips: 1 }
+                ];
+                
+                for (const site of sites) {
+                    const siteCoords = locations[site.name];
+                    if (siteCoords) {
+                        const route = await getRoute(homeCoords, siteCoords, useApi);
+                        const hours = route.durationHours * site.trips * 2;
+                        const miles = route.distanceMiles * site.trips * 2;
+                        totalHours += hours;
+                        totalMiles += miles;
+                        week4Details.push({ location: site.name, days: site.days, hours, miles });
+                    }
+                }
+                return { totalHours, totalMiles, weeks, isPediatrics: true, week4Details };
+            }
+            
+            for (const locName of blockLocations) {
+                const siteCoords = locations[locName];
+                if (!siteCoords) continue;
+                
+                const dailyRoute = await getRoute(homeCoords, siteCoords, useApi);
+                const weeksAtLocation = weeks / blockLocations.length;
+                const tripsPerDay = hasWednesdayException ? 2 : 3;
+                
+                totalHours += dailyRoute.durationHours * tripsPerDay * 5 * weeksAtLocation;
+                totalMiles += dailyRoute.distanceMiles * tripsPerDay * 5 * weeksAtLocation;
+            }
+            
+            return { totalHours, totalMiles, weeks };
+        }
+        
+       async function findOptimalLocation(trackData) {
+            const minLat = 25.5, maxLat = 26.8;
+            const minLng = -80.5, maxLng = -80.0;
+            const gridSize = 20; 
+            
+            let candidates = [];
+            
+            const latStep = (maxLat - minLat) / gridSize;
+            const lngStep = (maxLng - minLng) / gridSize;
+            
+            for (let i = 0; i <= gridSize; i++) {
+                for (let j = 0; j <= gridSize; j++) {
+                    const testCoords = {
+                        lat: minLat + (i * latStep),
+                        lng: minLng + (j * lngStep)
+                    };
+                    
+                    try {
+                        const result = await calculateTrackCommute(trackData, testCoords, false);
+                        candidates.push({ coords: testCoords, hours: result.totalHours });
+                    } catch (error) {
+                        console.error('Error testing location:', error);
+                    }
+                }
+            }
+            
+            candidates.sort((a, b) => a.hours - b.hours);
+            
+            let bestLocation = null;
+            let minTotalHours = Infinity;
+            
+            const topCandidates = candidates.slice(0, 5);
+            
+            for (const candidate of topCandidates) {
+                try {
+                    const result = await calculateTrackCommute(trackData, candidate.coords, true);
+                    if (result.totalHours < minTotalHours) {
+                        minTotalHours = result.totalHours;
+                        bestLocation = candidate.coords;
+                    }
+                } catch (e) {
+                    console.error("Verification failed for candidate", e);
+                }
+            }
+            
+            return bestLocation || topCandidates[0].coords;
+        }
+        
+        function displayResults(results, homeCoords) {
+            const hourlyRate = costSettings.residentSalary / (52 * 60);
+            const gasCost = (results.totalMiles / costSettings.mpg) * costSettings.gasPricePerGallon;
+            const maintenanceCost = results.totalMiles * costSettings.maintenancePerMile;
+            const opportunityCost = results.totalHours * hourlyRate;
+            const uWorldQuestions = (results.totalHours * 60) / 1.5;
+            
+            const hoursPerWeek = results.totalWeeks > 0 ? results.totalHours / results.totalWeeks : 0;
+            const hoursPerMonth = results.totalWeeks > 0 ? results.totalHours / (results.totalWeeks / 4.33) : 0;
+
+            // Stats
+            document.getElementById('statsGrid').innerHTML = [
+                { label: 'Hours/Day', value: (hoursPerWeek / 5).toFixed(1), color: '#3b82f6' },
+                { label: 'Hours/Week', value: hoursPerWeek.toFixed(1), color: '#8b5cf6' },
+                { label: 'Hours/Month', value: hoursPerMonth.toFixed(1), color: '#ec4899' },
+                { label: 'Hours/Year', value: Math.round(results.totalHours).toLocaleString(), color: '#ef4444' }
+            ].map(s => `
+                <div class="stat-card">
+                    <div style="color: #64748b; font-size: 14px; font-weight: 500;">${s.label}</div>
+                    <div class="stat-value" style="color: ${s.color};">${s.value}</div>
+                </div>
+            `).join('');
+            
+            // Costs
+            document.getElementById('costsContent').innerHTML = `
+                <div class="cost-item">
+                    <span>Gas</span>
+                    <strong>$${Math.round(gasCost).toLocaleString()}</strong>
+                </div>
+                <div class="cost-sub">${Math.round(results.totalMiles).toLocaleString()} miles @ $${costSettings.gasPricePerGallon}/gal</div>
+                
+                <div class="cost-item">
+                    <span>Car Maintenance</span>
+                    <strong>$${Math.round(maintenanceCost).toLocaleString()}</strong>
+                </div>
+                <div class="cost-sub">${Math.round(results.totalMiles).toLocaleString()} miles @ $${costSettings.maintenancePerMile}/mile</div>
+                
+                <div class="cost-item" style="background: #fffbeb;">
+                    <span>UWorld Questions Lost</span>
+                    <strong style="color: #d97706">${Math.round(uWorldQuestions).toLocaleString()}</strong>
+                </div>
+                <div class="cost-sub">1.5 mins/question</div>
+
+                <div class="cost-item" style="background: #eff6ff;">
+                    <span>Finacial Opportunity Cost</span>
+                    <strong style="color: #2563eb">$${Math.round(opportunityCost).toLocaleString()}</strong>
+                </div>
+                <div class="cost-sub">Based on $${costSettings.residentSalary} resident salary</div>
+            `;
+            
+            document.getElementById('homeLocDisplay').innerText = `Your Home: ${homeCoords.lat.toFixed(4)}, ${homeCoords.lng.toFixed(4)}`;
+            
+            const usedSites = new Set();
+            results.blockDetails.forEach(block => {
+                const varData = variance[block.block];
+                if (varData && varData.Locations) {
+                    varData.Locations.split(',').map(l => l.trim()).forEach(loc => {
+                        if (loc && !loc.toLowerCase().includes('nemours') && locations[loc]) {
+                            usedSites.add(loc);
+                        }
+                    });
+                }
+                // Handle pediatric specific sub-locations
+                if(block.isPediatrics && block.week4Details) {
+                    block.week4Details.forEach(d => usedSites.add(d.location));
+                }
+            });
+            
+            document.getElementById('sitesContent').innerHTML = Array.from(usedSites).sort().map(site => {
+                const coords = locations[site];
+                return `<div class="site-item">
+                    <div style="font-weight: 600; color: #334155">${site}</div>
+                    <div style="font-size: 11px; color: #64748b">${coords.lat.toFixed(3)}, ${coords.lng.toFixed(3)}</div>
+                </div>`;
+            }).join('');
+            
+            // Blocks
+            document.getElementById('blocksContent').innerHTML = results.blockDetails.map(block => `
+                <div class="block-item">
+                    <div style="font-weight: 600; font-size: 12px; color: #3b82f6; margin-bottom: 4px;">${block.month}</div>
+                    <div style="font-size: 13px; color: #475569; margin-bottom: 8px;">${block.block}</div>
+                    ${block.isPediatrics ? `
+                        <div style="font-size: 12px; color: #64748b;">
+                            <div><strong>Total:</strong> ${block.totalHours.toFixed(1)} hrs over ${block.weeks} weeks</div>
+                            <div style="font-size: 11px; margin-top: 4px;">Weeks 1-3: Nemours (0 hrs)</div>
+                            <div style="font-size: 11px;">Week 4: ${block.week4Details.map(d => `${d.location} (${d.days}): ${d.hours.toFixed(1)} hrs`).join(', ')}</div>
+                        </div>
+                    ` : `
+                        <div style="font-size: 12px; color: #64748b;">
+                            ${block.totalHours.toFixed(1)} hrs over ${block.weeks} weeks
+                        </div>
+                    `}
+                </div>
+            `).join('');
+            
+            document.getElementById('results').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>

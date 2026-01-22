@@ -1,0 +1,118 @@
+/**
+ * NSU Commute Optimizer V3 - Additional CSS Styles
+ * Add these styles to your existing <style> section
+ */
+
+/* Button variations */
+.button-secondary {
+    background: #10b981;
+}
+.button-secondary:hover:not(:disabled) { 
+    background: #059669; 
+}
+
+.button-tertiary {
+    background: #8b5cf6;
+}
+.button-tertiary:hover:not(:disabled) { 
+    background: #7c3aed; 
+}
+
+.button-group {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* Week schedule for custom block builder */
+.week-schedule {
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    background: #f8fafc;
+}
+
+.week-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.day-row {
+    display: grid;
+    grid-template-columns: 100px 1fr 120px;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 8px;
+    padding: 8px;
+    background: white;
+    border-radius: 6px;
+}
+
+/* Buttons for custom block builder */
+.remove-btn {
+    background: #ef4444;
+    padding: 6px 12px;
+    font-size: 12px;
+}
+.remove-btn:hover { 
+    background: #dc2626; 
+}
+
+.add-btn {
+    background: #10b981;
+    padding: 8px 16px;
+    font-size: 14px;
+    width: 100%;
+    margin-top: 8px;
+}
+.add-btn:hover { 
+    background: #059669; 
+}
+
+/* Custom location manager */
+.location-manager {
+    background: #fffbeb;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.location-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.location-chip {
+    background: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.custom-location-form {
+    display: grid;
+    grid-template-columns: 2fr 1fr auto;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .day-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .custom-location-form {
+        grid-template-columns: 1fr;
+    }
+}
