@@ -1,6 +1,6 @@
 NSU Commute Optimizer - Version History
 
-v2.3 - January 2026
+v2.31 - January 2026
 
 New Features
 - Compare All Tracks: Now shows you how far from optimal your starting location is and the relative costs of that location
