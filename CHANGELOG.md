@@ -1,5 +1,12 @@
 NSU Commute Optimizer - Version History
 
+v2.32 - January2026
+
+UI
+- General UI formating fixes
+
+	-
+
 v2.31 - January 2026
 
 New Features

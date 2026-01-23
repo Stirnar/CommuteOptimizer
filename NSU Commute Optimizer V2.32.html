@@ -368,8 +368,8 @@
                     <li>Address geocoding: Nominatim (OpenStreetMap) with 1-second rate limiting</li>
                     <li>Interactive map: Leaflet.js with OpenStreetMap tiles</li>
                     <li>Routes calculated using OpenStreetMap OSRM</li>
-                    <li>Wednesday campus trips: Home â†’ Site â†’ School â†’ Home (3 legs)</li>
-                    <li>Regular days: Home â†’ Site â†’ Home (2 legs)</li>
+                    <li>Wednesday campus trips: Home to Site to School to Home (3 legs)</li>
+                    <li>Regular days: Home to Site to Home (2 legs)</li>
                     <li>Blocks at Nemours = 0 commute (on-site housing)</li>
                     <li>Car maintenance cost: $0.0986/mile (AAA average)</li>
                     <li>UWorld questions: 1.5 minutes per question max</li>
@@ -408,17 +408,17 @@
                 <p style="margin-bottom: 16px;">This tool helps you understand and minimize your commute burden during clinical rotations. Choose one of three ways to use it:</p>
                 
                 <div style="background: #f8fafc; padding: 16px; border-radius: 8px; margin-bottom: 16px;">
-                    <div style="font-weight: 600; color: #334155; margin-bottom: 8px;">1ï¸) Find the Best Track for Your Home</div>
+                    <div style="font-weight: 600; color: #334155; margin-bottom: 8px;">1) Find the Best Track for Your Home</div>
                     <p style="margin: 0; font-size: 13px;">Enter your home address (or where you plan to live) and leave the track blank. The system will compare all tracks and show you the top 5 with the lowest commute burden from your location.</p>
                 </div>
                 
                 <div style="background: #f8fafc; padding: 16px; border-radius: 8px; margin-bottom: 16px;">
-                    <div style="font-weight: 600; color: #334155; margin-bottom: 8px;">2ï¸) Find the Best Home for Your Track</div>
+                    <div style="font-weight: 600; color: #334155; margin-bottom: 8px;">2) Find the Best Home for Your Track</div>
                     <p style="margin: 0; font-size: 13px;">Select a track and leave the address blank. The system will calculate the optimal home location in South Florida that minimizes commute time for that specific track.</p>
                 </div>
                 
                 <div style="background: #f8fafc; padding: 16px; border-radius: 8px; margin-bottom: 16px;">
-                    <div style="font-weight: 600; color: #334155; margin-bottom: 8px;">3ï¸) Calculate Commute for Specific Track + Location</div>
+                    <div style="font-weight: 600; color: #334155; margin-bottom: 8px;">3) Calculate Commute for Specific Track + Location</div>
                     <p style="margin: 0; font-size: 13px;">Enter both a track and your home address to see detailed commute statistics, costs, and an interactive map showing all clinical sites you'll visit.</p>
                 </div>
                 
@@ -871,7 +871,7 @@
                             <div>
                                 <h3 style="margin: 0; font-size: 20px;">${medal} ${track.trackName}</h3>
                                 <p style="color: #64748b; font-size: 14px; margin-top: 4px;">
-                                    ${Math.round(track.totalHours)} hrs/year â€¢ ${hoursPerWeek.toFixed(1)} hrs/week
+                                    ${Math.round(track.totalHours)} hrs/year @ ${hoursPerWeek.toFixed(1)} hrs/week
                                 </p>
                             </div>
                             <div style="text-align: right;">
@@ -1466,7 +1466,7 @@
             
             // Add OpenStreetMap tiles
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: 'Â© OpenStreetMap contributors',
+                attribution: '© OpenStreetMap contributors',
                 maxZoom: 19
             }).addTo(mapInstance);
             
