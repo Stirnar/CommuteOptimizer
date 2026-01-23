@@ -320,10 +320,10 @@
                     </div>
                 </div>
                 
-				<div class="card" style="display: flex; flex-direction: column;">
-					<h3 style="flex-shrink: 0;">Track Blocks</h3>
-					<div id="blocksContent" style="flex: 1; overflow-y: auto; padding-right: 8px;"></div>
-				</div>
+                <div class="card" style="display: flex; flex-direction: column;">
+                    <h3 style="flex-shrink: 0;">Track Blocks</h3>
+                    <div id="blocksContent" style="flex: 1; overflow-y: auto; padding-right: 8px;"></div>
+                </div>
             </div>
             
             <div class="card">
@@ -903,6 +903,11 @@
             displayResults(currentResults, currentHomeCoords);
         };
         
+        window.showTrackComparison = function() {
+            document.getElementById('results').classList.add('hidden');
+            displayTrackComparison(lastTrackComparison, lastComparisonHomeCoords);
+        };
+        
         async function handleCalculate() {
             const trackSelect = document.getElementById('trackSelect');
             const homeInput = document.getElementById('homeInput');
@@ -1207,9 +1212,52 @@
             return { totalHours, totalMiles, totalWeeks, blockDetails };
         }
         
+        async function calculateTBDBlock(blockType, homeCoords, useApi = true) {
+            // Find all possible locations for this block type
+            const possibleBlocks = Object.keys(variance).filter(key => 
+                key.includes(blockType) && !key.includes('To Be Determined')
+            );
+            
+            if (possibleBlocks.length === 0) {
+                console.warn(`No variance entries found for TBD block type: ${blockType}`);
+                return null;
+            }
+            
+            let totalHours = 0;
+            let totalMiles = 0;
+            let weeks = 0;
+            
+            // Calculate average burden across all possible locations
+            for (const blockName of possibleBlocks) {
+                const result = await calculateBlockCommute(blockName, homeCoords, useApi);
+                if (result) {
+                    totalHours += result.totalHours;
+                    totalMiles += result.totalMiles;
+                    weeks = result.weeks; // Should be same for all
+                }
+            }
+            
+            // Return average
+            return {
+                totalHours: totalHours / possibleBlocks.length,
+                totalMiles: totalMiles / possibleBlocks.length,
+                weeks: weeks
+            };
+        }
+        
         async function calculateBlockCommute(blockName, homeCoords, useApi = true) {
+            // Handle "To Be Determined" blocks by averaging across possible locations
+            if (blockName.includes('To Be Determined')) {
+                // Extract the block type (e.g., "Obstetrics and Gynecology Clerkship")
+                const blockType = blockName.split('@')[0].trim();
+                return await calculateTBDBlock(blockType, homeCoords, useApi);
+            }
+            
             const varData = variance[blockName];
-            if (!varData) return null;
+            if (!varData) {
+                console.warn(`No variance data found for: ${blockName}`);
+                return null;
+            }
             
             const blockLocations = varData.Locations.split(',').map(l => l.trim()).filter(Boolean);
             const isPediatrics = blockName.includes('Pediatrics Clerkship @ Nemours');
@@ -1458,7 +1506,19 @@
             const hoursPerWeek = results.totalWeeks > 0 ? results.totalHours / results.totalWeeks : 0;
             const hoursPerMonth = results.totalWeeks > 0 ? results.totalHours / (results.totalWeeks / 4.33) : 0;
 
-            document.getElementById('statsGrid').innerHTML = [
+            // Check if we came from track comparison and add back button
+            let backButtonHtml = '';
+            if (lastTrackComparison && lastComparisonHomeCoords) {
+                backButtonHtml = `
+                    <div style="margin-bottom: 16px;">
+                        <button onclick="showTrackComparison()" style="background: #64748b;">
+                            ← Back to Track Comparison
+                        </button>
+                    </div>
+                `;
+            }
+
+            document.getElementById('statsGrid').innerHTML = backButtonHtml + [
                 { label: 'Hours/Day', value: (hoursPerWeek / 5).toFixed(1), color: '#3b82f6' },
                 { label: 'Hours/Week', value: hoursPerWeek.toFixed(1), color: '#8b5cf6' },
                 { label: 'Hours/Month', value: hoursPerMonth.toFixed(1), color: '#ec4899' },
