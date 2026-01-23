@@ -4,463 +4,463 @@
       "lat": 26.02,
       "lng": -80.15
     },
-    "minCommuteBurden": 272.6998333333333,
-    "computedAt": "2026-01-22T19:49:30.518Z"
+    "minCommuteBurden": 340.2109444444444,
+    "computedAt": "2026-01-23T03:32:30.732Z"
   },
   "Track 2": {
     "optimalLocation": {
       "lat": 26.02,
       "lng": -80.15
     },
-    "minCommuteBurden": 177.10427777777778,
-    "computedAt": "2026-01-22T19:50:30.537Z"
+    "minCommuteBurden": 244.6153888888889,
+    "computedAt": "2026-01-23T03:34:00.741Z"
   },
   "Track 3": {
     "optimalLocation": {
       "lat": 26.02,
       "lng": -80.15
     },
-    "minCommuteBurden": 234.8442777777778,
-    "computedAt": "2026-01-22T19:51:30.533Z"
+    "minCommuteBurden": 302.35538888888885,
+    "computedAt": "2026-01-23T03:35:30.747Z"
   },
   "Track 4": {
     "optimalLocation": {
       "lat": 26.085,
       "lng": -80.25
     },
-    "minCommuteBurden": 310.3094444444444,
-    "computedAt": "2026-01-22T19:52:35.533Z"
+    "minCommuteBurden": 378.8411111111111,
+    "computedAt": "2026-01-23T03:37:05.736Z"
   },
   "Track 5": {
     "optimalLocation": {
-      "lat": 25.76,
-      "lng": -80.4
+      "lat": 25.955000000000002,
+      "lng": -80.25
     },
-    "minCommuteBurden": 308.8742222222222,
-    "computedAt": "2026-01-22T19:53:30.532Z"
+    "minCommuteBurden": 403.4240555555556,
+    "computedAt": "2026-01-23T03:38:35.738Z"
   },
   "Track 6": {
     "optimalLocation": {
       "lat": 25.89,
       "lng": -80.2
     },
-    "minCommuteBurden": 301.79277777777776,
-    "computedAt": "2026-01-22T19:54:20.540Z"
+    "minCommuteBurden": 371.99333333333334,
+    "computedAt": "2026-01-23T03:39:55.735Z"
   },
   "Track 7": {
     "optimalLocation": {
       "lat": 25.955000000000002,
-      "lng": -80.2
+      "lng": -80.225
     },
-    "minCommuteBurden": 302.46116666666666,
-    "computedAt": "2026-01-22T19:55:15.532Z"
+    "minCommuteBurden": 359.63105555555563,
+    "computedAt": "2026-01-23T03:41:20.740Z"
   },
   "Track 8": {
     "optimalLocation": {
-      "lat": 25.76,
-      "lng": -80.375
+      "lat": 25.955000000000002,
+      "lng": -80.225
     },
-    "minCommuteBurden": 272.42294444444445,
-    "computedAt": "2026-01-22T19:56:00.542Z"
+    "minCommuteBurden": 341.58188888888895,
+    "computedAt": "2026-01-23T03:42:40.743Z"
   },
   "Track 11": {
     "optimalLocation": {
       "lat": 25.955000000000002,
       "lng": -80.25
     },
-    "minCommuteBurden": 281.4943333333333,
-    "computedAt": "2026-01-22T19:56:55.533Z"
+    "minCommuteBurden": 348.0048888888889,
+    "computedAt": "2026-01-23T03:44:05.742Z"
   },
   "Track 12": {
     "optimalLocation": {
-      "lat": 25.76,
-      "lng": -80.375
+      "lat": 25.89,
+      "lng": -80.325
     },
-    "minCommuteBurden": 312.53683333333333,
-    "computedAt": "2026-01-22T19:57:55.530Z"
+    "minCommuteBurden": 417.4408888888888,
+    "computedAt": "2026-01-23T03:45:35.730Z"
   },
   "Track 13": {
     "optimalLocation": {
       "lat": 25.76,
       "lng": -80.4
     },
-    "minCommuteBurden": 155.497,
-    "computedAt": "2026-01-22T19:58:50.627Z"
+    "minCommuteBurden": 246.56311111111114,
+    "computedAt": "2026-01-23T03:47:00.733Z"
   },
   "Track 14": {
     "optimalLocation": {
       "lat": 25.76,
-      "lng": -80.4
+      "lng": -80.375
     },
-    "minCommuteBurden": 315.2342222222223,
-    "computedAt": "2026-01-22T19:59:50.628Z"
+    "minCommuteBurden": 411.0618333333333,
+    "computedAt": "2026-01-23T03:48:30.725Z"
   },
   "Track 15": {
     "optimalLocation": {
       "lat": 26.085,
       "lng": -80.25
     },
-    "minCommuteBurden": 344.6161111111111,
-    "computedAt": "2026-01-22T20:00:55.628Z"
+    "minCommuteBurden": 413.1477777777778,
+    "computedAt": "2026-01-23T03:50:05.731Z"
   },
   "Track 16": {
     "optimalLocation": {
       "lat": 26.085,
       "lng": -80.25
     },
-    "minCommuteBurden": 334.16027777777776,
-    "computedAt": "2026-01-22T20:01:55.639Z"
+    "minCommuteBurden": 402.69194444444446,
+    "computedAt": "2026-01-23T03:51:35.726Z"
   },
   "Track 17": {
     "optimalLocation": {
       "lat": 26.085,
       "lng": -80.25
     },
-    "minCommuteBurden": 310.30944444444447,
-    "computedAt": "2026-01-22T20:03:00.634Z"
+    "minCommuteBurden": 378.84111111111116,
+    "computedAt": "2026-01-23T03:53:10.731Z"
   },
   "Track 18": {
     "optimalLocation": {
       "lat": 25.76,
       "lng": -80.4
     },
-    "minCommuteBurden": 155.497,
-    "computedAt": "2026-01-22T20:03:55.625Z"
+    "minCommuteBurden": 246.56311111111114,
+    "computedAt": "2026-01-23T03:54:35.739Z"
   },
   "Track 19": {
     "optimalLocation": {
       "lat": 26.085,
       "lng": -80.25
     },
-    "minCommuteBurden": 293.02194444444444,
-    "computedAt": "2026-01-22T20:04:50.636Z"
+    "minCommuteBurden": 384.8336111111111,
+    "computedAt": "2026-01-23T03:56:05.731Z"
   },
   "Track 20": {
     "optimalLocation": {
       "lat": 25.76,
       "lng": -80.4
     },
-    "minCommuteBurden": 182.27422222222225,
-    "computedAt": "2026-01-22T20:05:45.638Z"
+    "minCommuteBurden": 273.3403333333333,
+    "computedAt": "2026-01-23T03:57:30.731Z"
   },
   "Track 21": {
     "optimalLocation": {
       "lat": 25.76,
       "lng": -80.4
     },
-    "minCommuteBurden": 131.59422222222224,
-    "computedAt": "2026-01-22T20:06:30.631Z"
+    "minCommuteBurden": 263.20866666666666,
+    "computedAt": "2026-01-23T03:58:50.731Z"
   },
   "Track 22": {
     "optimalLocation": {
       "lat": 25.76,
       "lng": -80.4
     },
-    "minCommuteBurden": 171.73755555555556,
-    "computedAt": "2026-01-22T20:07:15.632Z"
+    "minCommuteBurden": 303.352,
+    "computedAt": "2026-01-23T04:00:10.741Z"
   },
   "Track 23": {
     "optimalLocation": {
       "lat": 25.76,
       "lng": -80.4
     },
-    "minCommuteBurden": 131.59422222222221,
-    "computedAt": "2026-01-22T20:08:00.637Z"
+    "minCommuteBurden": 263.20866666666666,
+    "computedAt": "2026-01-23T04:01:30.739Z"
   },
   "Track 24": {
     "optimalLocation": {
       "lat": 25.76,
       "lng": -80.4
     },
-    "minCommuteBurden": 131.59422222222221,
-    "computedAt": "2026-01-22T20:08:46.103Z"
+    "minCommuteBurden": 263.20866666666666,
+    "computedAt": "2026-01-23T04:02:50.737Z"
   },
   "Track 25": {
     "optimalLocation": {
       "lat": 25.76,
       "lng": -80.4
     },
-    "minCommuteBurden": 165.78255555555555,
-    "computedAt": "2026-01-22T20:09:31.101Z"
+    "minCommuteBurden": 297.39700000000005,
+    "computedAt": "2026-01-23T04:04:10.726Z"
   },
   "Track 26": {
     "optimalLocation": {
       "lat": 25.76,
       "lng": -80.4
     },
-    "minCommuteBurden": 158.03922222222224,
-    "computedAt": "2026-01-22T20:10:16.103Z"
+    "minCommuteBurden": 289.6536666666667,
+    "computedAt": "2026-01-23T04:05:30.732Z"
   },
   "Track 27": {
     "optimalLocation": {
       "lat": 25.76,
       "lng": -80.4
     },
-    "minCommuteBurden": 131.59422222222221,
-    "computedAt": "2026-01-22T20:11:01.103Z"
+    "minCommuteBurden": 263.20866666666666,
+    "computedAt": "2026-01-23T04:06:50.744Z"
   },
   "Track 28": {
     "optimalLocation": {
       "lat": 25.76,
       "lng": -80.4
     },
-    "minCommuteBurden": 125.99033333333333,
-    "computedAt": "2026-01-22T20:11:46.103Z"
+    "minCommuteBurden": 257.60477777777777,
+    "computedAt": "2026-01-23T04:08:10.786Z"
   },
   "Track 30": {
     "optimalLocation": {
       "lat": 25.955000000000002,
       "lng": -80.225
     },
-    "minCommuteBurden": 265.63855555555557,
-    "computedAt": "2026-01-22T20:12:36.303Z"
+    "minCommuteBurden": 303.8735555555555,
+    "computedAt": "2026-01-23T04:09:20.782Z"
   },
   "Track 31": {
     "optimalLocation": {
-      "lat": 25.89,
+      "lat": 25.955000000000002,
       "lng": -80.2
     },
-    "minCommuteBurden": 267.8077777777778,
-    "computedAt": "2026-01-22T20:13:21.108Z"
+    "minCommuteBurden": 338.7553333333333,
+    "computedAt": "2026-01-23T04:10:40.779Z"
   },
   "Track 32": {
     "optimalLocation": {
-      "lat": 25.76,
-      "lng": -80.35
+      "lat": 25.955000000000002,
+      "lng": -80.2
     },
-    "minCommuteBurden": 251.8901666666667,
-    "computedAt": "2026-01-22T20:14:06.111Z"
+    "minCommuteBurden": 307.6236666666666,
+    "computedAt": "2026-01-23T04:12:00.777Z"
   },
   "Track 33": {
     "optimalLocation": {
       "lat": 25.955000000000002,
       "lng": -80.225
     },
-    "minCommuteBurden": 214.59522222222222,
-    "computedAt": "2026-01-22T20:14:51.109Z"
+    "minCommuteBurden": 292.81022222222225,
+    "computedAt": "2026-01-23T04:13:20.787Z"
   },
   "Track 34": {
     "optimalLocation": {
       "lat": 26.02,
       "lng": -80.15
     },
-    "minCommuteBurden": 230.2965,
-    "computedAt": "2026-01-22T20:15:46.112Z"
+    "minCommuteBurden": 304.73094444444445,
+    "computedAt": "2026-01-23T04:14:50.778Z"
   },
   "Track 35": {
     "optimalLocation": {
       "lat": 26.02,
       "lng": -80.15
     },
-    "minCommuteBurden": 163.8842777777778,
-    "computedAt": "2026-01-22T20:16:46.098Z"
+    "minCommuteBurden": 199.4870555555556,
+    "computedAt": "2026-01-23T04:16:10.781Z"
   },
   "Track 36": {
     "optimalLocation": {
       "lat": 26.02,
       "lng": -80.15
     },
-    "minCommuteBurden": 192.44094444444445,
-    "computedAt": "2026-01-22T20:17:41.104Z"
+    "minCommuteBurden": 266.8753888888889,
+    "computedAt": "2026-01-23T04:17:41.701Z"
   },
   "Track 37": {
     "optimalLocation": {
       "lat": 26.02,
       "lng": -80.15
     },
-    "minCommuteBurden": 192.44094444444445,
-    "computedAt": "2026-01-22T20:18:36.103Z"
+    "minCommuteBurden": 266.8753888888889,
+    "computedAt": "2026-01-23T04:19:11.686Z"
   },
   "Track 38": {
     "optimalLocation": {
       "lat": 26.02,
       "lng": -80.15
     },
-    "minCommuteBurden": 234.8442777777778,
-    "computedAt": "2026-01-22T20:19:36.115Z"
+    "minCommuteBurden": 302.3553888888889,
+    "computedAt": "2026-01-23T04:20:41.682Z"
   },
   "Track 39": {
     "optimalLocation": {
       "lat": 25.955000000000002,
       "lng": -80.15
     },
-    "minCommuteBurden": 70.55722222222222,
-    "computedAt": "2026-01-22T20:20:21.117Z"
+    "minCommuteBurden": 145.5822222222222,
+    "computedAt": "2026-01-23T04:22:01.680Z"
   },
   "Track 40": {
     "optimalLocation": {
       "lat": 25.955000000000002,
       "lng": -80.15
     },
-    "minCommuteBurden": 85.93722222222223,
-    "computedAt": "2026-01-22T20:21:06.165Z"
+    "minCommuteBurden": 160.9622222222222,
+    "computedAt": "2026-01-23T04:23:21.682Z"
   },
   "Track 41": {
     "optimalLocation": {
       "lat": 26.02,
       "lng": -80.15
     },
-    "minCommuteBurden": 192.44094444444445,
-    "computedAt": "2026-01-22T20:22:01.105Z"
+    "minCommuteBurden": 266.87538888888895,
+    "computedAt": "2026-01-23T04:24:51.676Z"
   },
   "Track 42": {
     "optimalLocation": {
-      "lat": 25.76,
-      "lng": -80.35
+      "lat": 25.955000000000002,
+      "lng": -80.2
     },
-    "minCommuteBurden": 251.89016666666666,
-    "computedAt": "2026-01-22T20:22:46.117Z"
+    "minCommuteBurden": 307.6236666666666,
+    "computedAt": "2026-01-23T04:26:11.679Z"
   },
   "Track 43": {
     "optimalLocation": {
       "lat": 26.02,
       "lng": -80.15
     },
-    "minCommuteBurden": 220.75983333333332,
-    "computedAt": "2026-01-22T20:23:41.104Z"
+    "minCommuteBurden": 295.1942777777778,
+    "computedAt": "2026-01-23T04:27:41.691Z"
   },
   "Track 44": {
     "optimalLocation": {
       "lat": 25.955000000000002,
       "lng": -80.225
     },
-    "minCommuteBurden": 214.59522222222222,
-    "computedAt": "2026-01-22T20:24:26.110Z"
+    "minCommuteBurden": 292.8102222222222,
+    "computedAt": "2026-01-23T04:29:01.679Z"
   },
   "Track 45": {
     "optimalLocation": {
       "lat": 26.085,
       "lng": -80.175
     },
-    "minCommuteBurden": 208.8295,
-    "computedAt": "2026-01-22T20:25:21.113Z"
+    "minCommuteBurden": 292.04394444444443,
+    "computedAt": "2026-01-23T04:30:31.676Z"
   },
   "Track 46": {
     "optimalLocation": {
       "lat": 26.02,
       "lng": -80.15
     },
-    "minCommuteBurden": 197.42594444444447,
-    "computedAt": "2026-01-22T20:26:26.110Z"
+    "minCommuteBurden": 204.34927777777781,
+    "computedAt": "2026-01-23T04:31:41.676Z"
   },
   "Track 47": {
     "optimalLocation": {
       "lat": 26.02,
       "lng": -80.15
     },
-    "minCommuteBurden": 182.9042777777778,
-    "computedAt": "2026-01-22T20:27:21.107Z"
+    "minCommuteBurden": 257.33872222222226,
+    "computedAt": "2026-01-23T04:33:11.686Z"
   },
   "Track 48": {
     "optimalLocation": {
-      "lat": 26.085,
-      "lng": -80.175
+      "lat": 26.02,
+      "lng": -80.15
     },
-    "minCommuteBurden": 210.55616666666666,
-    "computedAt": "2026-01-22T20:28:16.108Z"
+    "minCommuteBurden": 283.6959444444445,
+    "computedAt": "2026-01-23T04:34:41.686Z"
   },
   "Track 49": {
     "optimalLocation": {
       "lat": 26.02,
       "lng": -80.15
     },
-    "minCommuteBurden": 170.75094444444446,
-    "computedAt": "2026-01-22T20:29:11.106Z"
+    "minCommuteBurden": 245.1853888888889,
+    "computedAt": "2026-01-23T04:36:11.677Z"
   },
   "Track 50": {
     "optimalLocation": {
       "lat": 26.02,
       "lng": -80.15
     },
-    "minCommuteBurden": 192.44094444444443,
-    "computedAt": "2026-01-22T20:30:06.110Z"
+    "minCommuteBurden": 266.8753888888889,
+    "computedAt": "2026-01-23T04:37:41.689Z"
   },
   "Track 51": {
     "optimalLocation": {
       "lat": 26.02,
       "lng": -80.15
     },
-    "minCommuteBurden": 169.17927777777783,
-    "computedAt": "2026-01-22T20:31:01.110Z"
+    "minCommuteBurden": 243.61372222222224,
+    "computedAt": "2026-01-23T04:39:11.683Z"
   },
   "Track 52": {
     "optimalLocation": {
       "lat": 26.02,
       "lng": -80.15
     },
-    "minCommuteBurden": 170.75094444444446,
-    "computedAt": "2026-01-22T20:31:56.111Z"
+    "minCommuteBurden": 245.1853888888889,
+    "computedAt": "2026-01-23T04:40:41.679Z"
   },
   "Track 53": {
     "optimalLocation": {
       "lat": 26.085,
       "lng": -80.175
     },
-    "minCommuteBurden": 210.2578333333333,
-    "computedAt": "2026-01-22T20:32:51.112Z"
+    "minCommuteBurden": 293.4722777777778,
+    "computedAt": "2026-01-23T04:42:11.680Z"
   },
   "Track 54": {
     "optimalLocation": {
       "lat": 26.085,
       "lng": -80.175
     },
-    "minCommuteBurden": 210.2578333333333,
-    "computedAt": "2026-01-22T20:33:46.105Z"
+    "minCommuteBurden": 293.4722777777778,
+    "computedAt": "2026-01-23T04:43:41.690Z"
   },
   "Track 55": {
     "optimalLocation": {
       "lat": 26.02,
       "lng": -80.15
     },
-    "minCommuteBurden": 170.75094444444449,
-    "computedAt": "2026-01-22T20:34:41.112Z"
+    "minCommuteBurden": 245.1853888888889,
+    "computedAt": "2026-01-23T04:45:11.685Z"
   },
   "Track 56": {
     "optimalLocation": {
       "lat": 26.02,
       "lng": -80.15
     },
-    "minCommuteBurden": 156.96094444444446,
-    "computedAt": "2026-01-22T20:35:36.109Z"
+    "minCommuteBurden": 231.39538888888893,
+    "computedAt": "2026-01-23T04:46:41.694Z"
   },
   "Track 57": {
     "optimalLocation": {
       "lat": 26.02,
       "lng": -80.15
     },
-    "minCommuteBurden": 170.75094444444449,
-    "computedAt": "2026-01-22T20:36:31.113Z"
+    "minCommuteBurden": 245.1853888888889,
+    "computedAt": "2026-01-23T04:48:11.681Z"
   },
   "Track 58": {
     "optimalLocation": {
       "lat": 26.085,
       "lng": -80.175
     },
-    "minCommuteBurden": 206.98366666666664,
-    "computedAt": "2026-01-22T20:37:36.108Z"
+    "minCommuteBurden": 273.5681111111111,
+    "computedAt": "2026-01-23T04:49:46.691Z"
   },
   "Track 59": {
     "optimalLocation": {
       "lat": 26.02,
       "lng": -80.15
     },
-    "minCommuteBurden": 234.84427777777776,
-    "computedAt": "2026-01-22T20:38:36.109Z"
+    "minCommuteBurden": 302.3553888888889,
+    "computedAt": "2026-01-23T04:51:16.688Z"
   },
   "Track 60": {
     "optimalLocation": {
       "lat": 26.02,
       "lng": -80.15
     },
-    "minCommuteBurden": 192.44094444444445,
-    "computedAt": "2026-01-22T20:39:31.100Z"
+    "minCommuteBurden": 266.87538888888895,
+    "computedAt": "2026-01-23T04:52:46.682Z"
   },
   "Track 61": {
     "optimalLocation": {
       "lat": 26.02,
       "lng": -80.15
     },
-    "minCommuteBurden": 234.8442777777778,
-    "computedAt": "2026-01-22T20:40:31.109Z"
+    "minCommuteBurden": 302.35538888888897,
+    "computedAt": "2026-01-23T04:54:16.681Z"
   }
 }

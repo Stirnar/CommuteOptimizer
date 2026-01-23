@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medical Student Commute Optimizer - NSU v2.3</title>
+    <title>Medical Student Commute Optimizer - NSU v2.31</title>
     <script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
     <!-- Leaflet.js for mapping -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -241,11 +241,16 @@
             <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 8px;">
                 <h1>
                     Medical Student Commute Optimizer
-                    <span class="version-badge">V2.3</span>
+                    <span class="version-badge">v2.31</span>
                 </h1>
-                <button id="changelogBtn" style="padding: 8px 16px; font-size: 14px; background: #64748b;">
-                    Changelog
-                </button>
+                <div style="display: flex; gap: 12px;">
+                    <button id="howToUseBtn" style="padding: 8px 16px; font-size: 14px; background: #3b82f6;">
+                        How to Use
+                    </button>
+                    <button id="changelogBtn" style="padding: 8px 16px; font-size: 14px; background: #64748b;">
+                        Changelog
+                    </button>
+                </div>
             </div>
             <p class="subtitle">Calculate your clinical rotation commute burden</p>
             
@@ -396,6 +401,44 @@
                 <p>Loading changelog...</p>
             </div>
             <button id="closeChangelog" style="margin-top: 24px;">Close</button>
+        </div>
+    </div>
+    
+    <div id="howToUseModal" class="modal">
+        <div class="modal-content">
+            <h2 style="font-size: 24px; font-weight: bold; margin-bottom: 16px;">How to Use & Features</h2>
+            
+            <div style="color: #64748b; font-size: 14px; line-height: 1.8;">
+                <h3 style="font-size: 18px; font-weight: 600; margin-top: 0; margin-bottom: 12px; color: #1e40af;">Quick Start</h3>
+                <p style="margin-bottom: 16px;">This tool helps you understand and minimize your commute burden during clinical rotations. Choose one of three ways to use it:</p>
+                
+                <div style="background: #f8fafc; padding: 16px; border-radius: 8px; margin-bottom: 16px;">
+                    <div style="font-weight: 600; color: #334155; margin-bottom: 8px;">1️) Find the Best Track for Your Home</div>
+                    <p style="margin: 0; font-size: 13px;">Enter your home address (or where you plan to live) and leave the track blank. The system will compare all tracks and show you the top 5 with the lowest commute burden from your location.</p>
+                </div>
+                
+                <div style="background: #f8fafc; padding: 16px; border-radius: 8px; margin-bottom: 16px;">
+                    <div style="font-weight: 600; color: #334155; margin-bottom: 8px;">2️) Find the Best Home for Your Track</div>
+                    <p style="margin: 0; font-size: 13px;">Select a track and leave the address blank. The system will calculate the optimal home location in South Florida that minimizes commute time for that specific track.</p>
+                </div>
+                
+                <div style="background: #f8fafc; padding: 16px; border-radius: 8px; margin-bottom: 16px;">
+                    <div style="font-weight: 600; color: #334155; margin-bottom: 8px;">3️) Calculate Commute for Specific Track + Location</div>
+                    <p style="margin: 0; font-size: 13px;">Enter both a track and your home address to see detailed commute statistics, costs, and an interactive map showing all clinical sites you'll visit.</p>
+                </div>
+                
+                <h3 style="font-size: 18px; font-weight: 600; margin-top: 24px; margin-bottom: 12px; color: #1e40af;">What You'll See</h3>
+                <ul style="margin-left: 20px; margin-bottom: 16px;">
+                    <li style="margin-bottom: 8px;"><strong>Commute Stats:</strong> Hours per day/week/month/year spent commuting</li>
+                    <li style="margin-bottom: 8px;"><strong>Financial Costs:</strong> Gas, car maintenance, and opportunity cost based on resident salary</li>
+                    <li style="margin-bottom: 8px;"><strong>Interactive Map:</strong> See your home location, NSU campus, and all clinical sites</li>
+                    <li style="margin-bottom: 8px;"><strong>Block-by-Block Breakdown:</strong> Detailed view of each rotation period</li>
+                    <li style="margin-bottom: 8px;"><strong>UWorld Impact:</strong> How many practice questions you could answer instead of driving</li>
+                </ul>
+                
+            </div>
+            
+            <button id="closeHowToUse" style="margin-top: 24px;">Close</button>
         </div>
     </div>
 
@@ -637,6 +680,14 @@
             
             document.getElementById('closeModal').addEventListener('click', () => {
                 document.getElementById('modal').classList.remove('show');
+            });
+            
+            document.getElementById('howToUseBtn').addEventListener('click', () => {
+                document.getElementById('howToUseModal').classList.add('show');
+            });
+            
+            document.getElementById('closeHowToUse').addEventListener('click', () => {
+                document.getElementById('howToUseModal').classList.remove('show');
             });
             
             document.getElementById('changelogBtn').addEventListener('click', async () => {

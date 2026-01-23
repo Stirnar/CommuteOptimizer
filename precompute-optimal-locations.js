@@ -153,9 +153,51 @@ function getRoute(from, to) {
 }
 
 /**
+ * Calculate average commute burden for TBD blocks
+ */
+async function calculateTBDBlock(blockType, homeCoords, useApi = true) {
+    // Find all possible locations for this block type
+    const possibleBlocks = Object.keys(variance).filter(key => 
+        key.includes(blockType) && !key.includes('To Be Determined')
+    );
+    
+    if (possibleBlocks.length === 0) {
+        console.warn(`  Warning: No variance entries found for TBD block type: ${blockType}`);
+        return null;
+    }
+    
+    let totalHours = 0;
+    let totalMiles = 0;
+    let weeks = 0;
+    
+    // Calculate average burden across all possible locations
+    for (const blockName of possibleBlocks) {
+        const result = await calculateBlockCommute(blockName, homeCoords, useApi);
+        if (result) {
+            totalHours += result.totalHours;
+            totalMiles += result.totalMiles;
+            weeks = result.weeks; // Should be same for all
+        }
+    }
+    
+    // Return average
+    return {
+        totalHours: totalHours / possibleBlocks.length,
+        totalMiles: totalMiles / possibleBlocks.length,
+        weeks: weeks
+    };
+}
+
+/**
  * Calculate commute burden for a block
  */
 async function calculateBlockCommute(blockName, homeCoords, useApi = true) {
+    // Handle "To Be Determined" blocks by averaging across possible locations
+    if (blockName.includes('To Be Determined')) {
+        const blockType = blockName.split('@')[0].trim();
+        return await calculateTBDBlock(blockType, homeCoords, useApi);
+    }
+    
     const varData = variance[blockName];
     if (!varData) return null;
     
