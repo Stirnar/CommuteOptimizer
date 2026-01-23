@@ -6,6 +6,8 @@ Optimization Improvements
 - Pre-calculated all optimal locations per block
 - Used all block optimium locations to find top 10 blocks to calculate for 'Compare All Tracks' function
 
+	-
+
 V2.21 - January 2026
 
 UI Improvements
