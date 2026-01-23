@@ -1,8 +1,24 @@
 NSU Commute Optimizer - Version History
 
-V2.2 (Current) - January 2026
+v2.3 - January 2026
 
- New Features
+Optimization Improvements
+- Pre-calculated all optimal locations per block
+- Used all block optimium locations to find top 10 blocks to calculate for 'Compare All Tracks' function
+
+V2.21 - January 2026
+
+UI Improvements
+- Added a Changelog button in the top-right corner of the landing page
+- Removed the "Clinical Sites & Your Location" section entirely
+- Moved the interactive map into the left column
+- Moved the Map below the Costs
+
+	-
+
+V2.2 - January 2026
+
+New Features
 - Track Comparison Mode: Enter your home address and see which tracks have the lowest commute burden
 - Two-way optimization: Find optimal home for a track OR find optimal track for your home
 - Top 5 Rankings: See best tracks ranked
