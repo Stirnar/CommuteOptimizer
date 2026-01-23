@@ -2,6 +2,9 @@ NSU Commute Optimizer - Version History
 
 v2.3 - January 2026
 
+New Features
+- Compare All Tracks: Now shows you how far from optimal your starting location is and the relative costs of that location
+
 Optimization Improvements
 - Pre-calculated all optimal locations per block
 - Used all block optimium locations to find top 10 blocks to calculate for 'Compare All Tracks' function
