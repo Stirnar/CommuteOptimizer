@@ -95,18 +95,10 @@ Key Metrics
 	-
 
 Upcoming Features (Planned)
-
- V2.3 (Next)
-- Pre-computed optimal locations for faster comparisons
-- Multi-address comparison (compare 2-5 potential homes)
-
-Phase 2 (Future)
-- System-wide track optimization
-- Administrative tools for track assignment
-- Custom rotation builder
+- Custom Block Builder
 
 	-
 
-Current Version: V2.2
+Current Version: V2.32
 Last Updated: January 2026
 Developed by: Skyler Colwell
