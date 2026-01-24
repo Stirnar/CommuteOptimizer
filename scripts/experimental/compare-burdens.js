@@ -24,8 +24,8 @@ console.log('=================================\n');
 // Load both optimal locations files
 console.log('Loading data files...');
 
-const originalData = JSON.parse(fs.readFileSync('./data/optimal-locations.json', 'utf8'));
-const optimizedData = JSON.parse(fs.readFileSync('./data/optimal-locations-for-resort.json', 'utf8'));
+const originalData = JSON.parse(fs.readFileSync('../../data/optimal-locations.json', 'utf8'));
+const optimizedData = JSON.parse(fs.readFileSync('../../data/optimal-locations-for-resort.json', 'utf8'));
 
 console.log(`Original tracks: ${Object.keys(originalData).length}`);
 console.log(`Optimized tracks: ${Object.keys(optimizedData).length}\n`);
@@ -264,5 +264,5 @@ const report = {
     }
 };
 
-fs.writeFileSync('./data/burden-comparison-report.json', JSON.stringify(report, null, 2));
+fs.writeFileSync('../../data/burden-comparison-report.json', JSON.stringify(report, null, 2));
 console.log('✓ Saved detailed report to ./data/burden-comparison-report.json\n');

@@ -68,7 +68,7 @@ function loadData() {
     console.log('Loading data files...');
     
     // Load Locations
-    const locationsText = fs.readFileSync('./data/Locations.csv', 'utf8');
+    const locationsText = fs.readFileSync('../../data/Locations.csv', 'utf8');
     const locationsData = parseCSV(locationsText);
     locationsData.forEach(row => {
         if (row.Locations && row.Coordinates) {
@@ -80,7 +80,7 @@ function loadData() {
     });
     
     // Load Tracks and extract unique rotations
-    const tracksText = fs.readFileSync('./data/Tracks.csv', 'utf8');
+    const tracksText = fs.readFileSync('../../data/Tracks.csv', 'utf8');
     const tracks = parseCSV(tracksText).filter(row => row['Current Track'] && row['Current Track'].trim() !== '');
     
     tracks.forEach(track => {
@@ -94,7 +94,7 @@ function loadData() {
     });
     
     // Load Variance
-    const varianceText = fs.readFileSync('./data/Variance.csv', 'utf8');
+    const varianceText = fs.readFileSync('../../data/Variance.csv', 'utf8');
     const varianceData = parseCSV(varianceText);
     varianceData.forEach(row => {
         if (row.Block) {
@@ -390,7 +390,7 @@ async function main() {
     console.log('=================================\n');
     
     // Check if data directory exists
-    if (!fs.existsSync('./data')) {
+    if (!fs.existsSync('../../data')) {
         console.error('ERROR: ./data directory not found!');
         console.error('Please run this script from the project root directory.');
         process.exit(1);
@@ -431,7 +431,7 @@ async function main() {
     }
     
     // Save to file
-    const outputPath = './data/rotation-burdens.json';
+    const outputPath = '../../data/rotation-burdens.json';
     fs.writeFileSync(outputPath, JSON.stringify(results, null, 2));
     
     const elapsed = ((Date.now() - startTime) / 1000 / 60).toFixed(1);

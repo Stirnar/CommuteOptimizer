@@ -22,8 +22,8 @@ const COOLING_RATE = 0.9995;
 
 console.log('Loading data files...');
 
-const rotationBurdens = JSON.parse(fs.readFileSync('./data/rotation-burdens.json', 'utf8'));
-const tracksText = fs.readFileSync('./data/Tracks.csv', 'utf8');
+const rotationBurdens = JSON.parse(fs.readFileSync('../../data/rotation-burdens.json', 'utf8'));
+const tracksText = fs.readFileSync('../../data/Tracks.csv', 'utf8');
 
 // Parse CSV
 function parseCSV(text) {
@@ -324,7 +324,7 @@ function arrayToCSV(data, allColumns) {
     return [headers.join(','), ...rows].join('\n');
 }
 
-fs.writeFileSync('./data/Tracks-Optimized-Clustering.csv', arrayToCSV(optimizedTracks, timeColumns));
+fs.writeFileSync('../../data/Tracks-Optimized-Clustering.csv', arrayToCSV(optimizedTracks, timeColumns));
 console.log('✓ Saved to ./data/Tracks-Optimized-Clustering.csv\n');
 
 if (improvementPct > 10) {
