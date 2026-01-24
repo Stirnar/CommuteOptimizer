@@ -1,11 +1,8 @@
 Quick Start Guide
 
-For Users (No Installation)
+> License: Free for NSU students and personal use. See [LICENSE](LICENSE) for details.
 
-Option 1: Download and Open
-1. Download `index.html`
-2. Double-click to open in browser
-3. Start using immediately!
+For Users (No Installation)
 
 Option 2: Use Online (if hosted)
 1. Go to the hosted URL
@@ -15,10 +12,11 @@ Using the Application
 
 Basic Commute Calculation
 1. Select your track from the dropdown
-2. (Optional) Enter your home coordinates
-   - Or leave blank to find optimal location
+	- Or leave blank and just enter an address to find optimal tracks
+2. (Optional) Enter your home address or coordinates
+	- Or leave blank to find optimal location
 3. Click "Calculate Commute Burden"
-4. View your results!
+4. View your results
 
 Getting Your Home Coordinates
 1. Open Google Maps
@@ -27,16 +25,16 @@ Getting Your Home Coordinates
 4. Click the coordinates to copy them
 5. Paste into the "Home Location" field
 
-Creating a Custom Block
+* Creating a Custom Block (planned future)
 1. Click "Build Custom Block" button
 2. Name your block (e.g., "My Cardiology Elective")
 3. Add weeks using "+ Add Week"
 4. For each week, add days and select locations
 5. Check "Wednesday Campus Trips" if applicable
 6. Click "Save Custom Block"
-7. Your custom block now appears in the track dropdown with a 🎯 icon
+7. Your custom block now appears in the track dropdown
 
-Adding Custom Locations
+* Adding Custom Locations (planned future)
 1. In Custom Block Builder, find "Custom Locations"
 2. Enter location name (e.g., "Private Practice Dr. Smith")
 3. Get coordinates from Google Maps
@@ -45,11 +43,13 @@ Adding Custom Locations
 6. Location is now available in all dropdowns
 
 Viewing Help
-Click the "Help & Instructions" button anytime for detailed guidance.
+Click the "How to Use" button anytime for detailed guidance.
 
 ---
 
 For Developers/Admins
+
+Note: If you're from another institution and want to use this commercially, please see [LICENSE](LICENSE) for commercial licensing information.
 
 Quick Deploy (No Server)
 1. Open `index.html` in text editor
@@ -100,20 +100,11 @@ Select "main" branch
 Your site will be at: https://[username].github.io/[repo-name]
 ```
 
-Deploy to Netlify
-1. Drag and drop the `nsu-optimizer-v3` folder to netlify.com
-2. Done! You get a URL automatically
-
-pdate Data (Embedded Mode)
-1. Open `index.html` in text editor
-2. Find `LOCATIONS_CSV`, `TRACKS_CSV`, `VARIANCE_CSV` sections
-3. Update the data
-4. Save and redistribute
-
 Update Data (Backend Mode)
 1. Edit CSV files in `data/` directory
 2. Upload to server
-3. Changes take effect immediately
+3. Rerun generate-optimal-data.js
+4. Changes take effect immediately
 
 ---
 
@@ -138,7 +129,7 @@ Export Results
 - Or copy values manually
 - (PDF export coming in future version)
 
-Share Custom Block
+Share Custom Block (planned future)
 - Custom blocks saved in browser only
 - To share: Recreate manually for now
 - (Cloud sync coming in future version)
@@ -149,3 +140,7 @@ If something goes wrong:
 2. Run: `localStorage.clear()`
 3. Refresh page
 4. Everything resets to defaults
+
+---
+
+Questions? Check the full [README](README.md) or contact: skyler_colwell@yahoo.com

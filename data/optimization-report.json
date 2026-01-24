@@ -1,0 +1,157 @@
+{
+  "timestamp": "2026-01-24T03:48:36.846Z",
+  "algorithm": "greedy",
+  "tracksCount": 58,
+  "originalTotalBurden": 12415.731000000003,
+  "optimizedTotalBurden": 12415.731000000003,
+  "improvement": 0,
+  "improvementPercent": 0,
+  "originalAvgBurden": 214.06432758620696,
+  "optimizedAvgBurden": 214.06432758620696,
+  "originalStdDev": 24.441020382149265,
+  "optimizedStdDev": 28.4055640472974,
+  "topImprovers": [
+    {
+      "name": "Track 6",
+      "originalBurden": 242.86938888888892,
+      "optimizedBurden": 157.0691666666667,
+      "change": -85.80022222222223,
+      "changePct": -35.32772187337089
+    },
+    {
+      "name": "Track 23",
+      "originalBurden": 253.19705555555558,
+      "optimizedBurden": 184.47972222222222,
+      "change": -68.71733333333336,
+      "changePct": -27.13986273756475
+    },
+    {
+      "name": "Track 26",
+      "originalBurden": 252.64672222222228,
+      "optimizedBurden": 184.47972222222222,
+      "change": -68.16700000000006,
+      "changePct": -26.981153525531166
+    },
+    {
+      "name": "Track 25",
+      "originalBurden": 243.41972222222225,
+      "optimizedBurden": 184.47972222222222,
+      "change": -58.940000000000026,
+      "changePct": -24.2133215262618
+    },
+    {
+      "name": "Track 14",
+      "originalBurden": 243.38238888888887,
+      "optimizedBurden": 184.46105555555556,
+      "change": -58.92133333333331,
+      "changePct": -24.209366011372584
+    },
+    {
+      "name": "Track 13",
+      "originalBurden": 241.8413888888889,
+      "optimizedBurden": 184.96916666666664,
+      "change": -56.87222222222226,
+      "changePct": -23.51633129610892
+    },
+    {
+      "name": "Track 12",
+      "originalBurden": 229.2273888888889,
+      "optimizedBurden": 172.5035,
+      "change": -56.723888888888894,
+      "changePct": -24.745685567436315
+    },
+    {
+      "name": "Track 24",
+      "originalBurden": 253.19705555555558,
+      "optimizedBurden": 202.71338888888886,
+      "change": -50.48366666666672,
+      "changePct": -19.938488840597824
+    },
+    {
+      "name": "Track 27",
+      "originalBurden": 253.19705555555555,
+      "optimizedBurden": 202.71338888888886,
+      "change": -50.48366666666669,
+      "changePct": -19.938488840597817
+    },
+    {
+      "name": "Track 8",
+      "originalBurden": 233.64238888888892,
+      "optimizedBurden": 184.49838888888888,
+      "change": -49.144000000000034,
+      "changePct": -21.03385444469624
+    }
+  ],
+  "topDecliners": [
+    {
+      "name": "Track 46",
+      "originalBurden": 139.3622777777778,
+      "optimizedBurden": 239.04205555555555,
+      "change": 99.67977777777776,
+      "changePct": 71.52565196783281
+    },
+    {
+      "name": "Track 58",
+      "originalBurden": 184.46105555555556,
+      "optimizedBurden": 253.19705555555558,
+      "change": 68.73600000000002,
+      "changePct": 37.26315009581969
+    },
+    {
+      "name": "Track 57",
+      "originalBurden": 184.47972222222222,
+      "optimizedBurden": 253.1970555555556,
+      "change": 68.71733333333339,
+      "changePct": 37.24926106000813
+    },
+    {
+      "name": "Track 52",
+      "originalBurden": 184.47972222222222,
+      "optimizedBurden": 252.64672222222225,
+      "change": 68.16700000000003,
+      "changePct": 36.9509446235434
+    },
+    {
+      "name": "Track 35",
+      "originalBurden": 165.54416666666665,
+      "optimizedBurden": 233.60505555555554,
+      "change": 68.06088888888888,
+      "changePct": 41.113432299872976
+    },
+    {
+      "name": "Track 53",
+      "originalBurden": 195.8167222222222,
+      "optimizedBurden": 262.97438888888894,
+      "change": 67.15766666666673,
+      "changePct": 34.296185690644435
+    },
+    {
+      "name": "Track 60",
+      "originalBurden": 202.71338888888886,
+      "optimizedBurden": 262.9743888888889,
+      "change": 60.261000000000024,
+      "changePct": 29.72719282643449
+    },
+    {
+      "name": "Track 49",
+      "originalBurden": 184.47972222222222,
+      "optimizedBurden": 241.86005555555556,
+      "change": 57.38033333333334,
+      "changePct": 31.103870193502146
+    },
+    {
+      "name": "Track 48",
+      "originalBurden": 196.29572222222222,
+      "optimizedBurden": 253.19705555555558,
+      "change": 56.901333333333355,
+      "changePct": 28.987556473042524
+    },
+    {
+      "name": "Track 61",
+      "originalBurden": 212.4907222222222,
+      "optimizedBurden": 262.97438888888894,
+      "change": 50.48366666666675,
+      "changePct": 23.758056887712524
+    }
+  ]
+}

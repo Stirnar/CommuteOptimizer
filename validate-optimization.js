@@ -26,62 +26,77 @@ console.log('=================================\n');
 const results = [];
 
 // For each track, compare:
-// 1. Actual optimal location for the full track (from optimal-locations.json)
-// 2. Average optimal location across individual blocks (from rotation-burdens.json)
+// 1. Track-level optimal location and burden (from optimal-locations.json)
+// 2. Best block-level strategy: Pick one block's optimal and see total track burden
 for (const [trackName, trackData] of Object.entries(optimalLocations)) {
     const trackOptimal = trackData.optimalLocation;
     const trackBurden = trackData.minCommuteBurden;
     
-    // Calculate average optimal location from individual blocks
-    let blockLats = [];
-    let blockLngs = [];
-    let blockBurdens = [];
-    let missingBlocks = [];
+    // Strategy: Test each block's optimal location and see which gives lowest total track burden
+    // This simulates: "Student picks location optimal for their hardest/favorite rotation"
     
-    trackData.blockDetails.forEach(block => {
-        const blockName = block.block;
+    const blockOptimalStrategies = [];
+    
+    trackData.blockDetails.forEach(blockDetail => {
+        const blockName = blockDetail.block;
         const blockBurdenData = rotationBurdens[blockName];
         
         if (blockBurdenData && blockBurdenData.optimalLocation) {
-            blockLats.push(blockBurdenData.optimalLocation.lat);
-            blockLngs.push(blockBurdenData.optimalLocation.lng);
-            blockBurdens.push(blockBurdenData.minBurden);
-        } else {
-            missingBlocks.push(blockName);
+            // Calculate total track burden if you lived at this block's optimal location
+            // We'll sum up: this block's minBurden + other blocks' totalHours (average burden)
+            let totalTrackBurden = 0;
+            
+            trackData.blockDetails.forEach(otherBlock => {
+                const otherBlockName = otherBlock.block;
+                const otherBlockData = rotationBurdens[otherBlockName];
+                
+                if (otherBlockData) {
+                    if (otherBlockName === blockName) {
+                        // For this block, we're at its optimal, so use minBurden
+                        totalTrackBurden += otherBlockData.minBurden;
+                    } else {
+                        // For other blocks, we're not at their optimal, so use average (totalHours)
+                        totalTrackBurden += otherBlockData.totalHours;
+                    }
+                }
+            });
+            
+            blockOptimalStrategies.push({
+                blockName: blockName,
+                location: blockBurdenData.optimalLocation,
+                totalTrackBurden: totalTrackBurden
+            });
         }
     });
     
-    if (blockLats.length === 0) {
-        console.log(`⚠️  ${trackName}: No block optimal locations found`);
+    if (blockOptimalStrategies.length === 0) {
+        console.log(`⚠️  ${trackName}: No block data available`);
         continue;
     }
     
-    const avgBlockOptimal = {
-        lat: blockLats.reduce((a, b) => a + b, 0) / blockLats.length,
-        lng: blockLngs.reduce((a, b) => a + b, 0) / blockLngs.length
-    };
+    // Find which block's optimal location gives the lowest total track burden
+    blockOptimalStrategies.sort((a, b) => a.totalTrackBurden - b.totalTrackBurden);
+    const bestBlockStrategy = blockOptimalStrategies[0];
     
-    const sumBlockBurdens = blockBurdens.reduce((a, b) => a + b, 0);
-    
-    // Calculate distance between track optimal and average block optimal
-    const latDiff = Math.abs(trackOptimal.lat - avgBlockOptimal.lat);
-    const lngDiff = Math.abs(trackOptimal.lng - avgBlockOptimal.lng);
+    // Compare this to the actual track optimal
+    const latDiff = Math.abs(trackOptimal.lat - bestBlockStrategy.location.lat);
+    const lngDiff = Math.abs(trackOptimal.lng - bestBlockStrategy.location.lng);
     const distance = Math.sqrt(latDiff * latDiff + lngDiff * lngDiff);
     
-    // Calculate burden difference
-    const burdenDiff = Math.abs(trackBurden - sumBlockBurdens);
+    const burdenDiff = Math.abs(trackBurden - bestBlockStrategy.totalTrackBurden);
     const burdenPctDiff = (burdenDiff / trackBurden * 100);
     
     results.push({
         trackName,
         trackOptimal,
-        avgBlockOptimal,
+        bestBlockOptimal: bestBlockStrategy.location,
+        bestBlockName: bestBlockStrategy.blockName,
         distance,
         trackBurden,
-        sumBlockBurdens,
+        blockBasedBurden: bestBlockStrategy.totalTrackBurden,
         burdenDiff,
         burdenPctDiff,
-        missingBlocks
+        numBlockStrategies: blockOptimalStrategies.length
     });
 }
 
@@ -94,14 +109,12 @@ console.log('=================================\n');
 results.slice(0, 10).forEach((r, idx) => {
     console.log(`${idx + 1}. ${r.trackName}`);
     console.log(`   Track optimal: (${r.trackOptimal.lat.toFixed(4)}, ${r.trackOptimal.lng.toFixed(4)})`);
-    console.log(`   Avg block optimal: (${r.avgBlockOptimal.lat.toFixed(4)}, ${r.avgBlockOptimal.lng.toFixed(4)})`);
+    console.log(`   Best block strategy: ${r.bestBlockName}`);
+    console.log(`   Block optimal: (${r.bestBlockOptimal.lat.toFixed(4)}, ${r.bestBlockOptimal.lng.toFixed(4)})`);
     console.log(`   Distance: ${r.distance.toFixed(4)} degrees (~${(r.distance * 69).toFixed(1)} miles)`);
     console.log(`   Track burden: ${r.trackBurden.toFixed(1)} hrs`);
-    console.log(`   Sum block burdens: ${r.sumBlockBurdens.toFixed(1)} hrs`);
+    console.log(`   Block-based burden: ${r.blockBasedBurden.toFixed(1)} hrs`);
     console.log(`   Burden difference: ${r.burdenDiff.toFixed(1)} hrs (${r.burdenPctDiff.toFixed(1)}%)`);
-    if (r.missingBlocks.length > 0) {
-        console.log(`   ⚠️  Missing blocks: ${r.missingBlocks.length}`);
-    }
     console.log('');
 });
 
@@ -114,7 +127,7 @@ console.log('=================================\n');
 results.slice(0, 10).forEach((r, idx) => {
     console.log(`${idx + 1}. ${r.trackName}`);
     console.log(`   Track burden: ${r.trackBurden.toFixed(1)} hrs`);
-    console.log(`   Sum block burdens: ${r.sumBlockBurdens.toFixed(1)} hrs`);
+    console.log(`   Block-based burden: ${r.blockBasedBurden.toFixed(1)} hrs`);
     console.log(`   Difference: ${r.burdenDiff.toFixed(1)} hrs (${r.burdenPctDiff.toFixed(1)}%)`);
     console.log('');
 });
