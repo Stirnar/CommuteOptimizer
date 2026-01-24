@@ -16,8 +16,8 @@
 const fs = require('fs');
 
 // Load the data
-const optimalLocations = JSON.parse(fs.readFileSync('./data/optimal-locations.json', 'utf8'));
-const rotationBurdens = JSON.parse(fs.readFileSync('./data/rotation-burdens.json', 'utf8'));
+const optimalLocations = JSON.parse(fs.readFileSync('../../data/optimal-locations.json', 'utf8'));
+const rotationBurdens = JSON.parse(fs.readFileSync('../../data/rotation-burdens.json', 'utf8'));
 
 console.log('=================================');
 console.log('Validation: Track vs Block Optimization');
