@@ -1,4 +1,4 @@
-NSU Commute Optimizer V2.32
+NSU Commute Optimizer V2.4
 
 Overview
 
@@ -25,7 +25,7 @@ Commercial Inquiries: skyler_colwell@yahoo.com
 
 New Features
 
-1. Custom Block Builder
+1. Custom Block Builder (planned future)
 
 What it does:
 - Create custom rotation blocks with flexible weekly schedules
@@ -183,7 +183,7 @@ For questions or issues:
 
 Credits
 Developed by Skyler Colwell  
-Version 2.32 - January 2026
+Version 2.4 - January 2026
 
 ---
 

@@ -1,13 +1,26 @@
 NSU Commute Optimizer - Version History
 
-v2.32 - January2026
+v2.4 - January 25 2026
+
+New Features
+- Instant Feedback
+	- Enter any address and see top 10 track estimates immediately
+	- No more 30-60 second blank loading screen
+
+- Progressive Refinement
+	- Top 5 tracks are calculated precisely in the background
+	- Estimates for tracks 6-10 remain for quick comparison
+
+	---
+
+v2.32 - January 24 2026
 
 UI
 - General UI formating fixes
 
-	-
+	---
 
-v2.31 - January 2026
+v2.31 - January 23 2026
 
 New Features
 - Compare All Tracks: Now shows you how far from optimal your starting location is and the relative costs of that location
@@ -16,9 +29,9 @@ Optimization Improvements
 - Pre-calculated all optimal locations per block
 - Used all block optimum locations to find top 10 blocks to calculate for 'Compare All Tracks' function
 
-	-
+	---
 
-V2.21 - January 2026
+V2.21 - January 23 2026
 
 UI Improvements
 - Added a Changelog button in the top-right corner of the landing page
@@ -26,9 +39,9 @@ UI Improvements
 - Moved the interactive map into the left column
 - Moved the Map below the Costs
 
-	-
+	---
 
-V2.2 - January 2026
+V2.2 - January 22 2026
 
 New Features
 - Track Comparison Mode: Enter your home address and see which tracks have the lowest commute burden
@@ -53,9 +66,9 @@ What You Can Do Now
 - Track comparison takes 3-5 minutes (analyzing all 60 tracks)
 - Single track calculation: 5-30 seconds depending on whether optimal location search is needed
 
-	-
+	---
 
-V2.1 - January 2026
+V2.1 - January 22 2026
 
 New Features
 - Address input: Enter street addresses instead of coordinates
@@ -75,12 +88,12 @@ What You Can Do Now
 - Click markers to see site details
 - Pan and zoom the map
 
-	-
+	---
 
-V2.0 - January 2026
+V2.0 - January 21 2026
 
 Initial Features
-- Track selection: Choose from 60 available tracks
+- Track selection: Choose from all available tracks
 - Commute calculation: Calculate time and costs for rotations
 - Optimal location finder: Find best home location for selected track
 - Cost analysis: Gas, maintenance, and opportunity costs
@@ -92,12 +105,12 @@ Key Metrics
 - UWorld questions lost to commuting
 - Financial opportunity cost
 
-	-
+	---
 
 Upcoming Features (Planned)
 - Custom Block Builder
 
-	-
+	---
 
 Current Version: V2.32
 Last Updated: January 2026

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medical Student Commute Optimizer - NSU v2.4</title>
+    <title>Medical Student Commute Optimizer - NSU v2.32</title>
     <script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
     <!-- Leaflet.js for mapping -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -241,7 +241,7 @@
             <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 8px;">
                 <h1>
                     Medical Student Commute Optimizer
-                    <span class="version-badge">v2.4</span>
+                    <span class="version-badge">v2.32</span>
                 </h1>
                 <div style="display: flex; gap: 12px;">
                     <button id="howToUseBtn" style="padding: 8px 16px; font-size: 14px; background: #3b82f6;">
@@ -444,7 +444,6 @@
         let tracks = [];
         let variance = {};
 		let optimalLocations = {};
-		let burdenMatrix = null;
         let currentResults = null;
         let currentHomeCoords = null;
         let mapInstance = null;
@@ -474,7 +473,6 @@
                     loadTracks(),
                     loadVariance(),
 					loadOptimalLocations().then(data => optimalLocations = data)
-					,loadBurdenMatrix()
                 ]);
                 
                 locations['NSU'] = NSU_COORDS;
@@ -565,23 +563,6 @@
 				return {};
 			}
 		}
-        
-
-	async function loadBurdenMatrix() {
-		try {
-			const response = await fetch('./data/burden-matrix.json');
-			if (!response.ok) {
-				console.warn('Burden matrix file not found. Instant estimates will not be available.');
-				return null;
-			}
-			burdenMatrix = await response.json();
-			console.log(`Loaded burden matrix with ${burdenMatrix.testPoints.length} test points`);
-			return burdenMatrix;
-		} catch (error) {
-			console.warn('Could not load burden matrix:', error.message);
-			return null;
-		}
-	}
         
         function showError(message) {
             const errorDiv = document.getElementById('dataError');
@@ -740,152 +721,6 @@
         }
         
         
-        // ============================================================================
-        // Burden Matrix Utility Functions for Instant Estimates
-        // ============================================================================
-        
-        /**
-         * Calculate distance between two points using Haversine formula
-         * @returns {number} - Distance in miles
-         */
-        function haversineDistance(point1, point2) {
-            const R = 3959; // Earth's radius in miles
-            const lat1 = point1.lat * Math.PI / 180;
-            const lat2 = point2.lat * Math.PI / 180;
-            const deltaLat = (point2.lat - point1.lat) * Math.PI / 180;
-            const deltaLng = (point2.lng - point1.lng) * Math.PI / 180;
-            
-            const a = Math.sin(deltaLat/2) * Math.sin(deltaLat/2) +
-                      Math.cos(lat1) * Math.cos(lat2) *
-                      Math.sin(deltaLng/2) * Math.sin(deltaLng/2);
-            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-            
-            return R * c;
-        }
-        
-        /**
-         * Find the nearest test point to given coordinates
-         * @param {Object} coords - {lat, lng}
-         * @returns {Object} - {index, testPoint, distance}
-         */
-        function findNearestTestPoint(coords) {
-            if (!burdenMatrix || !burdenMatrix.testPoints) {
-                return null;
-            }
-            
-            let minDistance = Infinity;
-            let nearestIndex = -1;
-            let nearestPoint = null;
-            
-            for (let i = 0; i < burdenMatrix.testPoints.length; i++) {
-                const point = burdenMatrix.testPoints[i];
-                const distance = haversineDistance(coords, point);
-                
-                if (distance < minDistance) {
-                    minDistance = distance;
-                    nearestIndex = i;
-                    nearestPoint = point;
-                }
-            }
-            
-            return {
-                index: nearestIndex,
-                testPoint: nearestPoint,
-                distance: minDistance
-            };
-        }
-        
-        /**
-         * Get all track burdens for given coordinates from burden matrix
-         * @param {Object} coords - {lat, lng}
-         * @returns {Array} - Array of {trackName, burden, isEstimate, distance}
-         */
-        function getAllTrackBurdensEstimate(coords) {
-            if (!burdenMatrix) {
-                return [];
-            }
-            
-            const nearest = findNearestTestPoint(coords);
-            if (!nearest) {
-                return [];
-            }
-            
-            const results = [];
-            for (let i = 0; i < burdenMatrix.rotations.length; i++) {
-                results.push({
-                    trackName: burdenMatrix.rotations[i],
-                    burden: burdenMatrix.burdens[nearest.index][i],
-                    isEstimate: true,
-                    distance: nearest.distance,
-                    testPoint: nearest.testPoint
-                });
-            }
-            
-            return results;
-        }
-        
-        /**
-         * Get burden estimate for a single track at given coordinates
-         * @param {string} trackName - Full track name (e.g., "Track 15")
-         * @param {Object} coords - {lat, lng}
-         * @returns {Object|null} - {burden, miles, isEstimate, distance, testPoint} or null
-         */
-        function getTrackBurdenEstimate(trackName, coords) {
-            if (!burdenMatrix) {
-                return null;
-            }
-            
-            const nearest = findNearestTestPoint(coords);
-            if (!nearest) {
-                return null;
-            }
-            
-            // Find the track in the tracks data
-            const trackData = tracks.find(t => t['Current Track'] === trackName);
-            if (!trackData) {
-                console.warn(`Track ${trackName} not found in tracks data`);
-                return null;
-            }
-            
-            // Get all rotations for this track from the rotation columns
-            const rotations = [];
-            // Iterate through all columns except 'Current Track'
-            for (const [key, value] of Object.entries(trackData)) {
-                if (key !== 'Current Track' && value && value.trim()) {
-                    rotations.push(value.trim());
-                }
-            }
-            
-            // Calculate total burden by summing burdens for all rotations
-            let totalBurden = 0;
-            let foundRotations = 0;
-            
-            for (const rotation of rotations) {
-                const rotationIndex = burdenMatrix.rotations.indexOf(rotation);
-                if (rotationIndex !== -1) {
-                    totalBurden += burdenMatrix.burdens[nearest.index][rotationIndex];
-                    foundRotations++;
-                } else {
-                    console.warn(`Rotation ${rotation} not found in burden matrix`);
-                }
-            }
-            
-            // Estimate miles based on hours (rough: 1 hour commute = 15 miles)
-            const estimatedMiles = totalBurden * 15;
-            
-            return {
-                burden: totalBurden,
-                miles: estimatedMiles,
-                isEstimate: true,
-                distance: nearest.distance,
-                testPoint: nearest.testPoint,
-                rotationsFound: foundRotations,
-                totalRotations: rotations.length
-            };
-        }
-        
-        
-        
         async function findOptimalTracks(homeCoords) {
             const loadingProgress = document.getElementById('loadingProgress');
             const trackResults = [];
@@ -1020,138 +855,6 @@
 			return preciseResults.slice(0, 5);
 		}
         
-        async function findOptimalTracksWithInstantEstimates(homeCoords) {
-            console.log('Using burden matrix for instant estimates');
-            
-            const loadingProgress = document.getElementById('loadingProgress');
-            
-            // Phase 1: INSTANT estimates from burden matrix
-            loadingProgress.textContent = 'Getting instant estimates...';
-            
-            const estimates = getAllTrackBurdensEstimate(homeCoords);
-            
-            if (estimates.length === 0) {
-                console.warn('No burden matrix available, falling back to standard method');
-                return await findOptimalTracksFast(homeCoords);
-            }
-            
-            // Show distance from test point
-            const distanceMiles = estimates[0].distance;
-            console.log(`Using test point ${distanceMiles.toFixed(2)} miles from your location`);
-            
-            // Match estimates with track data and calculate costs
-            const trackResults = [];
-            for (const estimate of estimates) {
-                const trackData = tracks.find(t => {
-                    // Match rotation name from burden matrix to track
-                    const rotationParts = estimate.trackName.split('@');
-                    const rotationType = rotationParts[0].trim();
-                    const rotationSite = rotationParts[1]?.trim() || '';
-                    
-                    return t['Current Track'].includes(rotationType) && 
-                           (rotationSite === '' || t['Current Track'].includes(rotationSite));
-                });
-                
-                if (!trackData) continue;
-                
-                // Calculate estimated costs
-                const hourlyRate = costSettings.residentSalary / (52 * 60);
-                const estimatedMiles = estimate.burden * 15; // Rough: 1 hour commute = 15 miles
-                const estimatedWeeks = 48; // Approximate
-                
-                const gasCost = (estimatedMiles / costSettings.mpg) * costSettings.gasPricePerGallon;
-                const maintenanceCost = estimatedMiles * costSettings.maintenancePerMile;
-                const opportunityCost = estimate.burden * hourlyRate;
-                const totalCost = gasCost + maintenanceCost + opportunityCost;
-                
-                trackResults.push({
-                    trackName: trackData['Current Track'],
-                    trackData: trackData,
-                    totalHours: estimate.burden,
-                    totalMiles: estimatedMiles,
-                    totalWeeks: estimatedWeeks,
-                    gasCost: gasCost,
-                    maintenanceCost: maintenanceCost,
-                    opportunityCost: opportunityCost,
-                    totalCost: totalCost,
-                    isEstimate: true,
-                    estimateDistance: estimate.distance
-                });
-            }
-            
-            // Sort and display top 10 estimated results immediately
-            trackResults.sort((a, b) => {
-                if (Math.abs(a.totalHours - b.totalHours) < 1) {
-                    return a.totalCost - b.totalCost;
-                }
-                return a.totalHours - b.totalHours;
-            });
-            
-            const topCandidates = trackResults.slice(0, 10);
-            
-            // Display instant estimates
-            displayTrackComparisonWithEstimates(topCandidates, homeCoords, true);
-            
-            // Phase 2: Precise calculation for top 5 in background
-            loadingProgress.textContent = 'Refining top candidates...';
-            const preciseResults = [];
-            
-            for (let i = 0; i < Math.min(5, topCandidates.length); i++) {
-                const candidate = topCandidates[i];
-                loadingProgress.textContent = `Calculating precise burden for ${candidate.trackName} (${i + 1}/5)...`;
-                
-                try {
-                    const result = await calculateTrackCommute(candidate.trackData, homeCoords, true);
-                    
-                    const hourlyRate = costSettings.residentSalary / (52 * 60);
-                    const gasCost = (result.totalMiles / costSettings.mpg) * costSettings.gasPricePerGallon;
-                    const maintenanceCost = result.totalMiles * costSettings.maintenancePerMile;
-                    const opportunityCost = result.totalHours * hourlyRate;
-                    const totalCost = gasCost + maintenanceCost + opportunityCost;
-                    
-                    preciseResults.push({
-                        trackName: candidate.trackName,
-                        trackData: candidate.trackData,
-                        totalHours: result.totalHours,
-                        totalMiles: result.totalMiles,
-                        totalWeeks: result.totalWeeks,
-                        gasCost: gasCost,
-                        maintenanceCost: maintenanceCost,
-                        opportunityCost: opportunityCost,
-                        totalCost: totalCost,
-                        blockDetails: result.blockDetails,
-                        isEstimate: false,
-                        estimateDistance: candidate.estimateDistance
-                    });
-                    
-                    // Update display progressively as each calculation completes
-                    displayTrackComparisonWithEstimates(
-                        [...preciseResults, ...topCandidates.slice(preciseResults.length)], 
-                        homeCoords, 
-                        false
-                    );
-                    
-                } catch (error) {
-                    console.error(`Error calculating ${candidate.trackName}:`, error);
-                }
-            }
-            
-            // Final sort
-            preciseResults.sort((a, b) => {
-                if (Math.abs(a.totalHours - b.totalHours) < 1) {
-                    return a.totalCost - b.totalCost;
-                }
-                return a.totalHours - b.totalHours;
-            });
-            
-            console.log('Track comparison complete with precise calculations');
-            
-            // Hide loading indicator
-            document.getElementById('loading').classList.add('hidden');
-            
-            return preciseResults;
-        }
-        
         function displayTrackComparison(topTracks, homeCoords) {
             document.getElementById('comparisonHomeDisplay').textContent = 
                 `Comparing from: ${homeCoords.lat.toFixed(4)}, ${homeCoords.lng.toFixed(4)}`;
@@ -1222,103 +925,6 @@
             document.getElementById('loading').classList.add('hidden');
         }
         
-        
-        /**
-         * Enhanced display function with estimate/calculated indicators
-         */
-        function displayTrackComparisonWithEstimates(topTracks, homeCoords, allEstimates = false) {
-            document.getElementById('comparisonHomeDisplay').textContent = 
-                `Comparing from: ${homeCoords.lat.toFixed(4)}, ${homeCoords.lng.toFixed(4)}`;
-            
-            const rankingsDiv = document.getElementById('trackRankings');
-            
-            // Show estimate notice if any are estimates
-            const hasEstimates = topTracks.some(t => t.isEstimate);
-            let noticeHtml = '';
-            
-            if (hasEstimates && allEstimates) {
-                const estimateDistance = topTracks[0].estimateDistance || 0;
-                noticeHtml = `
-                    <div style="background: #fef3c7; border-left: 4px solid #f59e0b; padding: 12px; margin-bottom: 16px; border-radius: 8px;">
-                        <strong>Instant Estimates</strong><br>
-                        <span style="font-size: 14px; color: #92400e;">
-                            Using nearest test point (${estimateDistance.toFixed(2)} miles away). 
-                            Calculating precise burdens now...
-                        </span>
-                    </div>
-                `;
-            } else if (hasEstimates) {
-                noticeHtml = `
-                    <div style="background: #dbeafe; border-left: 4px solid #3b82f6; padding: 12px; margin-bottom: 16px; border-radius: 8px;">
-                        <strong>Refining Results</strong><br>
-                        <span style="font-size: 14px; color: #1e40af;">
-                            Some results are still being calculated...
-                        </span>
-                    </div>
-                `;
-            }
-            
-            rankingsDiv.innerHTML = noticeHtml + topTracks.map((track, index) => {
-                const hoursPerWeek = track.totalWeeks > 0 ? track.totalHours / track.totalWeeks : 0;
-                const medal = index === 0 ? '1.' : index === 1 ? '2.' : index === 2 ? '3.' : `${index + 1}.`;
-                
-                const estimateBadge = track.isEstimate 
-                    ? '<span style="background: #fef3c7; color: #92400e; padding: 2px 8px; border-radius: 4px; font-size: 12px; margin-left: 8px;">⚡ Estimate</span>'
-                    : '<span style="background: #d1fae5; color: #065f46; padding: 2px 8px; border-radius: 4px; font-size: 12px; margin-left: 8px;">✓ Calculated</span>';
-                
-                return `
-                    <div class="card" style="margin-bottom: 16px; border-left: 4px solid ${index === 0 ? '#10b981' : index === 1 ? '#3b82f6' : '#64748b'}; ${track.isEstimate ? 'opacity: 0.85;' : ''}">
-                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 16px;">
-                            <div>
-                                <h3 style="margin: 0; font-size: 20px;">
-                                    ${medal} ${track.trackName}
-                                    ${estimateBadge}
-                                </h3>
-                                <p style="color: #64748b; font-size: 14px; margin-top: 4px;">
-                                    ${Math.round(track.totalHours)} hrs/year • ${hoursPerWeek.toFixed(1)} hrs/week
-                                </p>
-                            </div>
-                            <div style="text-align: right;">
-                                <div style="font-size: 24px; font-weight: bold; color: #10b981;">
-                                    $${Math.round(track.totalCost).toLocaleString()}
-                                </div>
-                                <div style="font-size: 12px; color: #64748b;">Total Cost</div>
-                            </div>
-                        </div>
-                        
-                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; padding: 12px; background: #f8fafc; border-radius: 8px;">
-                            <div>
-                                <div style="font-size: 12px; color: #64748b;">Gas</div>
-                                <div style="font-weight: 600;">$${Math.round(track.gasCost).toLocaleString()}</div>
-                            </div>
-                            <div>
-                                <div style="font-size: 12px; color: #64748b;">Maintenance</div>
-                                <div style="font-weight: 600;">$${Math.round(track.maintenanceCost).toLocaleString()}</div>
-                            </div>
-                            <div>
-                                <div style="font-size: 12px; color: #64748b;">Opportunity</div>
-                                <div style="font-weight: 600;">$${Math.round(track.opportunityCost).toLocaleString()}</div>
-                            </div>
-                        </div>
-                        
-                        ${!track.isEstimate ? `
-                            <button onclick="selectTrackFromComparison('${track.trackName}', ${index})" 
-                                    style="margin-top: 12px; width: 100%; background: #3b82f6;">
-                                View Full Details for ${track.trackName}
-                            </button>
-                        ` : `
-                            <div style="margin-top: 12px; padding: 8px; background: #f8fafc; border-radius: 6px; text-align: center; color: #64748b; font-size: 13px;">
-                                Calculating precise burden...
-                            </div>
-                        `}
-                    </div>
-                `;
-            }).join('');
-            
-            document.getElementById('loading').classList.add('hidden');
-            document.getElementById('trackComparisonResults').classList.remove('hidden');
-        }
-        
         // Store comparison results globally so we can access them
         let lastTrackComparison = null;
         let lastComparisonHomeCoords = null;
@@ -1383,8 +989,8 @@
                     }
                     
                     const topTracks = Object.keys(optimalLocations).length > 0 
-							? await findOptimalTracksFast(coords)
-							: await findOptimalTracks(coords);
+						? await findOptimalTracksFast(coords)
+						: await findOptimalTracks(coords);
                     
                     // Store for detailed view
                     lastTrackComparison = topTracks;
@@ -1463,7 +1069,7 @@
                 } else {
                     // Case 3: Both track and home - Calculate specific combination
                     loadingTitle.textContent = 'Calculating routes...';
-                    loadingSubtext.textContent = burdenMatrix ? 'Getting instant estimate...' : 'This may take a moment. Please wait.';
+                    loadingSubtext.textContent = 'This may take a moment. Please wait.';
                     
                     const trackData = tracks.find(t => t['Current Track'] === trackSelect.value);
                     const coords = await parseLocationInput(homeInput.value);
@@ -1498,43 +1104,10 @@
                         
                         displayResults(currentResults, coords);
                     } else {
-                        // Try to get instant estimate from burden matrix
-                        const estimate = burdenMatrix ? getTrackBurdenEstimate(trackName, coords) : null;
-                        
-                        if (estimate) {
-                            // Show instant estimate immediately
-                            console.log(`Using instant estimate from burden matrix (${estimate.distance.toFixed(2)} miles from test point)`);
-                            loadingSubtext.textContent = `Showing estimate (${estimate.distance.toFixed(2)} mi from test point)...`;
-                            
-                            // Create estimated results
-                            const estimatedResults = {
-                                totalHours: estimate.burden,
-                                totalMiles: estimate.miles,
-                                totalWeeks: 48, // Approximate
-                                blockDetails: null,
-                                isEstimate: true,
-                                estimateDistance: estimate.distance
-                            };
-                            
-                            // Display estimate immediately
-                            displayResults(estimatedResults, coords);
-                            
-                            // Update loading indicator
-                            loadingTitle.textContent = 'Refining calculation...';
-                            loadingSubtext.textContent = 'Calculating precise commute burden...';
-                            document.getElementById('loading').classList.remove('hidden');
-                        }
-                        
-                        // Calculate precise results (in background if estimate was shown)
+                        // Different location or no pre-computed data - calculate normally
                         const results = await calculateTrackCommute(trackData, coords);
                         currentResults = results;
-                        
-                        // Display precise results (will replace estimate if shown)
                         displayResults(results, coords);
-                        
-                        if (estimate) {
-                            console.log(`Precise calculation complete. Estimate: ${estimate.burden.toFixed(1)}h, Actual: ${results.totalHours.toFixed(1)}h, Difference: ${Math.abs(results.totalHours - estimate.burden).toFixed(1)}h`);
-                        }
                     }
                 }
             } catch (error) {
@@ -1931,8 +1504,7 @@
             
 			// Calculate weeks at each site from blockDetails
 			const siteWeeks = {};
-			if (results.blockDetails) {
-				results.blockDetails.forEach(block => {
+			results.blockDetails.forEach(block => {
 				const varData = variance[block.block];
 				if (varData && varData.Locations) {
 					const blockSites = varData.Locations.split(',').map(l => l.trim()).filter(Boolean);
@@ -1953,7 +1525,6 @@
 					});
 				}
 			});
-			}
 
 			// Add clinical site markers with size/intensity based on weeks
 			clinicalSites.forEach(site => {
@@ -2045,24 +1616,7 @@
                 `;
             }
 
-
-            // Add estimate indicator if this is an estimate
-            let estimateIndicatorHtml = '';
-            if (results.isEstimate) {
-                estimateIndicatorHtml = `
-                    <div style="grid-column: 1 / -1; background: #fef3c7; border-left: 4px solid #f59e0b; padding: 12px; margin-bottom: 16px; border-radius: 8px;">
-                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
-                            <span style="font-size: 18px;">⚡</span>
-                            <strong style="color: #92400e;">Instant Estimate</strong>
-                        </div>
-                        <span style="font-size: 13px; color: #92400e;">
-                            Based on nearest test point (${results.estimateDistance.toFixed(2)} miles away). 
-                            Precise calculation in progress...
-                        </span>
-                    </div>
-                `;
-            }
-            document.getElementById('statsGrid').innerHTML = backButtonHtml + estimateIndicatorHtml + [
+            document.getElementById('statsGrid').innerHTML = backButtonHtml + [
                 { label: 'Hours/Day', value: (hoursPerWeek / 5).toFixed(1), color: '#3b82f6' },
                 { label: 'Hours/Week', value: hoursPerWeek.toFixed(1), color: '#8b5cf6' },
                 { label: 'Hours/Month', value: hoursPerMonth.toFixed(1), color: '#ec4899' },
@@ -2100,7 +1654,7 @@
                 <div class="cost-sub">Based on $${costSettings.residentSalary} resident salary</div>
             `;
             
-            document.getElementById('blocksContent').innerHTML = (results.blockDetails && results.blockDetails.length > 0) ? results.blockDetails.map(block => `
+            document.getElementById('blocksContent').innerHTML = results.blockDetails.map(block => `
                 <div class="block-item">
                     <div style="font-weight: 600; font-size: 12px; color: #3b82f6; margin-bottom: 4px;">${block.month}</div>
                     <div style="font-size: 13px; color: #475569; margin-bottom: 8px;">${block.block}</div>
@@ -2116,11 +1670,11 @@
                         </div>
                     `}
                 </div>
-            `).join('') : '<div style="padding: 16px; text-align: center; color: #64748b; font-size: 14px;">Block details will appear after precise calculation completes...</div>';
+            `).join('');
             
             // Collect used sites for map
             const usedSites = new Set();
-            if (results.blockDetails) results.blockDetails.forEach(block => {
+            results.blockDetails.forEach(block => {
                 const varData = variance[block.block];
                 if (varData && varData.Locations) {
                     varData.Locations.split(',').map(l => l.trim()).forEach(loc => {
