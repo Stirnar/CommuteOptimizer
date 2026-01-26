@@ -112,6 +112,6 @@ Upcoming Features (Planned)
 
 	---
 
-Current Version: V2.32
+Current Version: V2.4
 Last Updated: January 2026
 Developed by: Skyler Colwell
