@@ -1,1 +1,0 @@
-RERUN generate-optimal-data IN ROOT IF UPDATING CSVs

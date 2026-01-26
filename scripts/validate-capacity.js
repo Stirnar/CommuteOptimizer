@@ -45,8 +45,8 @@ function parseCSV(text) {
 
 // Load files
 console.log('Loading files...');
-const originalText = fs.readFileSync('../../data/Tracks.csv', 'utf8');
-const optimizedText = fs.readFileSync('../../data/Tracks-Optimized-Clustering.csv', 'utf8');
+const originalText = fs.readFileSync('../data/Tracks.csv', 'utf8');
+const optimizedText = fs.readFileSync('../data/Tracks-Optimized-Matrix.csv', 'utf8');
 
 const originalTracks = parseCSV(originalText).filter(row => row['Current Track'] && row['Current Track'].trim() !== '');
 const optimizedTracks = parseCSV(optimizedText).filter(row => row['Current Track'] && row['Current Track'].trim() !== '');
