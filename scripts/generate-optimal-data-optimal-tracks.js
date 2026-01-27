@@ -5,7 +5,7 @@
  * This script calculates the optimal home location for each track AND stores
  * the complete commute results so users get instant results.
  * 
- * Run once, or whenever Locations.csv, Tracks.csv, or Variance.csv change.
+ * Run once, or whenever Locations.csv, Tracks-Optimized-Matrix.csv, or Variance.csv change.
  */
 
 const fs = require('fs');
@@ -75,7 +75,7 @@ function loadData() {
     locations['NSU'] = NSU_COORDS;
     
     // Load Tracks
-    const tracksText = fs.readFileSync('../data/Tracks.csv', 'utf8');
+    const tracksText = fs.readFileSync('../data/Tracks-Optimized-Matrix.csv', 'utf8');
     tracks = parseCSV(tracksText).filter(row => row['Current Track'] && row['Current Track'].trim() !== '');
     
     // Load Variance
@@ -385,7 +385,7 @@ async function main() {
     }
     
     // Save to file
-    const outputPath = '../data/optimal-locations.json';
+    const outputPath = '../data/optimal-locations-optimal-tracks.json';
     fs.writeFileSync(outputPath, JSON.stringify(results, null, 2));
     
     const elapsed = ((Date.now() - startTime) / 1000 / 60).toFixed(1);

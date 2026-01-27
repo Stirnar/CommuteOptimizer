@@ -1,1 +1,0 @@
-RERUN generate-optimal-data.js (found in scripts folder) IF UPDATING CSVs

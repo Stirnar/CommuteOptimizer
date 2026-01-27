@@ -1263,8 +1263,8 @@
                 const medal = index === 0 ? '1.' : index === 1 ? '2.' : index === 2 ? '3.' : `${index + 1}.`;
                 
                 const estimateBadge = track.isEstimate 
-                    ? '<span style="background: #fef3c7; color: #92400e; padding: 2px 8px; border-radius: 4px; font-size: 12px; margin-left: 8px;">⚡ Estimate</span>'
-                    : '<span style="background: #d1fae5; color: #065f46; padding: 2px 8px; border-radius: 4px; font-size: 12px; margin-left: 8px;">✓ Calculated</span>';
+                    ? '<span style="background: #fef3c7; color: #92400e; padding: 2px 8px; border-radius: 4px; font-size: 12px; margin-left: 8px;">Estimate</span>'
+                    : '<span style="background: #d1fae5; color: #065f46; padding: 2px 8px; border-radius: 4px; font-size: 12px; margin-left: 8px;">Calculated</span>';
                 
                 return `
                     <div class="card" style="margin-bottom: 16px; border-left: 4px solid ${index === 0 ? '#10b981' : index === 1 ? '#3b82f6' : '#64748b'}; ${track.isEstimate ? 'opacity: 0.85;' : ''}">
@@ -2052,7 +2052,6 @@
                 estimateIndicatorHtml = `
                     <div style="grid-column: 1 / -1; background: #fef3c7; border-left: 4px solid #f59e0b; padding: 12px; margin-bottom: 16px; border-radius: 8px;">
                         <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
-                            <span style="font-size: 18px;">⚡</span>
                             <strong style="color: #92400e;">Instant Estimate</strong>
                         </div>
                         <span style="font-size: 13px; color: #92400e;">
