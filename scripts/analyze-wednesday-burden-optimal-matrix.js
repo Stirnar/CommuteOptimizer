@@ -3,7 +3,6 @@
 /**
  * Analyze the incremental burden of Wednesday campus requirements
  * 
- * CORRECTED VERSION:
  * - Wednesday Exception = "y" means NO Wednesday campus requirement
  * - Wednesday Exception = "n" (or missing) means YES Wednesday campus requirement
  * - Handles "To Be Determined" blocks by averaging across possible locations
@@ -59,7 +58,7 @@ function loadData() {
     console.log('Loading data files...');
     
     // Load Locations
-    const locationsText = fs.readFileSync('../../data/Locations.csv', 'utf8');
+    const locationsText = fs.readFileSync('../data/Locations.csv', 'utf8');
     const locationsData = parseCSV(locationsText);
     locationsData.forEach(row => {
         if (row.Locations && row.Coordinates) {
@@ -72,11 +71,11 @@ function loadData() {
     locations['NSU'] = NSU_COORDS;
     
     // Load Tracks
-    const tracksText = fs.readFileSync('../../data/Tracks.csv', 'utf8');
+    const tracksText = fs.readFileSync('../data/Tracks-Optimized-Matrix.csv', 'utf8');
     tracks = parseCSV(tracksText).filter(row => row['Current Track'] && row['Current Track'].trim() !== '');
     
     // Load Variance
-    const varianceText = fs.readFileSync('../../data/Variance.csv', 'utf8');
+    const varianceText = fs.readFileSync('../data/Variance.csv', 'utf8');
     const varianceData = parseCSV(varianceText);
     varianceData.forEach(row => {
         if (row.Block) {
@@ -86,12 +85,12 @@ function loadData() {
     
     // Load optimal locations
     try {
-        const optimalText = fs.readFileSync('../../data/optimal-locations.json', 'utf8');
+        const optimalText = fs.readFileSync('../data/optimal-locations-optimal-tracks.json', 'utf8');
         optimalLocations = JSON.parse(optimalText);
         console.log(`Loaded optimal locations for ${Object.keys(optimalLocations).length} tracks`);
     } catch (error) {
-        console.error('ERROR: Could not load optimal-locations.json');
-        console.error('Please run generate-optimal-data.js first');
+        console.error('ERROR: Could not load optimal-locations-optimal-tracks.json');
+        console.error('Please run generate-optimal-data-optimal-tracks.js first');
         process.exit(1);
     }
     
@@ -426,7 +425,7 @@ async function main() {
     const totalUWorldLost = (totalSystemWednesdayHours * 60) / 1.5;
     
     // Save results
-    const outputPath = '../../data/wednesday-analysis.json';
+    const outputPath = '../data/wednesday-analysis-of-optimized-tracks.json';
     fs.writeFileSync(outputPath, JSON.stringify({
         summary: {
             totalStudents,

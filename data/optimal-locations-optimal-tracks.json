@@ -1,0 +1,6142 @@
+{
+  "Track 1": {
+    "optimalLocation": {
+      "lat": 26.15,
+      "lng": -80.225
+    },
+    "minCommuteBurden": 315.6145,
+    "totalMiles": 12136.2397085126,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Radiology Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 44.48499999999999,
+        "totalMiles": 2198.258983476,
+        "weeks": 4
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 30.54666666666667,
+        "totalMiles": 850.904204658,
+        "weeks": 8
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 30.54666666666667,
+        "totalMiles": 850.904204658,
+        "weeks": 8
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 30.54666666666667,
+        "totalMiles": 850.904204658,
+        "weeks": 8
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 30.54666666666667,
+        "totalMiles": 850.904204658,
+        "weeks": 8
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 6.300055555555556,
+        "totalMiles": 288.15496036260004,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.9656666666666665,
+            "miles": 146.5505988984
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 2.8445555555555555,
+            "miles": 128.09140632720002
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.48983333333333334,
+            "miles": 13.512955137
+          }
+        ]
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 45.166666666666664,
+        "totalMiles": 2084.422573534,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 25.99277777777778,
+        "totalMiles": 930.324117652,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Psychiatry Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 26.99833333333334,
+        "totalMiles": 1033.2032713800002,
+        "weeks": 4
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Surgical Selective (Burn) @ HCA Florida Kendall Hospital",
+        "totalHours": 44.48499999999999,
+        "totalMiles": 2198.258983476,
+        "weeks": 4
+      }
+    ]
+  },
+  "Track 2": {
+    "optimalLocation": {
+      "lat": 25.955000000000002,
+      "lng": -80.15
+    },
+    "minCommuteBurden": 154.58333333333331,
+    "totalMiles": 5850.713139623001,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 4.071666666666667,
+        "totalMiles": 87.561115836,
+        "weeks": 4
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Psychiatry Clerkship @ HCA Florida JFK North Hospital",
+        "totalHours": 48.47333333333334,
+        "totalMiles": 2377.8898831240003,
+        "weeks": 4
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 7.657222222222221,
+        "totalMiles": 340.963044717,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.7756666666666665,
+            "miles": 124.4012082324
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 4.038444444444444,
+            "miles": 186.18238692359998
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.843111111111111,
+            "miles": 30.379449561
+          }
+        ]
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Surgery Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 8.143333333333334,
+        "totalMiles": 175.122231672,
+        "weeks": 8
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Surgery Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 8.143333333333334,
+        "totalMiles": 175.122231672,
+        "weeks": 8
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 8.143333333333334,
+        "totalMiles": 175.122231672,
+        "weeks": 8
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 8.143333333333334,
+        "totalMiles": 175.122231672,
+        "weeks": 8
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 31.481111111111108,
+        "totalMiles": 1209.810579742,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Primary Care Medicine Clerkship @ Aventura",
+        "totalHours": 4.071666666666667,
+        "totalMiles": 87.561115836,
+        "weeks": 4
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Nephrology Selective @ HCA Florida Westside Hospital",
+        "totalHours": 26.254999999999995,
+        "totalMiles": 1046.43847368,
+        "weeks": 4
+      }
+    ]
+  },
+  "Track 3": {
+    "optimalLocation": {
+      "lat": 26.02,
+      "lng": -80.25
+    },
+    "minCommuteBurden": 355.94050000000004,
+    "totalMiles": 14538.788948320002,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Neurology Selective @ HCA Florida Westside Hospital",
+        "totalHours": 15.156666666666666,
+        "totalMiles": 473.533168938,
+        "weeks": 4
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 20.075000000000003,
+        "totalMiles": 610.638680088,
+        "weeks": 4
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 42.61333333333334,
+        "totalMiles": 1901.0398357880003,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 47.733333333333334,
+        "totalMiles": 1730.743171302,
+        "weeks": 8
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 47.733333333333334,
+        "totalMiles": 1730.743171302,
+        "weeks": 8
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Psychiatry Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 20.075000000000003,
+        "totalMiles": 610.638680088,
+        "weeks": 4
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 6.0793888888888885,
+        "totalMiles": 274.01839729000005,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.186444444444444,
+            "miles": 104.51410510320001
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 3.602222222222222,
+            "miles": 160.8950727076
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.2907222222222222,
+            "miles": 8.6092194792
+          }
+        ]
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 25.287777777777777,
+        "totalMiles": 936.5875373319999,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 65.59333333333333,
+        "totalMiles": 3135.4231530960005,
+        "weeks": 8
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 65.59333333333333,
+        "totalMiles": 3135.4231530960005,
+        "weeks": 8
+      }
+    ]
+  },
+  "Track 4": {
+    "optimalLocation": {
+      "lat": 26.15,
+      "lng": -80.2
+    },
+    "minCommuteBurden": 259.88994444444444,
+    "totalMiles": 8953.5611665924,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 29.585,
+        "totalMiles": 850.6022183520001,
+        "weeks": 8
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 29.585,
+        "totalMiles": 850.6022183520001,
+        "weeks": 8
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 6.538833333333334,
+        "totalMiles": 289.18258372239995,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 3.1756666666666664,
+            "miles": 153.1982744048
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 2.7864444444444447,
+            "miles": 119.11060699000001
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.5767222222222221,
+            "miles": 16.8737023276
+          }
+        ]
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 29.585,
+        "totalMiles": 850.6022183520001,
+        "weeks": 8
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 29.585,
+        "totalMiles": 850.6022183520001,
+        "weeks": 8
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 26.722222222222225,
+        "totalMiles": 963.4605903400001,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 44.80222222222222,
+        "totalMiles": 2034.5550652999998,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 25.401666666666664,
+        "totalMiles": 948.6955726379999,
+        "weeks": 4
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Psychiatry Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 25.401666666666664,
+        "totalMiles": 948.6955726379999,
+        "weeks": 4
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Anesthesia Selective (Westside) @ HCA Florida Westside Hospital",
+        "totalHours": 12.683333333333334,
+        "totalMiles": 366.562908546,
+        "weeks": 4
+      }
+    ]
+  },
+  "Track 5": {
+    "optimalLocation": {
+      "lat": 25.76,
+      "lng": -80.4
+    },
+    "minCommuteBurden": 263.20866666666666,
+    "totalMiles": 11298.8914578648,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 12.720000000000002,
+        "totalMiles": 363.904683408,
+        "weeks": 8
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 12.720000000000002,
+        "totalMiles": 363.904683408,
+        "weeks": 8
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 40.54833333333333,
+        "totalMiles": 1819.4749501019999,
+        "weeks": 4
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 12.720000000000002,
+        "totalMiles": 363.904683408,
+        "weeks": 8
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 12.720000000000002,
+        "totalMiles": 363.904683408,
+        "weeks": 8
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 7.028666666666666,
+        "totalMiles": 333.3411837568,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 0.42400000000000004,
+            "miles": 12.1301561136
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 5.260999999999999,
+            "miles": 261.6908937468
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 1.3436666666666666,
+            "miles": 59.5201338964
+          }
+        ]
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 49.29888888888888,
+        "totalMiles": 2331.866175896,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 41.76722222222222,
+        "totalMiles": 1847.190582186,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Psychiatry Clerkship @ HCA Florida JFK North Hospital",
+        "totalHours": 67.32555555555555,
+        "totalMiles": 3329.447490588,
+        "weeks": 4
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Anesthesia Selective (Kendall) @ HCA Florida Kendall Hospital",
+        "totalHours": 6.360000000000001,
+        "totalMiles": 181.952341704,
+        "weeks": 4
+      }
+    ]
+  },
+  "Track 6": {
+    "optimalLocation": {
+      "lat": 26.085,
+      "lng": -80.25
+    },
+    "minCommuteBurden": 305.9794444444444,
+    "totalMiles": 12511.5607170294,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Ophthalmology Selective @ Ft. Lauderdale Eye Institute",
+        "totalHours": 5.403333333333333,
+        "totalMiles": 148.148516562,
+        "weeks": 4
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 46.56,
+        "totalMiles": 1825.74955446,
+        "weeks": 8
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 46.56,
+        "totalMiles": 1825.74955446,
+        "weeks": 8
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Radiology Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 17.287499999999998,
+        "totalMiles": 650.526970062,
+        "weeks": 4
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 44.665,
+        "totalMiles": 2028.25436336,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 34.574999999999996,
+        "totalMiles": 1301.053940124,
+        "weeks": 8
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 34.574999999999996,
+        "totalMiles": 1301.053940124,
+        "weeks": 8
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 23.866666666666664,
+        "totalMiles": 937.7967252980001,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 6.1025,
+        "totalMiles": 275.0917535554,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.7425555555555556,
+            "miles": 122.97901428760001
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 3.28,
+            "miles": 150.55197959
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.07994444444444444,
+            "miles": 1.5607596778000001
+          }
+        ]
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Psychiatry Clerkship @ HCA Florida JFK North Hospital",
+        "totalHours": 46.38444444444445,
+        "totalMiles": 2218.135399024,
+        "weeks": 4
+      }
+    ]
+  },
+  "Track 7": {
+    "optimalLocation": {
+      "lat": 25.76,
+      "lng": -80.375
+    },
+    "minCommuteBurden": 343.7240555555556,
+    "totalMiles": 14429.7968709682,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 41.321111111111115,
+        "totalMiles": 1753.9339797639998,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 14.520000000000001,
+        "totalMiles": 366.119249652,
+        "weeks": 8
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 14.520000000000001,
+        "totalMiles": 366.119249652,
+        "weeks": 8
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Radiology Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 7.260000000000001,
+        "totalMiles": 183.059624826,
+        "weeks": 4
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 7.0785,
+        "totalMiles": 330.1979164162,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 0.48400000000000004,
+            "miles": 12.2039749884
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 5.254222222222222,
+            "miles": 259.5461696032
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 1.3402777777777777,
+            "miles": 58.447771824600004
+          }
+        ]
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Surgery Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 80.89333333333335,
+        "totalMiles": 3574.6081758960004,
+        "weeks": 8
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Surgery Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 80.89333333333335,
+        "totalMiles": 3574.6081758960004,
+        "weeks": 8
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 49.53111111111111,
+        "totalMiles": 2310.786786092,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Surgical Intensive Care Unit Selective @ HCA Florida Kendall Hospital",
+        "totalHours": 7.260000000000001,
+        "totalMiles": 183.059624826,
+        "weeks": 4
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Psychiatry Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 40.44666666666667,
+        "totalMiles": 1787.3040879480002,
+        "weeks": 4
+      }
+    ]
+  },
+  "Track 8": {
+    "optimalLocation": {
+      "lat": 25.955000000000002,
+      "lng": -80.225
+    },
+    "minCommuteBurden": 359.6310555555556,
+    "totalMiles": 15957.174758809399,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 27.136666666666667,
+        "totalMiles": 1044.2350921139998,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 64.55333333333334,
+        "totalMiles": 3074.899132212,
+        "weeks": 8
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 64.55333333333334,
+        "totalMiles": 3074.899132212,
+        "weeks": 8
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 39.98,
+        "totalMiles": 1864.702059708,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 6.546888888888889,
+        "totalMiles": 299.52965361440005,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.151777777777778,
+            "miles": 102.4966377404
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 3.7534444444444444,
+            "miles": 176.843429342
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.6416666666666667,
+            "miles": 20.189586532
+          }
+        ]
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Surgery Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 22.196666666666665,
+        "totalMiles": 690.400347132,
+        "weeks": 8
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Surgery Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 22.196666666666665,
+        "totalMiles": 690.400347132,
+        "weeks": 8
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Surgical Selective (Ortho) @ HCA Florida Kendall Hospital",
+        "totalHours": 32.27666666666667,
+        "totalMiles": 1537.449566106,
+        "weeks": 4
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Radiology Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 29.147499999999997,
+        "totalMiles": 1206.3551356110002,
+        "weeks": 4
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Psychiatry Clerkship @ HCA Florida JFK North Hospital",
+        "totalHours": 51.04333333333333,
+        "totalMiles": 2474.304292968,
+        "weeks": 4
+      }
+    ]
+  },
+  "Track 11": {
+    "optimalLocation": {
+      "lat": 26.085,
+      "lng": -80.25
+    },
+    "minCommuteBurden": 307.40777777777777,
+    "totalMiles": 12562.4062632174,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 23.866666666666664,
+        "totalMiles": 937.7967252980001,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 46.56,
+        "totalMiles": 1825.74955446,
+        "weeks": 8
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 46.56,
+        "totalMiles": 1825.74955446,
+        "weeks": 8
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Psychiatry Clerkship @ HCA Florida JFK North Hospital",
+        "totalHours": 46.38444444444445,
+        "totalMiles": 2218.135399024,
+        "weeks": 4
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Nephrology Selective @ HCA Florida Westside Hospital",
+        "totalHours": 6.831666666666667,
+        "totalMiles": 198.99406275,
+        "weeks": 4
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Radiology Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 17.287499999999998,
+        "totalMiles": 650.526970062,
+        "weeks": 4
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 6.1025,
+        "totalMiles": 275.0917535554,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.7425555555555556,
+            "miles": 122.97901428760001
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 3.28,
+            "miles": 150.55197959
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.07994444444444444,
+            "miles": 1.5607596778000001
+          }
+        ]
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 34.574999999999996,
+        "totalMiles": 1301.053940124,
+        "weeks": 8
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 34.574999999999996,
+        "totalMiles": 1301.053940124,
+        "weeks": 8
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 44.665,
+        "totalMiles": 2028.25436336,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      }
+    ]
+  },
+  "Track 12": {
+    "optimalLocation": {
+      "lat": 26.02,
+      "lng": -80.15
+    },
+    "minCommuteBurden": 302.3553888888889,
+    "totalMiles": 12263.847439653398,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 38.83166666666667,
+        "totalMiles": 1807.3867986679998,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Anesthesia Selective (Kendall) @ HCA Florida Kendall Hospital",
+        "totalHours": 42.40333333333333,
+        "totalMiles": 1907.8823732399999,
+        "weeks": 4
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 28.679444444444446,
+        "totalMiles": 1096.205319812,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 13.846666666666668,
+        "totalMiles": 431.1693369,
+        "weeks": 8
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 13.846666666666668,
+        "totalMiles": 431.1693369,
+        "weeks": 8
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 7.154277777777778,
+        "totalMiles": 316.9398476634,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.8268888888888886,
+            "miles": 127.192158216
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 3.669,
+            "miles": 168.3062888988
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.6583888888888888,
+            "miles": 21.4414005486
+          }
+        ]
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Radiology Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 42.40333333333333,
+        "totalMiles": 1907.8823732399999,
+        "weeks": 4
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 54.13333333333334,
+        "totalMiles": 2074.81369239,
+        "weeks": 8
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 54.13333333333334,
+        "totalMiles": 2074.81369239,
+        "weeks": 8
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Psychiatry Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 6.923333333333334,
+        "totalMiles": 215.58466845,
+        "weeks": 4
+      }
+    ]
+  },
+  "Track 13": {
+    "optimalLocation": {
+      "lat": 25.955000000000002,
+      "lng": -80.225
+    },
+    "minCommuteBurden": 341.5818888888889,
+    "totalMiles": 15096.019796764398,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 64.55333333333334,
+        "totalMiles": 3074.899132212,
+        "weeks": 8
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 64.55333333333334,
+        "totalMiles": 3074.899132212,
+        "weeks": 8
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 27.136666666666667,
+        "totalMiles": 1044.2350921139998,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 22.196666666666665,
+        "totalMiles": 690.400347132,
+        "weeks": 8
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 22.196666666666665,
+        "totalMiles": 690.400347132,
+        "weeks": 8
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 6.546888888888889,
+        "totalMiles": 299.52965361440005,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.151777777777778,
+            "miles": 102.4966377404
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 3.7534444444444444,
+            "miles": 176.843429342
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.6416666666666667,
+            "miles": 20.189586532
+          }
+        ]
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 11.098333333333333,
+        "totalMiles": 345.200173566,
+        "weeks": 4
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 39.98,
+        "totalMiles": 1864.702059708,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Psychiatry Clerkship @ HCA Florida JFK North Hospital",
+        "totalHours": 51.04333333333333,
+        "totalMiles": 2474.304292968,
+        "weeks": 4
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Surgical Intensive Care Unit Selective @ HCA Florida Kendall Hospital",
+        "totalHours": 32.27666666666667,
+        "totalMiles": 1537.449566106,
+        "weeks": 4
+      }
+    ]
+  },
+  "Track 14": {
+    "optimalLocation": {
+      "lat": 26.02,
+      "lng": -80.25
+    },
+    "minCommuteBurden": 333.40216666666663,
+    "totalMiles": 13248.38779262,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 47.733333333333334,
+        "totalMiles": 1730.743171302,
+        "weeks": 8
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 47.733333333333334,
+        "totalMiles": 1730.743171302,
+        "weeks": 8
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Psychiatry Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 20.075000000000003,
+        "totalMiles": 610.638680088,
+        "weeks": 4
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 65.59333333333333,
+        "totalMiles": 3135.4231530960005,
+        "weeks": 8
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 65.59333333333333,
+        "totalMiles": 3135.4231530960005,
+        "weeks": 8
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Primary Care Medicine Clerkship @ Aventura",
+        "totalHours": 20.075000000000003,
+        "totalMiles": 610.638680088,
+        "weeks": 4
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 6.0793888888888885,
+        "totalMiles": 274.01839729000005,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.186444444444444,
+            "miles": 104.51410510320001
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 3.602222222222222,
+            "miles": 160.8950727076
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.2907222222222222,
+            "miles": 8.6092194792
+          }
+        ]
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Anesthesia Selective (Westside) @ HCA Florida Westside Hospital",
+        "totalHours": 15.156666666666666,
+        "totalMiles": 473.533168938,
+        "weeks": 4
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 25.287777777777777,
+        "totalMiles": 936.5875373319999,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 20.075000000000003,
+        "totalMiles": 610.638680088,
+        "weeks": 4
+      }
+    ]
+  },
+  "Track 15": {
+    "optimalLocation": {
+      "lat": 25.76,
+      "lng": -80.4
+    },
+    "minCommuteBurden": 202.2431111111111,
+    "totalMiles": 8151.3963089808,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 12.720000000000002,
+        "totalMiles": 363.904683408,
+        "weeks": 8
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 12.720000000000002,
+        "totalMiles": 363.904683408,
+        "weeks": 8
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Radiology Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 6.360000000000001,
+        "totalMiles": 181.952341704,
+        "weeks": 4
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 12.720000000000002,
+        "totalMiles": 363.904683408,
+        "weeks": 8
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 12.720000000000002,
+        "totalMiles": 363.904683408,
+        "weeks": 8
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 7.028666666666666,
+        "totalMiles": 333.3411837568,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 0.42400000000000004,
+            "miles": 12.1301561136
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 5.260999999999999,
+            "miles": 261.6908937468
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 1.3436666666666666,
+            "miles": 59.5201338964
+          }
+        ]
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Surgical Intensive Care Unit Selective @ HCA Florida Kendall Hospital",
+        "totalHours": 6.360000000000001,
+        "totalMiles": 181.952341704,
+        "weeks": 4
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 49.29888888888888,
+        "totalMiles": 2331.866175896,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 41.76722222222222,
+        "totalMiles": 1847.190582186,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Psychiatry Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 40.54833333333333,
+        "totalMiles": 1819.4749501019999,
+        "weeks": 4
+      }
+    ]
+  },
+  "Track 16": {
+    "optimalLocation": {
+      "lat": 26.02,
+      "lng": -80.15
+    },
+    "minCommuteBurden": 245.18538888888892,
+    "totalMiles": 9441.9606367054,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 54.13333333333334,
+        "totalMiles": 2074.81369239,
+        "weeks": 8
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 54.13333333333334,
+        "totalMiles": 2074.81369239,
+        "weeks": 8
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Psychiatry Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 6.923333333333334,
+        "totalMiles": 215.58466845,
+        "weeks": 4
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 13.846666666666668,
+        "totalMiles": 431.1693369,
+        "weeks": 8
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 13.846666666666668,
+        "totalMiles": 431.1693369,
+        "weeks": 8
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 7.154277777777778,
+        "totalMiles": 316.9398476634,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.8268888888888886,
+            "miles": 127.192158216
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 3.669,
+            "miles": 168.3062888988
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.6583888888888888,
+            "miles": 21.4414005486
+          }
+        ]
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 28.679444444444446,
+        "totalMiles": 1096.205319812,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 38.83166666666667,
+        "totalMiles": 1807.3867986679998,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 6.923333333333334,
+        "totalMiles": 215.58466845,
+        "weeks": 4
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Anesthesia Selective (Westside) @ HCA Florida Westside Hospital",
+        "totalHours": 20.713333333333335,
+        "totalMiles": 778.293275082,
+        "weeks": 4
+      }
+    ]
+  },
+  "Track 17": {
+    "optimalLocation": {
+      "lat": 26.15,
+      "lng": -80.225
+    },
+    "minCommuteBurden": 329.6222777777778,
+    "totalMiles": 12719.7344178366,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 30.54666666666667,
+        "totalMiles": 850.904204658,
+        "weeks": 8
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 30.54666666666667,
+        "totalMiles": 850.904204658,
+        "weeks": 8
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Psychiatry Clerkship @ HCA Florida JFK North Hospital",
+        "totalHours": 42.67777777777778,
+        "totalMiles": 2014.5369771640003,
+        "weeks": 4
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 30.54666666666667,
+        "totalMiles": 850.904204658,
+        "weeks": 8
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 30.54666666666667,
+        "totalMiles": 850.904204658,
+        "weeks": 8
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 6.300055555555556,
+        "totalMiles": 288.15496036260004,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.9656666666666665,
+            "miles": 146.5505988984
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 2.8445555555555555,
+            "miles": 128.09140632720002
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.48983333333333334,
+            "miles": 13.512955137
+          }
+        ]
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 25.99277777777778,
+        "totalMiles": 930.324117652,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 45.166666666666664,
+        "totalMiles": 2084.422573534,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Radiology Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 44.48499999999999,
+        "totalMiles": 2198.258983476,
+        "weeks": 4
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Surgical Selective (Surg Onc) @ HCA Florida Mercy Hospital",
+        "totalHours": 42.81333333333333,
+        "totalMiles": 1800.419987016,
+        "weeks": 4
+      }
+    ]
+  },
+  "Track 18": {
+    "optimalLocation": {
+      "lat": 25.955000000000002,
+      "lng": -80.225
+    },
+    "minCommuteBurden": 341.5818888888889,
+    "totalMiles": 15096.019796764402,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 27.136666666666667,
+        "totalMiles": 1044.2350921139998,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 11.098333333333333,
+        "totalMiles": 345.200173566,
+        "weeks": 4
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 6.546888888888889,
+        "totalMiles": 299.52965361440005,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.151777777777778,
+            "miles": 102.4966377404
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 3.7534444444444444,
+            "miles": 176.843429342
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.6416666666666667,
+            "miles": 20.189586532
+          }
+        ]
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Surgery Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 22.196666666666665,
+        "totalMiles": 690.400347132,
+        "weeks": 8
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Surgery Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 22.196666666666665,
+        "totalMiles": 690.400347132,
+        "weeks": 8
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 64.55333333333334,
+        "totalMiles": 3074.899132212,
+        "weeks": 8
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 64.55333333333334,
+        "totalMiles": 3074.899132212,
+        "weeks": 8
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 39.98,
+        "totalMiles": 1864.702059708,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Psychiatry Clerkship @ HCA Florida JFK North Hospital",
+        "totalHours": 51.04333333333333,
+        "totalMiles": 2474.304292968,
+        "weeks": 4
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Anesthesia Selective (Kendall) @ HCA Florida Kendall Hospital",
+        "totalHours": 32.27666666666667,
+        "totalMiles": 1537.449566106,
+        "weeks": 4
+      }
+    ]
+  },
+  "Track 19": {
+    "optimalLocation": {
+      "lat": 26.02,
+      "lng": -80.15
+    },
+    "minCommuteBurden": 245.18538888888892,
+    "totalMiles": 9441.9606367054,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Psychiatry Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 6.923333333333334,
+        "totalMiles": 215.58466845,
+        "weeks": 4
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 28.679444444444446,
+        "totalMiles": 1096.205319812,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 6.923333333333334,
+        "totalMiles": 215.58466845,
+        "weeks": 4
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 7.154277777777778,
+        "totalMiles": 316.9398476634,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.8268888888888886,
+            "miles": 127.192158216
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 3.669,
+            "miles": 168.3062888988
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.6583888888888888,
+            "miles": 21.4414005486
+          }
+        ]
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Anesthesia Selective (Westside) @ HCA Florida Westside Hospital",
+        "totalHours": 20.713333333333335,
+        "totalMiles": 778.293275082,
+        "weeks": 4
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 13.846666666666668,
+        "totalMiles": 431.1693369,
+        "weeks": 8
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 13.846666666666668,
+        "totalMiles": 431.1693369,
+        "weeks": 8
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 54.13333333333334,
+        "totalMiles": 2074.81369239,
+        "weeks": 8
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 54.13333333333334,
+        "totalMiles": 2074.81369239,
+        "weeks": 8
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 38.83166666666667,
+        "totalMiles": 1807.3867986679998,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      }
+    ]
+  },
+  "Track 20": {
+    "optimalLocation": {
+      "lat": 25.76,
+      "lng": -80.4
+    },
+    "minCommuteBurden": 273.3403333333333,
+    "totalMiles": 11883.7960579878,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 49.29888888888888,
+        "totalMiles": 2331.866175896,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 41.76722222222222,
+        "totalMiles": 1847.190582186,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 7.028666666666666,
+        "totalMiles": 333.3411837568,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 0.42400000000000004,
+            "miles": 12.1301561136
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 5.260999999999999,
+            "miles": 261.6908937468
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 1.3436666666666666,
+            "miles": 59.5201338964
+          }
+        ]
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 12.720000000000002,
+        "totalMiles": 363.904683408,
+        "weeks": 8
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 12.720000000000002,
+        "totalMiles": 363.904683408,
+        "weeks": 8
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 12.720000000000002,
+        "totalMiles": 363.904683408,
+        "weeks": 8
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 12.720000000000002,
+        "totalMiles": 363.904683408,
+        "weeks": 8
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Psychiatry Clerkship @ HCA Florida JFK North Hospital",
+        "totalHours": 67.32555555555555,
+        "totalMiles": 3329.447490588,
+        "weeks": 4
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Trauma Surgery/Surgical Critical Care Selective @ HCA Florida Kendall Hospital",
+        "totalHours": 6.360000000000001,
+        "totalMiles": 181.952341704,
+        "weeks": 4
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Radiology Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 50.68,
+        "totalMiles": 2404.379550225,
+        "weeks": 4
+      }
+    ]
+  },
+  "Track 21": {
+    "optimalLocation": {
+      "lat": 26.085,
+      "lng": -80.25
+    },
+    "minCommuteBurden": 363.36527777777775,
+    "totalMiles": 15661.021883757401,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 23.28,
+        "totalMiles": 912.87477723,
+        "weeks": 4
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ University Hospital",
+        "totalHours": 2.3983333333333334,
+        "totalMiles": 46.822790334000004,
+        "weeks": 4
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 6.1025,
+        "totalMiles": 275.0917535554,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.7425555555555556,
+            "miles": 122.97901428760001
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 3.28,
+            "miles": 150.55197959
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.07994444444444444,
+            "miles": 1.5607596778000001
+          }
+        ]
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 34.574999999999996,
+        "totalMiles": 1301.053940124,
+        "weeks": 8
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 34.574999999999996,
+        "totalMiles": 1301.053940124,
+        "weeks": 8
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 82.27666666666667,
+        "totalMiles": 3689.370428628,
+        "weeks": 8
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 82.27666666666667,
+        "totalMiles": 3689.370428628,
+        "weeks": 8
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Psychiatry Clerkship @ HCA Florida JFK North Hospital",
+        "totalHours": 46.38444444444445,
+        "totalMiles": 2218.135399024,
+        "weeks": 4
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Anesthesia Selective (Westside) @ HCA Florida Westside Hospital",
+        "totalHours": 6.831666666666667,
+        "totalMiles": 198.99406275,
+        "weeks": 4
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 44.665,
+        "totalMiles": 2028.25436336,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      }
+    ]
+  },
+  "Track 22": {
+    "optimalLocation": {
+      "lat": 25.955000000000002,
+      "lng": -80.25
+    },
+    "minCommuteBurden": 401.2957222222222,
+    "totalMiles": 17597.403686460802,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 12.788333333333332,
+        "totalMiles": 433.600140252,
+        "weeks": 4
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 26.203333333333333,
+        "totalMiles": 1030.5599591460002,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Urology Selective @ Mount Sinai Miami Beach",
+        "totalHours": 27.750000000000004,
+        "totalMiles": 999.6007704420001,
+        "weeks": 4
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 59.756666666666675,
+        "totalMiles": 2933.5322587439996,
+        "weeks": 8
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 59.756666666666675,
+        "totalMiles": 2933.5322587439996,
+        "weeks": 8
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 58.12833333333333,
+        "totalMiles": 2269.635870246,
+        "weeks": 8
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 58.12833333333333,
+        "totalMiles": 2269.635870246,
+        "weeks": 8
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Psychiatry Clerkship @ HCA Florida JFK North Hospital",
+        "totalHours": 52.17,
+        "totalMiles": 2533.240089576,
+        "weeks": 4
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 6.3068333333333335,
+        "totalMiles": 293.99100106879996,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 1.991888888888889,
+            "miles": 97.7844086248
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 3.7532222222222225,
+            "miles": 178.373244744
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.5617222222222222,
+            "miles": 17.8333477
+          }
+        ]
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 40.30722222222223,
+        "totalMiles": 1900.075467996,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      }
+    ]
+  },
+  "Track 23": {
+    "optimalLocation": {
+      "lat": 25.76,
+      "lng": -80.4
+    },
+    "minCommuteBurden": 267.8242222222222,
+    "totalMiles": 11210.1049984168,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Primary Care Medicine Clerkship @ Aventura",
+        "totalHours": 40.54833333333333,
+        "totalMiles": 1819.4749501019999,
+        "weeks": 4
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Psychiatry Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 40.54833333333333,
+        "totalMiles": 1819.4749501019999,
+        "weeks": 4
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Dermatology Selective @ Leading Edge Dermatology",
+        "totalHours": 46.50333333333333,
+        "totalMiles": 2115.529648536,
+        "weeks": 4
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 41.76722222222222,
+        "totalMiles": 1847.190582186,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 7.028666666666666,
+        "totalMiles": 333.3411837568,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 0.42400000000000004,
+            "miles": 12.1301561136
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 5.260999999999999,
+            "miles": 261.6908937468
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 1.3436666666666666,
+            "miles": 59.5201338964
+          }
+        ]
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 12.720000000000002,
+        "totalMiles": 363.904683408,
+        "weeks": 8
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 12.720000000000002,
+        "totalMiles": 363.904683408,
+        "weeks": 8
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 12.720000000000002,
+        "totalMiles": 363.904683408,
+        "weeks": 8
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 12.720000000000002,
+        "totalMiles": 363.904683408,
+        "weeks": 8
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 40.54833333333333,
+        "totalMiles": 1819.4749501019999,
+        "weeks": 4
+      }
+    ]
+  },
+  "Track 24": {
+    "optimalLocation": {
+      "lat": 26.15,
+      "lng": -80.2
+    },
+    "minCommuteBurden": 282.56077777777784,
+    "totalMiles": 9963.7351859704,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Radiology Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 14.7925,
+        "totalMiles": 425.30110917600007,
+        "weeks": 4
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Neonatal Intensive Care Unit Selective @ HCA Florida Mercy Hospital",
+        "totalHours": 45.96333333333334,
+        "totalMiles": 1900.131391386,
+        "weeks": 4
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 44.80222222222222,
+        "totalMiles": 2034.5550652999998,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Psychiatry Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 25.401666666666664,
+        "totalMiles": 948.6955726379999,
+        "weeks": 4
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 6.538833333333334,
+        "totalMiles": 289.18258372239995,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 3.1756666666666664,
+            "miles": 153.1982744048
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 2.7864444444444447,
+            "miles": 119.11060699000001
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.5767222222222221,
+            "miles": 16.8737023276
+          }
+        ]
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 29.585,
+        "totalMiles": 850.6022183520001,
+        "weeks": 8
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 29.585,
+        "totalMiles": 850.6022183520001,
+        "weeks": 8
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 26.722222222222225,
+        "totalMiles": 963.4605903400001,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 29.585,
+        "totalMiles": 850.6022183520001,
+        "weeks": 8
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 29.585,
+        "totalMiles": 850.6022183520001,
+        "weeks": 8
+      }
+    ]
+  },
+  "Track 25": {
+    "optimalLocation": {
+      "lat": 26.085,
+      "lng": -80.175
+    },
+    "minCommuteBurden": 273.5681111111111,
+    "totalMiles": 10341.500419452801,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 40.42388888888888,
+        "totalMiles": 1892.4984700220002,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Radiology Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 20.59583333333333,
+        "totalMiles": 737.828974191,
+        "weeks": 4
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Neurology Selective @ HCA Florida Westside Hospital",
+        "totalHours": 14.258333333333333,
+        "totalMiles": 441.80223745200004,
+        "weeks": 4
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 26.160555555555558,
+        "totalMiles": 1010.7730210220001,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 6.596166666666667,
+        "totalMiles": 298.9949017318,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.926111111111111,
+            "miles": 139.5937291824
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 3.226,
+            "miles": 146.004786612
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.44405555555555554,
+            "miles": 13.396385937400002
+          }
+        ]
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 41.19166666666666,
+        "totalMiles": 1475.657948382,
+        "weeks": 8
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 41.19166666666666,
+        "totalMiles": 1475.657948382,
+        "weeks": 8
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Psychiatry Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 16.63,
+        "totalMiles": 601.657383654,
+        "weeks": 4
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 33.26,
+        "totalMiles": 1203.314767308,
+        "weeks": 8
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 33.26,
+        "totalMiles": 1203.314767308,
+        "weeks": 8
+      }
+    ]
+  },
+  "Track 26": {
+    "optimalLocation": {
+      "lat": 25.76,
+      "lng": -80.4
+    },
+    "minCommuteBurden": 263.20866666666666,
+    "totalMiles": 11298.8914578648,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 49.29888888888888,
+        "totalMiles": 2331.866175896,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 40.54833333333333,
+        "totalMiles": 1819.4749501019999,
+        "weeks": 4
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Infectious Disease Selective @ HCA Florida Kendall Hospital",
+        "totalHours": 6.360000000000001,
+        "totalMiles": 181.952341704,
+        "weeks": 4
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 41.76722222222222,
+        "totalMiles": 1847.190582186,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Psychiatry Clerkship @ HCA Florida JFK North Hospital",
+        "totalHours": 67.32555555555555,
+        "totalMiles": 3329.447490588,
+        "weeks": 4
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 12.720000000000002,
+        "totalMiles": 363.904683408,
+        "weeks": 8
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 12.720000000000002,
+        "totalMiles": 363.904683408,
+        "weeks": 8
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 7.028666666666666,
+        "totalMiles": 333.3411837568,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 0.42400000000000004,
+            "miles": 12.1301561136
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 5.260999999999999,
+            "miles": 261.6908937468
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 1.3436666666666666,
+            "miles": 59.5201338964
+          }
+        ]
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 12.720000000000002,
+        "totalMiles": 363.904683408,
+        "weeks": 8
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 12.720000000000002,
+        "totalMiles": 363.904683408,
+        "weeks": 8
+      }
+    ]
+  },
+  "Track 27": {
+    "optimalLocation": {
+      "lat": 26.02,
+      "lng": -80.15
+    },
+    "minCommuteBurden": 304.7309444444445,
+    "totalMiles": 12555.0939692894,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 7.154277777777778,
+        "totalMiles": 316.9398476634,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.8268888888888886,
+            "miles": 127.192158216
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 3.669,
+            "miles": 168.3062888988
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.6583888888888888,
+            "miles": 21.4414005486
+          }
+        ]
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 6.923333333333334,
+        "totalMiles": 215.58466845,
+        "weeks": 4
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 28.679444444444446,
+        "totalMiles": 1096.205319812,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 38.83166666666667,
+        "totalMiles": 1807.3867986679998,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Psychiatry Clerkship @ HCA Florida JFK North Hospital",
+        "totalHours": 44.778888888888886,
+        "totalMiles": 2199.1289028759998,
+        "weeks": 4
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 54.13333333333334,
+        "totalMiles": 2074.81369239,
+        "weeks": 8
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 54.13333333333334,
+        "totalMiles": 2074.81369239,
+        "weeks": 8
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Trauma Surgery/Surgical Critical Care Selective @ HCA Florida Kendall Hospital",
+        "totalHours": 42.40333333333333,
+        "totalMiles": 1907.8823732399999,
+        "weeks": 4
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 13.846666666666668,
+        "totalMiles": 431.1693369,
+        "weeks": 8
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 13.846666666666668,
+        "totalMiles": 431.1693369,
+        "weeks": 8
+      }
+    ]
+  },
+  "Track 28": {
+    "optimalLocation": {
+      "lat": 25.76,
+      "lng": -80.4
+    },
+    "minCommuteBurden": 250.19366666666667,
+    "totalMiles": 10466.2369194768,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 49.29888888888888,
+        "totalMiles": 2331.866175896,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Radiology Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 6.360000000000001,
+        "totalMiles": 181.952341704,
+        "weeks": 4
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Psychiatry Clerkship @ HCA Florida JFK North Hospital",
+        "totalHours": 67.32555555555555,
+        "totalMiles": 3329.447490588,
+        "weeks": 4
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 41.76722222222222,
+        "totalMiles": 1847.190582186,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Neonatal Intensive Care Unit Selective @ HCA Florida Mercy Hospital",
+        "totalHours": 27.533333333333335,
+        "totalMiles": 986.820411714,
+        "weeks": 4
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 12.720000000000002,
+        "totalMiles": 363.904683408,
+        "weeks": 8
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 12.720000000000002,
+        "totalMiles": 363.904683408,
+        "weeks": 8
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 7.028666666666666,
+        "totalMiles": 333.3411837568,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 0.42400000000000004,
+            "miles": 12.1301561136
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 5.260999999999999,
+            "miles": 261.6908937468
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 1.3436666666666666,
+            "miles": 59.5201338964
+          }
+        ]
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 12.720000000000002,
+        "totalMiles": 363.904683408,
+        "weeks": 8
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 12.720000000000002,
+        "totalMiles": 363.904683408,
+        "weeks": 8
+      }
+    ]
+  },
+  "Track 30": {
+    "optimalLocation": {
+      "lat": 25.955000000000002,
+      "lng": -80.25
+    },
+    "minCommuteBurden": 400.46238888888894,
+    "totalMiles": 17635.1035077728,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 40.30722222222223,
+        "totalMiles": 1900.075467996,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 59.756666666666675,
+        "totalMiles": 2933.5322587439996,
+        "weeks": 8
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 59.756666666666675,
+        "totalMiles": 2933.5322587439996,
+        "weeks": 8
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 12.788333333333332,
+        "totalMiles": 433.600140252,
+        "weeks": 4
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 6.3068333333333335,
+        "totalMiles": 293.99100106879996,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 1.991888888888889,
+            "miles": 97.7844086248
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 3.7532222222222225,
+            "miles": 178.373244744
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.5617222222222222,
+            "miles": 17.8333477
+          }
+        ]
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Psychiatry Clerkship @ HCA Florida JFK North Hospital",
+        "totalHours": 52.17,
+        "totalMiles": 2533.240089576,
+        "weeks": 4
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Neonatal Intensive Care Unit Selective @ HCA Florida Mercy Hospital",
+        "totalHours": 26.916666666666668,
+        "totalMiles": 1037.3005917540002,
+        "weeks": 4
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 58.12833333333333,
+        "totalMiles": 2269.635870246,
+        "weeks": 8
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 58.12833333333333,
+        "totalMiles": 2269.635870246,
+        "weeks": 8
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 26.203333333333333,
+        "totalMiles": 1030.5599591460002,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      }
+    ]
+  },
+  "Track 31": {
+    "optimalLocation": {
+      "lat": 25.955000000000002,
+      "lng": -80.225
+    },
+    "minCommuteBurden": 292.8102222222222,
+    "totalMiles": 12345.744758824401,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 6.546888888888889,
+        "totalMiles": 299.52965361440005,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.151777777777778,
+            "miles": 102.4966377404
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 3.7534444444444444,
+            "miles": 176.843429342
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.6416666666666667,
+            "miles": 20.189586532
+          }
+        ]
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 22.196666666666665,
+        "totalMiles": 690.400347132,
+        "weeks": 8
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 22.196666666666665,
+        "totalMiles": 690.400347132,
+        "weeks": 8
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 11.098333333333333,
+        "totalMiles": 345.200173566,
+        "weeks": 4
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 39.98,
+        "totalMiles": 1864.702059708,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Psychiatry Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 11.098333333333333,
+        "totalMiles": 345.200173566,
+        "weeks": 4
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Anesthesia Selective (Westside) @ HCA Florida Westside Hospital",
+        "totalHours": 23.449999999999996,
+        "totalMiles": 916.278647568,
+        "weeks": 4
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 64.55333333333334,
+        "totalMiles": 3074.899132212,
+        "weeks": 8
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 64.55333333333334,
+        "totalMiles": 3074.899132212,
+        "weeks": 8
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 27.136666666666667,
+        "totalMiles": 1044.2350921139998,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      }
+    ]
+  },
+  "Track 32": {
+    "optimalLocation": {
+      "lat": 25.955000000000002,
+      "lng": -80.2
+    },
+    "minCommuteBurden": 307.6236666666666,
+    "totalMiles": 13109.956275756,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 7.025333333333334,
+        "totalMiles": 317.79522698200003,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.356333333333333,
+            "miles": 109.33842954720001
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 3.932777777777778,
+            "miles": 181.62276652559999
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.7362222222222222,
+            "miles": 26.8340309092
+          }
+        ]
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 18.526666666666664,
+        "totalMiles": 543.172702392,
+        "weeks": 8
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 18.526666666666664,
+        "totalMiles": 543.172702392,
+        "weeks": 8
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 39.779444444444444,
+        "totalMiles": 1849.836379904,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 9.263333333333332,
+        "totalMiles": 271.586351196,
+        "weeks": 4
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Psychiatry Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 9.263333333333332,
+        "totalMiles": 271.586351196,
+        "weeks": 4
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Cardiology Selective @ HCA Florida Kendall Hospital",
+        "totalHours": 35.345,
+        "totalMiles": 1640.076443208,
+        "weeks": 4
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 70.69,
+        "totalMiles": 3280.152886416,
+        "weeks": 8
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 70.69,
+        "totalMiles": 3280.152886416,
+        "weeks": 8
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 28.513888888888886,
+        "totalMiles": 1112.424345654,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      }
+    ]
+  },
+  "Track 33": {
+    "optimalLocation": {
+      "lat": 25.955000000000002,
+      "lng": -80.225
+    },
+    "minCommuteBurden": 332.7552222222222,
+    "totalMiles": 14474.8488782264,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Pathology Selective @ HCA Florida Westside Hospital",
+        "totalHours": 23.449999999999996,
+        "totalMiles": 916.278647568,
+        "weeks": 4
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 22.196666666666665,
+        "totalMiles": 690.400347132,
+        "weeks": 8
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 22.196666666666665,
+        "totalMiles": 690.400347132,
+        "weeks": 8
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 11.098333333333333,
+        "totalMiles": 345.200173566,
+        "weeks": 4
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 39.98,
+        "totalMiles": 1864.702059708,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Psychiatry Clerkship @ HCA Florida JFK North Hospital",
+        "totalHours": 51.04333333333333,
+        "totalMiles": 2474.304292968,
+        "weeks": 4
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 6.546888888888889,
+        "totalMiles": 299.52965361440005,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.151777777777778,
+            "miles": 102.4966377404
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 3.7534444444444444,
+            "miles": 176.843429342
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.6416666666666667,
+            "miles": 20.189586532
+          }
+        ]
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 64.55333333333334,
+        "totalMiles": 3074.899132212,
+        "weeks": 8
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 64.55333333333334,
+        "totalMiles": 3074.899132212,
+        "weeks": 8
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 27.136666666666667,
+        "totalMiles": 1044.2350921139998,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      }
+    ]
+  },
+  "Track 34": {
+    "optimalLocation": {
+      "lat": 26.02,
+      "lng": -80.15
+    },
+    "minCommuteBurden": 266.87538888888895,
+    "totalMiles": 10571.5497348634,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 7.154277777777778,
+        "totalMiles": 316.9398476634,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.8268888888888886,
+            "miles": 127.192158216
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 3.669,
+            "miles": 168.3062888988
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.6583888888888888,
+            "miles": 21.4414005486
+          }
+        ]
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 13.846666666666668,
+        "totalMiles": 431.1693369,
+        "weeks": 8
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 13.846666666666668,
+        "totalMiles": 431.1693369,
+        "weeks": 8
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 54.13333333333334,
+        "totalMiles": 2074.81369239,
+        "weeks": 8
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 54.13333333333334,
+        "totalMiles": 2074.81369239,
+        "weeks": 8
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 38.83166666666667,
+        "totalMiles": 1807.3867986679998,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Psychiatry Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 6.923333333333334,
+        "totalMiles": 215.58466845,
+        "weeks": 4
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Anesthesia Selective (Kendall) @ HCA Florida Kendall Hospital",
+        "totalHours": 42.40333333333333,
+        "totalMiles": 1907.8823732399999,
+        "weeks": 4
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 6.923333333333334,
+        "totalMiles": 215.58466845,
+        "weeks": 4
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 28.679444444444446,
+        "totalMiles": 1096.205319812,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      }
+    ]
+  },
+  "Track 35": {
+    "optimalLocation": {
+      "lat": 25.955000000000002,
+      "lng": -80.15
+    },
+    "minCommuteBurden": 273.6522222222222,
+    "totalMiles": 11467.911950591,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 7.657222222222221,
+        "totalMiles": 340.963044717,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.7756666666666665,
+            "miles": 124.4012082324
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 4.038444444444444,
+            "miles": 186.18238692359998
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.843111111111111,
+            "miles": 30.379449561
+          }
+        ]
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 83.27,
+        "totalMiles": 3732.036246972,
+        "weeks": 8
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 83.27,
+        "totalMiles": 3732.036246972,
+        "weeks": 8
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Surgery Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 8.143333333333334,
+        "totalMiles": 175.122231672,
+        "weeks": 8
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Surgery Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 8.143333333333334,
+        "totalMiles": 175.122231672,
+        "weeks": 8
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 39.47222222222222,
+        "totalMiles": 1840.138021336,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Psychiatry Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 4.071666666666667,
+        "totalMiles": 87.561115836,
+        "weeks": 4
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Pulmonology Selective @ HCA Florida Aventura Hospital",
+        "totalHours": 4.071666666666667,
+        "totalMiles": 87.561115836,
+        "weeks": 4
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 4.071666666666667,
+        "totalMiles": 87.561115836,
+        "weeks": 4
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 31.481111111111108,
+        "totalMiles": 1209.810579742,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      }
+    ]
+  },
+  "Track 36": {
+    "optimalLocation": {
+      "lat": 26.02,
+      "lng": -80.15
+    },
+    "minCommuteBurden": 304.73094444444445,
+    "totalMiles": 12555.093969289399,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 7.154277777777778,
+        "totalMiles": 316.9398476634,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.8268888888888886,
+            "miles": 127.192158216
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 3.669,
+            "miles": 168.3062888988
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.6583888888888888,
+            "miles": 21.4414005486
+          }
+        ]
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 13.846666666666668,
+        "totalMiles": 431.1693369,
+        "weeks": 8
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 13.846666666666668,
+        "totalMiles": 431.1693369,
+        "weeks": 8
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 54.13333333333334,
+        "totalMiles": 2074.81369239,
+        "weeks": 8
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 54.13333333333334,
+        "totalMiles": 2074.81369239,
+        "weeks": 8
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 6.923333333333334,
+        "totalMiles": 215.58466845,
+        "weeks": 4
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Psychiatry Clerkship @ HCA Florida JFK North Hospital",
+        "totalHours": 44.778888888888886,
+        "totalMiles": 2199.1289028759998,
+        "weeks": 4
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Surgical Intensive Care Unit Selective @ HCA Florida Kendall Hospital",
+        "totalHours": 42.40333333333333,
+        "totalMiles": 1907.8823732399999,
+        "weeks": 4
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 28.679444444444446,
+        "totalMiles": 1096.205319812,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 38.83166666666667,
+        "totalMiles": 1807.3867986679998,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      }
+    ]
+  },
+  "Track 37": {
+    "optimalLocation": {
+      "lat": 26.02,
+      "lng": -80.15
+    },
+    "minCommuteBurden": 245.18538888888892,
+    "totalMiles": 9441.9606367054,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Anesthesia Selective (Westside) @ HCA Florida Westside Hospital",
+        "totalHours": 20.713333333333335,
+        "totalMiles": 778.293275082,
+        "weeks": 4
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 13.846666666666668,
+        "totalMiles": 431.1693369,
+        "weeks": 8
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 13.846666666666668,
+        "totalMiles": 431.1693369,
+        "weeks": 8
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 54.13333333333334,
+        "totalMiles": 2074.81369239,
+        "weeks": 8
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 54.13333333333334,
+        "totalMiles": 2074.81369239,
+        "weeks": 8
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 6.923333333333334,
+        "totalMiles": 215.58466845,
+        "weeks": 4
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Psychiatry Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 6.923333333333334,
+        "totalMiles": 215.58466845,
+        "weeks": 4
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 7.154277777777778,
+        "totalMiles": 316.9398476634,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.8268888888888886,
+            "miles": 127.192158216
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 3.669,
+            "miles": 168.3062888988
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.6583888888888888,
+            "miles": 21.4414005486
+          }
+        ]
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 28.679444444444446,
+        "totalMiles": 1096.205319812,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 38.83166666666667,
+        "totalMiles": 1807.3867986679998,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      }
+    ]
+  },
+  "Track 38": {
+    "optimalLocation": {
+      "lat": 25.76,
+      "lng": -80.4
+    },
+    "minCommuteBurden": 273.3403333333333,
+    "totalMiles": 11883.7960579878,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 12.720000000000002,
+        "totalMiles": 363.904683408,
+        "weeks": 8
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 12.720000000000002,
+        "totalMiles": 363.904683408,
+        "weeks": 8
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Radiology Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 50.68,
+        "totalMiles": 2404.379550225,
+        "weeks": 4
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 12.720000000000002,
+        "totalMiles": 363.904683408,
+        "weeks": 8
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 12.720000000000002,
+        "totalMiles": 363.904683408,
+        "weeks": 8
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 49.29888888888888,
+        "totalMiles": 2331.866175896,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 41.76722222222222,
+        "totalMiles": 1847.190582186,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 7.028666666666666,
+        "totalMiles": 333.3411837568,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 0.42400000000000004,
+            "miles": 12.1301561136
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 5.260999999999999,
+            "miles": 261.6908937468
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 1.3436666666666666,
+            "miles": 59.5201338964
+          }
+        ]
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Anesthesia Selective (Kendall) @ HCA Florida Kendall Hospital",
+        "totalHours": 6.360000000000001,
+        "totalMiles": 181.952341704,
+        "weeks": 4
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Psychiatry Clerkship @ HCA Florida JFK North Hospital",
+        "totalHours": 67.32555555555555,
+        "totalMiles": 3329.447490588,
+        "weeks": 4
+      }
+    ]
+  },
+  "Track 39": {
+    "optimalLocation": {
+      "lat": 25.955000000000002,
+      "lng": -80.15
+    },
+    "minCommuteBurden": 205.3638888888889,
+    "totalMiles": 8422.869694929,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Surgery Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 8.143333333333334,
+        "totalMiles": 175.122231672,
+        "weeks": 8
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Surgery Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 8.143333333333334,
+        "totalMiles": 175.122231672,
+        "weeks": 8
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Psychiatry Clerkship @ HCA Florida JFK North Hospital",
+        "totalHours": 48.47333333333334,
+        "totalMiles": 2377.8898831240003,
+        "weeks": 4
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 8.143333333333334,
+        "totalMiles": 175.122231672,
+        "weeks": 8
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 8.143333333333334,
+        "totalMiles": 175.122231672,
+        "weeks": 8
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 4.071666666666667,
+        "totalMiles": 87.561115836,
+        "weeks": 4
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 31.481111111111108,
+        "totalMiles": 1209.810579742,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 7.657222222222221,
+        "totalMiles": 340.963044717,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.7756666666666665,
+            "miles": 124.4012082324
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 4.038444444444444,
+            "miles": 186.18238692359998
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.843111111111111,
+            "miles": 30.379449561
+          }
+        ]
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Anesthesia Selective (Kendall) @ HCA Florida Kendall Hospital",
+        "totalHours": 41.635,
+        "totalMiles": 1866.018123486,
+        "weeks": 4
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 39.47222222222222,
+        "totalMiles": 1840.138021336,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      }
+    ]
+  },
+  "Track 40": {
+    "optimalLocation": {
+      "lat": 26.02,
+      "lng": -80.15
+    },
+    "minCommuteBurden": 266.8753888888889,
+    "totalMiles": 10571.5497348634,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 54.13333333333334,
+        "totalMiles": 2074.81369239,
+        "weeks": 8
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 54.13333333333334,
+        "totalMiles": 2074.81369239,
+        "weeks": 8
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Psychiatry Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 6.923333333333334,
+        "totalMiles": 215.58466845,
+        "weeks": 4
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 13.846666666666668,
+        "totalMiles": 431.1693369,
+        "weeks": 8
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 13.846666666666668,
+        "totalMiles": 431.1693369,
+        "weeks": 8
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 6.923333333333334,
+        "totalMiles": 215.58466845,
+        "weeks": 4
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 28.679444444444446,
+        "totalMiles": 1096.205319812,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 7.154277777777778,
+        "totalMiles": 316.9398476634,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.8268888888888886,
+            "miles": 127.192158216
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 3.669,
+            "miles": 168.3062888988
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.6583888888888888,
+            "miles": 21.4414005486
+          }
+        ]
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 38.83166666666667,
+        "totalMiles": 1807.3867986679998,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Trauma Surgery/Surgical Critical Care Selective @ HCA Florida Kendall Hospital",
+        "totalHours": 42.40333333333333,
+        "totalMiles": 1907.8823732399999,
+        "weeks": 4
+      }
+    ]
+  },
+  "Track 41": {
+    "optimalLocation": {
+      "lat": 26.085,
+      "lng": -80.175
+    },
+    "minCommuteBurden": 327.0714444444444,
+    "totalMiles": 13379.9014618668,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 41.19166666666666,
+        "totalMiles": 1475.657948382,
+        "weeks": 8
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 41.19166666666666,
+        "totalMiles": 1475.657948382,
+        "weeks": 8
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 40.42388888888888,
+        "totalMiles": 1892.4984700220002,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 33.26,
+        "totalMiles": 1203.314767308,
+        "weeks": 8
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 33.26,
+        "totalMiles": 1203.314767308,
+        "weeks": 8
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Trauma Surgery/Surgical Critical Care Selective @ HCA Florida Kendall Hospital",
+        "totalHours": 43.891666666666666,
+        "totalMiles": 2093.905937736,
+        "weeks": 4
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Radiology Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 20.59583333333333,
+        "totalMiles": 737.828974191,
+        "weeks": 4
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 6.596166666666667,
+        "totalMiles": 298.9949017318,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.926111111111111,
+            "miles": 139.5937291824
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 3.226,
+            "miles": 146.004786612
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.44405555555555554,
+            "miles": 13.396385937400002
+          }
+        ]
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 26.160555555555558,
+        "totalMiles": 1010.7730210220001,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Psychiatry Clerkship @ HCA Florida JFK North Hospital",
+        "totalHours": 40.5,
+        "totalMiles": 1987.9547257840002,
+        "weeks": 4
+      }
+    ]
+  },
+  "Track 42": {
+    "optimalLocation": {
+      "lat": 25.955000000000002,
+      "lng": -80.25
+    },
+    "minCommuteBurden": 364.04238888888887,
+    "totalMiles": 15964.929096066797,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 58.12833333333333,
+        "totalMiles": 2269.635870246,
+        "weeks": 8
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 58.12833333333333,
+        "totalMiles": 2269.635870246,
+        "weeks": 8
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Psychiatry Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 12.788333333333332,
+        "totalMiles": 433.600140252,
+        "weeks": 4
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 59.756666666666675,
+        "totalMiles": 2933.5322587439996,
+        "weeks": 8
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 59.756666666666675,
+        "totalMiles": 2933.5322587439996,
+        "weeks": 8
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 26.203333333333333,
+        "totalMiles": 1030.5599591460002,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 12.788333333333332,
+        "totalMiles": 433.600140252,
+        "weeks": 4
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Anesthesia Selective (Kendall) @ HCA Florida Kendall Hospital",
+        "totalHours": 29.878333333333337,
+        "totalMiles": 1466.7661293719998,
+        "weeks": 4
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 40.30722222222223,
+        "totalMiles": 1900.075467996,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 6.3068333333333335,
+        "totalMiles": 293.99100106879996,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 1.991888888888889,
+            "miles": 97.7844086248
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 3.7532222222222225,
+            "miles": 178.373244744
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.5617222222222222,
+            "miles": 17.8333477
+          }
+        ]
+      }
+    ]
+  },
+  "Track 43": {
+    "optimalLocation": {
+      "lat": 26.02,
+      "lng": -80.15
+    },
+    "minCommuteBurden": 245.18538888888887,
+    "totalMiles": 9441.9606367054,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Psychiatry Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 6.923333333333334,
+        "totalMiles": 215.58466845,
+        "weeks": 4
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 38.83166666666667,
+        "totalMiles": 1807.3867986679998,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Anesthesia Selective (Westside) @ HCA Florida Westside Hospital",
+        "totalHours": 20.713333333333335,
+        "totalMiles": 778.293275082,
+        "weeks": 4
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 13.846666666666668,
+        "totalMiles": 431.1693369,
+        "weeks": 8
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 13.846666666666668,
+        "totalMiles": 431.1693369,
+        "weeks": 8
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 28.679444444444446,
+        "totalMiles": 1096.205319812,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 6.923333333333334,
+        "totalMiles": 215.58466845,
+        "weeks": 4
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 54.13333333333334,
+        "totalMiles": 2074.81369239,
+        "weeks": 8
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 54.13333333333334,
+        "totalMiles": 2074.81369239,
+        "weeks": 8
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 7.154277777777778,
+        "totalMiles": 316.9398476634,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.8268888888888886,
+            "miles": 127.192158216
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 3.669,
+            "miles": 168.3062888988
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.6583888888888888,
+            "miles": 21.4414005486
+          }
+        ]
+      }
+    ]
+  },
+  "Track 44": {
+    "optimalLocation": {
+      "lat": 25.955000000000002,
+      "lng": -80.15
+    },
+    "minCommuteBurden": 205.3638888888889,
+    "totalMiles": 8422.869694929,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Surgery Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 8.143333333333334,
+        "totalMiles": 175.122231672,
+        "weeks": 8
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Surgery Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 8.143333333333334,
+        "totalMiles": 175.122231672,
+        "weeks": 8
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Psychiatry Clerkship @ HCA Florida JFK North Hospital",
+        "totalHours": 48.47333333333334,
+        "totalMiles": 2377.8898831240003,
+        "weeks": 4
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 8.143333333333334,
+        "totalMiles": 175.122231672,
+        "weeks": 8
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 8.143333333333334,
+        "totalMiles": 175.122231672,
+        "weeks": 8
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 31.481111111111108,
+        "totalMiles": 1209.810579742,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 4.071666666666667,
+        "totalMiles": 87.561115836,
+        "weeks": 4
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Surgical Selective (Plastics) @ HCA Florida Kendall Hospital",
+        "totalHours": 41.635,
+        "totalMiles": 1866.018123486,
+        "weeks": 4
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 39.47222222222222,
+        "totalMiles": 1840.138021336,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 7.657222222222221,
+        "totalMiles": 340.963044717,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.7756666666666665,
+            "miles": 124.4012082324
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 4.038444444444444,
+            "miles": 186.18238692359998
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.843111111111111,
+            "miles": 30.379449561
+          }
+        ]
+      }
+    ]
+  },
+  "Track 45": {
+    "optimalLocation": {
+      "lat": 25.955000000000002,
+      "lng": -80.225
+    },
+    "minCommuteBurden": 354.6693888888889,
+    "totalMiles": 15450.3112494314,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 27.136666666666667,
+        "totalMiles": 1044.2350921139998,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Psychiatry Clerkship @ HCA Florida JFK North Hospital",
+        "totalHours": 51.04333333333333,
+        "totalMiles": 2474.304292968,
+        "weeks": 4
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Neonatal Intensive Care Unit Selective @ HCA Florida Mercy Hospital",
+        "totalHours": 27.315000000000005,
+        "totalMiles": 1030.586056728,
+        "weeks": 4
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 64.55333333333334,
+        "totalMiles": 3074.899132212,
+        "weeks": 8
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 64.55333333333334,
+        "totalMiles": 3074.899132212,
+        "weeks": 8
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Surgery Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 22.196666666666665,
+        "totalMiles": 690.400347132,
+        "weeks": 8
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Surgery Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 22.196666666666665,
+        "totalMiles": 690.400347132,
+        "weeks": 8
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Radiology Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 29.147499999999997,
+        "totalMiles": 1206.3551356110002,
+        "weeks": 4
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 39.98,
+        "totalMiles": 1864.702059708,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 6.546888888888889,
+        "totalMiles": 299.52965361440005,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.151777777777778,
+            "miles": 102.4966377404
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 3.7534444444444444,
+            "miles": 176.843429342
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.6416666666666667,
+            "miles": 20.189586532
+          }
+        ]
+      }
+    ]
+  },
+  "Track 46": {
+    "optimalLocation": {
+      "lat": 25.955000000000002,
+      "lng": -80.225
+    },
+    "minCommuteBurden": 291.23855555555554,
+    "totalMiles": 12304.573959106396,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Psychiatry Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 11.098333333333333,
+        "totalMiles": 345.200173566,
+        "weeks": 4
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 27.136666666666667,
+        "totalMiles": 1044.2350921139998,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Ophthalmology Selective @ Ft. Lauderdale Eye Institute",
+        "totalHours": 21.878333333333334,
+        "totalMiles": 875.10784785,
+        "weeks": 4
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 64.55333333333334,
+        "totalMiles": 3074.899132212,
+        "weeks": 8
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 64.55333333333334,
+        "totalMiles": 3074.899132212,
+        "weeks": 8
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 22.196666666666665,
+        "totalMiles": 690.400347132,
+        "weeks": 8
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 22.196666666666665,
+        "totalMiles": 690.400347132,
+        "weeks": 8
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 11.098333333333333,
+        "totalMiles": 345.200173566,
+        "weeks": 4
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 39.98,
+        "totalMiles": 1864.702059708,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 6.546888888888889,
+        "totalMiles": 299.52965361440005,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.151777777777778,
+            "miles": 102.4966377404
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 3.7534444444444444,
+            "miles": 176.843429342
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.6416666666666667,
+            "miles": 20.189586532
+          }
+        ]
+      }
+    ]
+  },
+  "Track 47": {
+    "optimalLocation": {
+      "lat": 25.955000000000002,
+      "lng": -80.25
+    },
+    "minCommuteBurden": 364.04238888888887,
+    "totalMiles": 15964.929096066799,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Infectious Disease Selective @ HCA Florida Kendall Hospital",
+        "totalHours": 29.878333333333337,
+        "totalMiles": 1466.7661293719998,
+        "weeks": 4
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 26.203333333333333,
+        "totalMiles": 1030.5599591460002,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 12.788333333333332,
+        "totalMiles": 433.600140252,
+        "weeks": 4
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 58.12833333333333,
+        "totalMiles": 2269.635870246,
+        "weeks": 8
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 58.12833333333333,
+        "totalMiles": 2269.635870246,
+        "weeks": 8
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 59.756666666666675,
+        "totalMiles": 2933.5322587439996,
+        "weeks": 8
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 59.756666666666675,
+        "totalMiles": 2933.5322587439996,
+        "weeks": 8
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 40.30722222222223,
+        "totalMiles": 1900.075467996,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 6.3068333333333335,
+        "totalMiles": 293.99100106879996,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 1.991888888888889,
+            "miles": 97.7844086248
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 3.7532222222222225,
+            "miles": 178.373244744
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.5617222222222222,
+            "miles": 17.8333477
+          }
+        ]
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Psychiatry Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 12.788333333333332,
+        "totalMiles": 433.600140252,
+        "weeks": 4
+      }
+    ]
+  },
+  "Track 48": {
+    "optimalLocation": {
+      "lat": 25.955000000000002,
+      "lng": -80.15
+    },
+    "minCommuteBurden": 273.65222222222224,
+    "totalMiles": 11467.911950590998,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Pulmonology Selective @ HCA Florida Aventura Hospital",
+        "totalHours": 4.071666666666667,
+        "totalMiles": 87.561115836,
+        "weeks": 4
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 39.47222222222222,
+        "totalMiles": 1840.138021336,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Psychiatry Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 4.071666666666667,
+        "totalMiles": 87.561115836,
+        "weeks": 4
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 83.27,
+        "totalMiles": 3732.036246972,
+        "weeks": 8
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 83.27,
+        "totalMiles": 3732.036246972,
+        "weeks": 8
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 8.143333333333334,
+        "totalMiles": 175.122231672,
+        "weeks": 8
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 8.143333333333334,
+        "totalMiles": 175.122231672,
+        "weeks": 8
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 4.071666666666667,
+        "totalMiles": 87.561115836,
+        "weeks": 4
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 31.481111111111108,
+        "totalMiles": 1209.810579742,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 7.657222222222221,
+        "totalMiles": 340.963044717,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.7756666666666665,
+            "miles": 124.4012082324
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 4.038444444444444,
+            "miles": 186.18238692359998
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.843111111111111,
+            "miles": 30.379449561
+          }
+        ]
+      }
+    ]
+  },
+  "Track 49": {
+    "optimalLocation": {
+      "lat": 26.02,
+      "lng": -80.15
+    },
+    "minCommuteBurden": 245.1853888888889,
+    "totalMiles": 9441.9606367054,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Psychiatry Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 6.923333333333334,
+        "totalMiles": 215.58466845,
+        "weeks": 4
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 38.83166666666667,
+        "totalMiles": 1807.3867986679998,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 28.679444444444446,
+        "totalMiles": 1096.205319812,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 54.13333333333334,
+        "totalMiles": 2074.81369239,
+        "weeks": 8
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 54.13333333333334,
+        "totalMiles": 2074.81369239,
+        "weeks": 8
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 13.846666666666668,
+        "totalMiles": 431.1693369,
+        "weeks": 8
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 13.846666666666668,
+        "totalMiles": 431.1693369,
+        "weeks": 8
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Anesthesia Selective (Westside) @ HCA Florida Westside Hospital",
+        "totalHours": 20.713333333333335,
+        "totalMiles": 778.293275082,
+        "weeks": 4
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 6.923333333333334,
+        "totalMiles": 215.58466845,
+        "weeks": 4
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 7.154277777777778,
+        "totalMiles": 316.9398476634,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.8268888888888886,
+            "miles": 127.192158216
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 3.669,
+            "miles": 168.3062888988
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.6583888888888888,
+            "miles": 21.4414005486
+          }
+        ]
+      }
+    ]
+  },
+  "Track 50": {
+    "optimalLocation": {
+      "lat": 25.76,
+      "lng": -80.4
+    },
+    "minCommuteBurden": 229.02033333333335,
+    "totalMiles": 9661.3688494668,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Psychiatry Clerkship @ HCA Florida JFK North Hospital",
+        "totalHours": 67.32555555555555,
+        "totalMiles": 3329.447490588,
+        "weeks": 4
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 49.29888888888888,
+        "totalMiles": 2331.866175896,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 7.028666666666666,
+        "totalMiles": 333.3411837568,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 0.42400000000000004,
+            "miles": 12.1301561136
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 5.260999999999999,
+            "miles": 261.6908937468
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 1.3436666666666666,
+            "miles": 59.5201338964
+          }
+        ]
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 41.76722222222222,
+        "totalMiles": 1847.190582186,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Cardiology Selective @ HCA Florida Kendall Hospital",
+        "totalHours": 6.360000000000001,
+        "totalMiles": 181.952341704,
+        "weeks": 4
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 12.720000000000002,
+        "totalMiles": 363.904683408,
+        "weeks": 8
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 12.720000000000002,
+        "totalMiles": 363.904683408,
+        "weeks": 8
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 12.720000000000002,
+        "totalMiles": 363.904683408,
+        "weeks": 8
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 12.720000000000002,
+        "totalMiles": 363.904683408,
+        "weeks": 8
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Radiology Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 6.360000000000001,
+        "totalMiles": 181.952341704,
+        "weeks": 4
+      }
+    ]
+  },
+  "Track 51": {
+    "optimalLocation": {
+      "lat": 26.02,
+      "lng": -80.15
+    },
+    "minCommuteBurden": 258.1720555555556,
+    "totalMiles": 9974.824794207401,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Urology Selective @ Mount Sinai Miami Beach",
+        "totalHours": 33.7,
+        "totalMiles": 1311.1574325840002,
+        "weeks": 4
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 38.83166666666667,
+        "totalMiles": 1807.3867986679998,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 7.154277777777778,
+        "totalMiles": 316.9398476634,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.8268888888888886,
+            "miles": 127.192158216
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 3.669,
+            "miles": 168.3062888988
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.6583888888888888,
+            "miles": 21.4414005486
+          }
+        ]
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 28.679444444444446,
+        "totalMiles": 1096.205319812,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 6.923333333333334,
+        "totalMiles": 215.58466845,
+        "weeks": 4
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 13.846666666666668,
+        "totalMiles": 431.1693369,
+        "weeks": 8
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 13.846666666666668,
+        "totalMiles": 431.1693369,
+        "weeks": 8
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 54.13333333333334,
+        "totalMiles": 2074.81369239,
+        "weeks": 8
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 54.13333333333334,
+        "totalMiles": 2074.81369239,
+        "weeks": 8
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Psychiatry Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 6.923333333333334,
+        "totalMiles": 215.58466845,
+        "weeks": 4
+      }
+    ]
+  },
+  "Track 52": {
+    "optimalLocation": {
+      "lat": 25.955000000000002,
+      "lng": -80.15
+    },
+    "minCommuteBurden": 145.5822222222222,
+    "totalMiles": 5312.961277834999,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Psychiatry Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 4.071666666666667,
+        "totalMiles": 87.561115836,
+        "weeks": 4
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 7.657222222222221,
+        "totalMiles": 340.963044717,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.7756666666666665,
+            "miles": 124.4012082324
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 4.038444444444444,
+            "miles": 186.18238692359998
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.843111111111111,
+            "miles": 30.379449561
+          }
+        ]
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Pathology Selective @ HCA Florida Westside Hospital",
+        "totalHours": 26.254999999999995,
+        "totalMiles": 1046.43847368,
+        "weeks": 4
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 39.47222222222222,
+        "totalMiles": 1840.138021336,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 31.481111111111108,
+        "totalMiles": 1209.810579742,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 8.143333333333334,
+        "totalMiles": 175.122231672,
+        "weeks": 8
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 8.143333333333334,
+        "totalMiles": 175.122231672,
+        "weeks": 8
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Surgery Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 8.143333333333334,
+        "totalMiles": 175.122231672,
+        "weeks": 8
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Surgery Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 8.143333333333334,
+        "totalMiles": 175.122231672,
+        "weeks": 8
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 4.071666666666667,
+        "totalMiles": 87.561115836,
+        "weeks": 4
+      }
+    ]
+  },
+  "Track 53": {
+    "optimalLocation": {
+      "lat": 26.02,
+      "lng": -80.15
+    },
+    "minCommuteBurden": 269.25094444444443,
+    "totalMiles": 10862.7962644994,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Psychiatry Clerkship @ HCA Florida JFK North Hospital",
+        "totalHours": 44.778888888888886,
+        "totalMiles": 2199.1289028759998,
+        "weeks": 4
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 7.154277777777778,
+        "totalMiles": 316.9398476634,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.8268888888888886,
+            "miles": 127.192158216
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 3.669,
+            "miles": 168.3062888988
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.6583888888888888,
+            "miles": 21.4414005486
+          }
+        ]
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Pulmonology Selective @ HCA Florida Aventura Hospital",
+        "totalHours": 6.923333333333334,
+        "totalMiles": 215.58466845,
+        "weeks": 4
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 38.83166666666667,
+        "totalMiles": 1807.3867986679998,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 28.679444444444446,
+        "totalMiles": 1096.205319812,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 13.846666666666668,
+        "totalMiles": 431.1693369,
+        "weeks": 8
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 13.846666666666668,
+        "totalMiles": 431.1693369,
+        "weeks": 8
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 54.13333333333334,
+        "totalMiles": 2074.81369239,
+        "weeks": 8
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 54.13333333333334,
+        "totalMiles": 2074.81369239,
+        "weeks": 8
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 6.923333333333334,
+        "totalMiles": 215.58466845,
+        "weeks": 4
+      }
+    ]
+  },
+  "Track 54": {
+    "optimalLocation": {
+      "lat": 26.085,
+      "lng": -80.25
+    },
+    "minCommuteBurden": 402.6919444444444,
+    "totalMiles": 17483.8062558054,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Psychiatry Clerkship @ HCA Florida JFK North Hospital",
+        "totalHours": 46.38444444444445,
+        "totalMiles": 2218.135399024,
+        "weeks": 4
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 6.1025,
+        "totalMiles": 275.0917535554,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.7425555555555556,
+            "miles": 122.97901428760001
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 3.28,
+            "miles": 150.55197959
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.07994444444444444,
+            "miles": 1.5607596778000001
+          }
+        ]
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 44.665,
+        "totalMiles": 2028.25436336,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Neurology Selective @ HCA Florida Westside Hospital",
+        "totalHours": 6.831666666666667,
+        "totalMiles": 198.99406275,
+        "weeks": 4
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 23.866666666666664,
+        "totalMiles": 937.7967252980001,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 34.574999999999996,
+        "totalMiles": 1301.053940124,
+        "weeks": 8
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 34.574999999999996,
+        "totalMiles": 1301.053940124,
+        "weeks": 8
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Radiology Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 41.138333333333335,
+        "totalMiles": 1844.685214314,
+        "weeks": 4
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 82.27666666666667,
+        "totalMiles": 3689.370428628,
+        "weeks": 8
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 82.27666666666667,
+        "totalMiles": 3689.370428628,
+        "weeks": 8
+      }
+    ]
+  },
+  "Track 55": {
+    "optimalLocation": {
+      "lat": 25.955000000000002,
+      "lng": -80.225
+    },
+    "minCommuteBurden": 292.81022222222225,
+    "totalMiles": 12345.744758824398,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 11.098333333333333,
+        "totalMiles": 345.200173566,
+        "weeks": 4
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 6.546888888888889,
+        "totalMiles": 299.52965361440005,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.151777777777778,
+            "miles": 102.4966377404
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 3.7534444444444444,
+            "miles": 176.843429342
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.6416666666666667,
+            "miles": 20.189586532
+          }
+        ]
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 39.98,
+        "totalMiles": 1864.702059708,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Anesthesia Selective (Westside) @ HCA Florida Westside Hospital",
+        "totalHours": 23.449999999999996,
+        "totalMiles": 916.278647568,
+        "weeks": 4
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 27.136666666666667,
+        "totalMiles": 1044.2350921139998,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 64.55333333333334,
+        "totalMiles": 3074.899132212,
+        "weeks": 8
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 64.55333333333334,
+        "totalMiles": 3074.899132212,
+        "weeks": 8
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Psychiatry Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 11.098333333333333,
+        "totalMiles": 345.200173566,
+        "weeks": 4
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 22.196666666666665,
+        "totalMiles": 690.400347132,
+        "weeks": 8
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 22.196666666666665,
+        "totalMiles": 690.400347132,
+        "weeks": 8
+      }
+    ]
+  },
+  "Track 56": {
+    "optimalLocation": {
+      "lat": 25.76,
+      "lng": -80.4
+    },
+    "minCommuteBurden": 257.60477777777777,
+    "totalMiles": 10593.7869873888,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Neonatal Intensive Care Unit Selective @ HCA Florida Mercy Hospital",
+        "totalHours": 27.533333333333335,
+        "totalMiles": 986.820411714,
+        "weeks": 4
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 7.028666666666666,
+        "totalMiles": 333.3411837568,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 0.42400000000000004,
+            "miles": 12.1301561136
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 5.260999999999999,
+            "miles": 261.6908937468
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 1.3436666666666666,
+            "miles": 59.5201338964
+          }
+        ]
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 41.76722222222222,
+        "totalMiles": 1847.190582186,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 49.29888888888888,
+        "totalMiles": 2331.866175896,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 40.54833333333333,
+        "totalMiles": 1819.4749501019999,
+        "weeks": 4
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 12.720000000000002,
+        "totalMiles": 363.904683408,
+        "weeks": 8
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 12.720000000000002,
+        "totalMiles": 363.904683408,
+        "weeks": 8
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Psychiatry Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 40.54833333333333,
+        "totalMiles": 1819.4749501019999,
+        "weeks": 4
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 12.720000000000002,
+        "totalMiles": 363.904683408,
+        "weeks": 8
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 12.720000000000002,
+        "totalMiles": 363.904683408,
+        "weeks": 8
+      }
+    ]
+  },
+  "Track 57": {
+    "optimalLocation": {
+      "lat": 26.02,
+      "lng": -80.15
+    },
+    "minCommuteBurden": 245.84038888888892,
+    "totalMiles": 9454.8342010834,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Dermatology Selective @ Leading Edge Dermatology",
+        "totalHours": 21.368333333333332,
+        "totalMiles": 791.1668394600001,
+        "weeks": 4
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 7.154277777777778,
+        "totalMiles": 316.9398476634,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.8268888888888886,
+            "miles": 127.192158216
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 3.669,
+            "miles": 168.3062888988
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.6583888888888888,
+            "miles": 21.4414005486
+          }
+        ]
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 38.83166666666667,
+        "totalMiles": 1807.3867986679998,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 6.923333333333334,
+        "totalMiles": 215.58466845,
+        "weeks": 4
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 28.679444444444446,
+        "totalMiles": 1096.205319812,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 54.13333333333334,
+        "totalMiles": 2074.81369239,
+        "weeks": 8
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 54.13333333333334,
+        "totalMiles": 2074.81369239,
+        "weeks": 8
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Psychiatry Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 6.923333333333334,
+        "totalMiles": 215.58466845,
+        "weeks": 4
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 13.846666666666668,
+        "totalMiles": 431.1693369,
+        "weeks": 8
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 13.846666666666668,
+        "totalMiles": 431.1693369,
+        "weeks": 8
+      }
+    ]
+  },
+  "Track 58": {
+    "optimalLocation": {
+      "lat": 26.085,
+      "lng": -80.175
+    },
+    "minCommuteBurden": 327.0714444444444,
+    "totalMiles": 13379.9014618668,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Anesthesia Selective (Kendall) @ HCA Florida Kendall Hospital",
+        "totalHours": 43.891666666666666,
+        "totalMiles": 2093.905937736,
+        "weeks": 4
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 6.596166666666667,
+        "totalMiles": 298.9949017318,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.926111111111111,
+            "miles": 139.5937291824
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 3.226,
+            "miles": 146.004786612
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.44405555555555554,
+            "miles": 13.396385937400002
+          }
+        ]
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 40.42388888888888,
+        "totalMiles": 1892.4984700220002,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Psychiatry Clerkship @ HCA Florida JFK North Hospital",
+        "totalHours": 40.5,
+        "totalMiles": 1987.9547257840002,
+        "weeks": 4
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Radiology Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 20.59583333333333,
+        "totalMiles": 737.828974191,
+        "weeks": 4
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 41.19166666666666,
+        "totalMiles": 1475.657948382,
+        "weeks": 8
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 41.19166666666666,
+        "totalMiles": 1475.657948382,
+        "weeks": 8
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 26.160555555555558,
+        "totalMiles": 1010.7730210220001,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 33.26,
+        "totalMiles": 1203.314767308,
+        "weeks": 8
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 33.26,
+        "totalMiles": 1203.314767308,
+        "weeks": 8
+      }
+    ]
+  },
+  "Track 59": {
+    "optimalLocation": {
+      "lat": 25.955000000000002,
+      "lng": -80.225
+    },
+    "minCommuteBurden": 341.5818888888889,
+    "totalMiles": 15096.019796764398,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Psychiatry Clerkship @ HCA Florida JFK North Hospital",
+        "totalHours": 51.04333333333333,
+        "totalMiles": 2474.304292968,
+        "weeks": 4
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 39.98,
+        "totalMiles": 1864.702059708,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 27.136666666666667,
+        "totalMiles": 1044.2350921139998,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Infectious Disease Selective @ HCA Florida Kendall Hospital",
+        "totalHours": 32.27666666666667,
+        "totalMiles": 1537.449566106,
+        "weeks": 4
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 6.546888888888889,
+        "totalMiles": 299.52965361440005,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.151777777777778,
+            "miles": 102.4966377404
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 3.7534444444444444,
+            "miles": 176.843429342
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.6416666666666667,
+            "miles": 20.189586532
+          }
+        ]
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 64.55333333333334,
+        "totalMiles": 3074.899132212,
+        "weeks": 8
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 64.55333333333334,
+        "totalMiles": 3074.899132212,
+        "weeks": 8
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 11.098333333333333,
+        "totalMiles": 345.200173566,
+        "weeks": 4
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 22.196666666666665,
+        "totalMiles": 690.400347132,
+        "weeks": 8
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 22.196666666666665,
+        "totalMiles": 690.400347132,
+        "weeks": 8
+      }
+    ]
+  },
+  "Track 60": {
+    "optimalLocation": {
+      "lat": 26.02,
+      "lng": -80.15
+    },
+    "minCommuteBurden": 266.87538888888895,
+    "totalMiles": 10571.5497348634,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 54.13333333333334,
+        "totalMiles": 2074.81369239,
+        "weeks": 8
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Surgery Clerkship @ HCA Florida Westside Hospital",
+        "totalHours": 54.13333333333334,
+        "totalMiles": 2074.81369239,
+        "weeks": 8
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Radiology Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 6.923333333333334,
+        "totalMiles": 215.58466845,
+        "weeks": 4
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 7.154277777777778,
+        "totalMiles": 316.9398476634,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 2.8268888888888886,
+            "miles": 127.192158216
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 3.669,
+            "miles": 168.3062888988
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 0.6583888888888888,
+            "miles": 21.4414005486
+          }
+        ]
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 28.679444444444446,
+        "totalMiles": 1096.205319812,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Surgical Intensive Care Unit Selective @ HCA Florida Kendall Hospital",
+        "totalHours": 42.40333333333333,
+        "totalMiles": 1907.8823732399999,
+        "weeks": 4
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 38.83166666666667,
+        "totalMiles": 1807.3867986679998,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Psychiatry Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 6.923333333333334,
+        "totalMiles": 215.58466845,
+        "weeks": 4
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 13.846666666666668,
+        "totalMiles": 431.1693369,
+        "weeks": 8
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 13.846666666666668,
+        "totalMiles": 431.1693369,
+        "weeks": 8
+      }
+    ]
+  },
+  "Track 61": {
+    "optimalLocation": {
+      "lat": 25.76,
+      "lng": -80.375
+    },
+    "minCommuteBurden": 370.53516666666667,
+    "totalMiles": 15950.490546688201,
+    "totalWeeks": 56,
+    "blockDetails": [
+      {
+        "month": "Apr-26 (03/30/26-04/24/26)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 14.520000000000001,
+        "totalMiles": 366.119249652,
+        "weeks": 8
+      },
+      {
+        "month": "May-26 (04/27/26-05/22/26)",
+        "block": "Surgery Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 14.520000000000001,
+        "totalMiles": 366.119249652,
+        "weeks": 8
+      },
+      {
+        "month": "Jun-26 (05/25/26-06/19/26)",
+        "block": "Trauma Surgery/Surgical Critical Care Selective @ HCA Florida Kendall Hospital",
+        "totalHours": 7.260000000000001,
+        "totalMiles": 183.059624826,
+        "weeks": 4
+      },
+      {
+        "month": "Aug-26 (07/27/26-08/21/26)",
+        "block": "Pediatrics Clerkship @ Nemours Children's Hospital",
+        "totalHours": 7.0785,
+        "totalMiles": 330.1979164162,
+        "weeks": 4,
+        "isPediatrics": true,
+        "week4Details": [
+          {
+            "location": "Kendall",
+            "days": "Mon-Tue",
+            "hours": 0.48400000000000004,
+            "miles": 12.2039749884
+          },
+          {
+            "location": "Boynton",
+            "days": "Wed-Thu",
+            "hours": 5.254222222222222,
+            "miles": 259.5461696032
+          },
+          {
+            "location": "University",
+            "days": "Fri",
+            "hours": 1.3402777777777777,
+            "miles": 58.447771824600004
+          }
+        ]
+      },
+      {
+        "month": "Sep-26 (08/24/26-09/18/26)",
+        "block": "Radiology Clerkship @ HCA Florida Kendall Hospital",
+        "totalHours": 7.260000000000001,
+        "totalMiles": 183.059624826,
+        "weeks": 4
+      },
+      {
+        "month": "Oct-26 (09/21/26-10/16/26)",
+        "block": "Primary Care Medicine Clerkship @ To Be Determined",
+        "totalHours": 49.53111111111111,
+        "totalMiles": 2310.786786092,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Nov-26 (10/19/26-11/13/26)",
+        "block": "Obstetrics and Gynecology Clerkship @ To Be Determined",
+        "totalHours": 41.321111111111115,
+        "totalMiles": 1753.9339797639998,
+        "weeks": 4,
+        "isTBD": true,
+        "possibleCount": 3
+      },
+      {
+        "month": "Jan-27 (01/04/27-01/29/27)",
+        "block": "Psychiatry Clerkship @ HCA Florida JFK North Hospital",
+        "totalHours": 67.25777777777778,
+        "totalMiles": 3307.997763668,
+        "weeks": 4
+      },
+      {
+        "month": "Feb-27 (02/01/27-02/26/27)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 80.89333333333335,
+        "totalMiles": 3574.6081758960004,
+        "weeks": 8
+      },
+      {
+        "month": "Mar-27 (03/01/27-03/26/27)",
+        "block": "Internal Medicine Clerkship @ HCA Florida Aventura Hospital",
+        "totalHours": 80.89333333333335,
+        "totalMiles": 3574.6081758960004,
+        "weeks": 8
+      }
+    ]
+  }
+}
