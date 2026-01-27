@@ -187,4 +187,4 @@ Version 2.4 - January 2026
 
 ---
 
-Note: This tool was created to help NSU MD medical students make informed housing decisions and advocate for equitable rotation assignments. If you're from another medical school and want to adapt this for your institution, feel free to reach out!
+Note: This tool was created to help NSU MD medical students make informed housing decisions and advocate for equitable rotation assignments. If you're from another medical school and want to adapt this for your institution, feel free to reach out
