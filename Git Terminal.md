@@ -1,4 +1,4 @@
-cd C:\Users\Skyler\Downloads\CommuteOptimizer
+cd C:\[filepath]\CommuteOptimizer
 
 python3 -m http.server 8000
 
